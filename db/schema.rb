@@ -11,10 +11,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160322195004) do
+ActiveRecord::Schema.define(version: 20160322204237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "album_images", force: :cascade do |t|
+    t.integer  "album_id"
+    t.string   "cover_image"
+    t.string   "backcover_image"
+    t.string   "insert_image_1"
+    t.string   "insert_image_2"
+    t.string   "insert_image_3"
+    t.string   "record_image"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "albums", force: :cascade do |t|
+    t.integer  "artist_id"
+    t.string   "title"
+    t.integer  "release_date"
+    t.string   "genre"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "areas", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "artist_images", force: :cascade do |t|
+    t.integer  "artist_id"
+    t.string   "image_1"
+    t.string   "image_2"
+    t.string   "image_3"
+    t.string   "image_4"
+    t.string   "image_5"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string   "name"
+    t.string   "bio"
+    t.integer  "area_id"
+    t.integer  "start_year"
+    t.integer  "end_year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
@@ -31,6 +79,33 @@ ActiveRecord::Schema.define(version: 20160322195004) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
+  create_table "members", force: :cascade do |t|
+    t.integer  "artist_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "instrument_1"
+    t.string   "instrument_2"
+    t.string   "instrument_3"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "releases", force: :cascade do |t|
+    t.integer  "album_id"
+    t.string   "format"
+    t.string   "label"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tracks", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "album_id"
+    t.integer  "length"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
