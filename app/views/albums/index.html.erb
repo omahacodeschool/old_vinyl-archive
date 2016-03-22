@@ -1,0 +1,42 @@
+<% @albums.each do |album| %>
+<%= album.title %>
+<% end %>
+
+<br />
+
+<% @artists.each do |artist| %>
+<%= artist.name %>
+<% end %>
+
+<br />
+
+<% @tracks.each do |track| %>
+<%= track.title %>
+<% end %>
+
+<br />
+
+<% @members.each do |member| %>
+<%= member.first_name %> <%= member.last_name %>
+<% end %>
+
+<br />
+
+<% @areas.each do |area| %>
+<%= area.name %>
+<% end %>
+
+<br />
+
+<% @artist_images.each do |image| %>
+<img src="<%= image.image_1 %>">
+<% end %>
+
+<br />
+
+<% @album_images.each do |image| %>
+<img src="<%= image.cover_image %>">
+<% end %>
+    
+    
+    
