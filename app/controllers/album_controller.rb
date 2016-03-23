@@ -1,4 +1,8 @@
 class AlbumController < ApplicationController
+  def show
+    @album = Album.find_by_id(params[:id])
+  end
+
   def show_all
     @albums = Album.all
     @artists = Artist.all
