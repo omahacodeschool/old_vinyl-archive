@@ -10,7 +10,9 @@ class TrackDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
-    album_id: Field::Number,
+    album_id: SelectField.with_options(
+      choices: Album.dropdown_values
+    ),
     length: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,

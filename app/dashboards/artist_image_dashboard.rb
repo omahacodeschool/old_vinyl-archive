@@ -9,7 +9,9 @@ class ArtistImageDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    artist_id: Field::Number,
+    artist_id: SelectField.with_options(
+      choices: Artist.dropdown_values
+    ),
     image_1: Field::String,
     image_2: Field::String,
     image_3: Field::String,

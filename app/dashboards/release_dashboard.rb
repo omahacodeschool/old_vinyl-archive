@@ -9,7 +9,9 @@ class ReleaseDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    album_id: Field::Number,
+    album_id: SelectField.with_options(
+      choices: Album.dropdown_values
+    ),
     format: Field::String,
     label: Field::String,
     created_at: Field::DateTime,

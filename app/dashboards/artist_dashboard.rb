@@ -11,7 +11,9 @@ class ArtistDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     bio: Field::String,
-    area_id: Field::Number,
+    area_id: SelectField.with_options(
+      choices: Area.dropdown_values
+    ),
     start_year: Field::Number,
     end_year: Field::Number,
     created_at: Field::DateTime,
