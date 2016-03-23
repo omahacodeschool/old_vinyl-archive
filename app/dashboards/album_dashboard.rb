@@ -9,9 +9,7 @@ class AlbumDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    artist_id: SelectField.with_options(
-      choices: Artist.dropdown_values
-    ),
+    artist: Field::BelongsTo,
     title: Field::String,
     release_date: Field::Number,
     genre: Field::BelongsTo,
@@ -26,7 +24,7 @@ class AlbumDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
-    :artist_id,
+    :artist,
     :title,
     :release_date,
   ]
@@ -35,7 +33,7 @@ class AlbumDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
-    :artist_id,
+    :artist,
     :title,
     :release_date,
     :genre,
@@ -47,7 +45,7 @@ class AlbumDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :artist_id,
+    :artist,
     :title,
     :release_date,
     :genre,
