@@ -1,4 +1,5 @@
 class Album < ActiveRecord::Base
+  belongs_to :genre
 
   def self.dropdown_values
     Album.select([:id, :title]).collect {|n| [n.title, n.id] }.to_h
