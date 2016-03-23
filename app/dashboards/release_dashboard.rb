@@ -12,7 +12,9 @@ class ReleaseDashboard < Administrate::BaseDashboard
     album_id: SelectField.with_options(
       choices: Album.dropdown_values
     ),
-    format: Field::String,
+    format: SelectField.with_options(
+      choices: Format.dropdown_values
+    ),
     label: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,

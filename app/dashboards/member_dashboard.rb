@@ -14,9 +14,15 @@ class MemberDashboard < Administrate::BaseDashboard
     ),
     first_name: Field::String,
     last_name: Field::String,
-    instrument_1: Field::String,
-    instrument_2: Field::String,
-    instrument_3: Field::String,
+    instrument_1: SelectField.with_options(
+      choices: Instrument.dropdown_values
+    ), 
+    instrument_2: SelectField.with_options(
+      choices: Instrument.dropdown_values
+    ),
+    instrument_3: SelectField.with_options(
+      choices: Instrument.dropdown_values
+    ),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
