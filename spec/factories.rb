@@ -1,4 +1,13 @@
 FactoryGirl.define do
+  factory :genre do
+    name "MyString"
+  end
+  factory :instrument do
+    name "MyString"
+  end
+  factory :format do
+    name "MyString"
+  end
   factory :track do
     title "MyString"
     album_id 1
