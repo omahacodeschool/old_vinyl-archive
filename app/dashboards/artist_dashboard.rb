@@ -11,9 +11,7 @@ class ArtistDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     bio: Field::String,
-    area_id: SelectField.with_options(
-      choices: Area.dropdown_values
-    ),
+    area: Field::BelongsTo,
     start_year: Field::Number,
     end_year: Field::Number,
     created_at: Field::DateTime,
@@ -29,7 +27,7 @@ class ArtistDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :bio,
-    :area_id,
+    :area,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
@@ -38,7 +36,7 @@ class ArtistDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :bio,
-    :area_id,
+    :area,
     :start_year,
     :end_year,
     :created_at,
@@ -51,7 +49,7 @@ class ArtistDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :bio,
-    :area_id,
+    :area,
     :start_year,
     :end_year,
   ]
