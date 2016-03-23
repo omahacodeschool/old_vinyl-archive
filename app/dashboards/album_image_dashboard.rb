@@ -9,7 +9,9 @@ class AlbumImageDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    album_id: Field::Number,
+    album_id: SelectField.with_options(
+      choices: Album.dropdown_values
+    ),
     cover_image: Field::String,
     backcover_image: Field::String,
     insert_image_1: Field::String,

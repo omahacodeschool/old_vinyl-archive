@@ -9,7 +9,9 @@ class AlbumDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    artist_id: Field::Number,
+    artist_id: SelectField.with_options(
+      choices: Artist.dropdown_values
+    ),
     title: Field::String,
     release_date: Field::Number,
     genre: Field::String,
