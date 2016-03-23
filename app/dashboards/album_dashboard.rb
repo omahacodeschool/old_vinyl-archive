@@ -14,9 +14,7 @@ class AlbumDashboard < Administrate::BaseDashboard
     ),
     title: Field::String,
     release_date: Field::Number,
-    genre: SelectField.with_options(
-      choices: Genre.dropdown_values
-    ),
+    genre: Field::BelongsTo,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
