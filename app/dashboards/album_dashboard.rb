@@ -10,7 +10,6 @@ class AlbumDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     artist: Field::BelongsTo,
     title: Field::String,
-    release_date: Field::Number,
     genre: Field::BelongsTo,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -24,7 +23,6 @@ class AlbumDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :artist,
     :title,
-    :release_date,
     :genre,
   ]
 
@@ -33,7 +31,6 @@ class AlbumDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :artist,
     :title,
-    :release_date,
     :genre,
     :created_at,
     :updated_at,
@@ -45,7 +42,6 @@ class AlbumDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :artist,
     :title,
-    :release_date,
     :genre,
   ]
 

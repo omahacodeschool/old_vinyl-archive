@@ -11,6 +11,7 @@ class ReleaseDashboard < Administrate::BaseDashboard
     album: Field::BelongsTo,
     format: Field::BelongsTo,
     label: Field::String,
+    release_date: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
@@ -24,6 +25,7 @@ class ReleaseDashboard < Administrate::BaseDashboard
     :album,
     :format,
     :label,
+    :release_date,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
@@ -32,6 +34,7 @@ class ReleaseDashboard < Administrate::BaseDashboard
     :album,
     :format,
     :label,
+    :release_date,
     :created_at,
     :updated_at,
   ]
@@ -43,6 +46,7 @@ class ReleaseDashboard < Administrate::BaseDashboard
     :album,
     :format,
     :label,
+    :release_date,
   ]
 
   # Overwrite this method to customize how releases are displayed
