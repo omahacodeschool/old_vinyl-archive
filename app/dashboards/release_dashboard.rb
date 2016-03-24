@@ -11,12 +11,8 @@ class ReleaseDashboard < Administrate::BaseDashboard
     id: Field::Number,
     # Album doesn't belong to Release, other way around
     # Would we still use Field:BelongsTo, ???
-    album_id: SelectField.with_options(
-      choices: Album.dropdown_values
-    ),
-    format: SelectField.with_options(
-      choices: Format.dropdown_values
-    ),
+    album: Field::BelongsTo,
+    format: Field::BelongsTo,
     label: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -29,7 +25,7 @@ class ReleaseDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
-    :album_id,
+    :album,
     :format,
     :label,
   ]
@@ -38,7 +34,7 @@ class ReleaseDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
-    :album_id,
+    :album,
     :format,
     :label,
     :created_at,
@@ -49,7 +45,7 @@ class ReleaseDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :album_id,
+    :album,
     :format,
     :label,
   ]

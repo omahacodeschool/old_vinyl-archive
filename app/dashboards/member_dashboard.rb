@@ -11,9 +11,7 @@ class MemberDashboard < Administrate::BaseDashboard
     id: Field::Number,
     # Artist doesn't belong to Member, other way around
     # Would we still use Field:BelongsTo, ???
-    artist_id: SelectField.with_options(
-      choices: Artist.dropdown_values
-    ),
+    artist: Field::BelongsTo,
     first_name: Field::String,
     last_name: Field::String,
     created_at: Field::DateTime,
@@ -27,7 +25,7 @@ class MemberDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
-    :artist_id,
+    :artist,
     :first_name,
     :last_name,
   ]
@@ -36,7 +34,7 @@ class MemberDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
-    :artist_id,
+    :artist,
     :first_name,
     :last_name,
     :created_at,
@@ -47,7 +45,7 @@ class MemberDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :artist_id,
+    :artist,
     :first_name,
     :last_name,
   ]

@@ -49,6 +49,6 @@ class RoleDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   # def display_resource(role)
-  #   "Role ##{role.id}"
+  #   "#{role.instrument_id}"
   # end
 end
