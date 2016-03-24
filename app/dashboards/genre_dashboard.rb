@@ -45,7 +45,7 @@ class GenreDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how genres are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(genre)
-  #   "Genre ##{genre.id}"
-  # end
+  def display_resource(genre)
+    "#{genre.name}"
+  end
 end

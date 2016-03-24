@@ -10,9 +10,7 @@ class TrackDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
-    album_id: SelectField.with_options(
-      choices: Album.dropdown_values
-    ),
+    album: Field::BelongsTo,
     length: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -26,7 +24,7 @@ class TrackDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
-    :album_id,
+    :album,
     :length,
   ]
 
@@ -35,7 +33,7 @@ class TrackDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :title,
-    :album_id,
+    :album,
     :length,
     :created_at,
     :updated_at,
@@ -46,14 +44,14 @@ class TrackDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :title,
-    :album_id,
+    :album,
     :length,
   ]
 
   # Overwrite this method to customize how tracks are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(track)
-  #   "Track ##{track.id}"
-  # end
+  def display_resource(track)
+    "#{track.title}"
+  end
 end

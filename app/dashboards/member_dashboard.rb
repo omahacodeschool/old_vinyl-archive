@@ -16,10 +16,6 @@ class MemberDashboard < Administrate::BaseDashboard
     ),
     first_name: Field::String,
     last_name: Field::String,
-    # Added 'Field::BelongsTo,' the 3 instruments below
-    instrument_1: Field::BelongsTo,
-    instrument_2: Field::BelongsTo,
-    instrument_3: Field::BelongsTo,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
@@ -43,9 +39,6 @@ class MemberDashboard < Administrate::BaseDashboard
     :artist_id,
     :first_name,
     :last_name,
-    :instrument_1,
-    :instrument_2,
-    :instrument_3,
     :created_at,
     :updated_at,
   ]
@@ -57,15 +50,12 @@ class MemberDashboard < Administrate::BaseDashboard
     :artist_id,
     :first_name,
     :last_name,
-    :instrument_1,
-    :instrument_2,
-    :instrument_3,
   ]
 
   # Overwrite this method to customize how members are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(member)
-  #   "Member ##{member.id}"
-  # end
+  def display_resource(member)
+    "#{member.first_name} #{member.last_name}"
+  end
 end

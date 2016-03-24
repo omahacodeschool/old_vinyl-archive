@@ -45,7 +45,7 @@ class FormatDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how formats are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(format)
-  #   "Format ##{format.id}"
-  # end
+  def display_resource(format)
+    "#{format.name}"
+  end
 end

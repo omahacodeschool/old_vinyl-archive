@@ -27,6 +27,7 @@ class AlbumDashboard < Administrate::BaseDashboard
     :artist,
     :title,
     :release_date,
+    :genre,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
@@ -54,7 +55,7 @@ class AlbumDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how albums are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(album)
-  #   "Album ##{album.id}"
-  # end
+  def display_resource(album)
+    "#{album.title}"
+  end
 end
