@@ -8,9 +8,6 @@ class ArtistImageDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    id: Field::Number,
-    # Artist doesn't belong to Artist Image, other way around
-    # Would we still use Field:BelongsTo, ???
     artist: Field::BelongsTo,
     image_1: Field::String,
     image_2: Field::String,
@@ -27,7 +24,6 @@ class ArtistImageDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
     :artist,
     :image_1,
     :image_2,
@@ -36,7 +32,6 @@ class ArtistImageDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :id,
     :artist,
     :image_1,
     :image_2,

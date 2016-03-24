@@ -8,12 +8,7 @@ class AlbumImageDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    id: Field::Number,
-    # Album doesn't belong to Album Image, other way around
-    # Would we still use Field:BelongsTo, ???
-    album_id: SelectField.with_options(
-      choices: Album.dropdown_values
-    ),
+    album: Field::BelongsTo,
     cover_image: Field::String,
     backcover_image: Field::String,
     insert_image_1: Field::String,
@@ -30,8 +25,7 @@ class AlbumImageDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
-    :album_id,
+    :album,
     :cover_image,
     :backcover_image,
   ]
@@ -39,8 +33,7 @@ class AlbumImageDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :id,
-    :album_id,
+    :album,
     :cover_image,
     :backcover_image,
     :insert_image_1,
@@ -55,7 +48,7 @@ class AlbumImageDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :album_id,
+    :album,
     :cover_image,
     :backcover_image,
     :insert_image_1,

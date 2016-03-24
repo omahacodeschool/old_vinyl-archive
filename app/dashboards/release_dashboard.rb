@@ -8,9 +8,6 @@ class ReleaseDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    id: Field::Number,
-    # Album doesn't belong to Release, other way around
-    # Would we still use Field:BelongsTo, ???
     album: Field::BelongsTo,
     format: Field::BelongsTo,
     label: Field::String,
@@ -24,7 +21,6 @@ class ReleaseDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
     :album,
     :format,
     :label,
@@ -33,7 +29,6 @@ class ReleaseDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :id,
     :album,
     :format,
     :label,

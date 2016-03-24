@@ -10,7 +10,6 @@ class RoleDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     member: Field::BelongsTo,
     instrument: Field::BelongsTo,
-    id: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
@@ -23,7 +22,6 @@ class RoleDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :member,
     :instrument,
-    :id,
     :created_at,
   ]
 
@@ -32,7 +30,6 @@ class RoleDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :member,
     :instrument,
-    :id,
     :created_at,
     :updated_at,
   ]
