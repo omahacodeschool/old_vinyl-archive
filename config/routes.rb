@@ -9,6 +9,11 @@ Rails.application.routes.draw do
     resources :releases
     resources :album_images
     resources :tracks
+    # Added the 3 below but dashboards are still not being generated
+    resources :formats
+    resources :genres
+    resources :instruments
+    resources :roles
 
     root to: "users#index"
   end

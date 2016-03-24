@@ -9,6 +9,8 @@ class AlbumImageDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    # Album doesn't belong to Album Image, other way around
+    # Would we still use Field:BelongsTo, ???
     album_id: SelectField.with_options(
       choices: Album.dropdown_values
     ),

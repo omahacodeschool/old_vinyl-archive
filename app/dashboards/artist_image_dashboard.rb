@@ -9,6 +9,8 @@ class ArtistImageDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    # Artist doesn't belong to Artist Image, other way around
+    # Would we still use Field:BelongsTo, ???
     artist_id: SelectField.with_options(
       choices: Artist.dropdown_values
     ),
