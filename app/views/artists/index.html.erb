@@ -3,7 +3,11 @@
   <p>Hometown: <%= artist.area_id %> </p>
   <p>Years Active: <%= artist.start_year %> - <%= artist.end_year %> </p>
   <p>Bio: <%= artist.bio %> </p>
-  <img src="<%= artist.artist_images.image_1 %>">
+
+  <% artist.show_artist_image.each do | x | %>
+    <img src="<%= x.image_1 %>">
+  <% end %>
+
   <br>
   <br>
 <% end %>
