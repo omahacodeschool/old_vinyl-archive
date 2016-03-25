@@ -25,4 +25,7 @@ Rails.application.routes.draw do
   get "admin/albums/index" => 'albums#index'
   get "albums/index" => 'albums#index'
   get "albums/:id" => 'albums#show'
+
+  get "artists/index" => 'artists#index'
+  get "artists/:id" => 'artists#show'
 end

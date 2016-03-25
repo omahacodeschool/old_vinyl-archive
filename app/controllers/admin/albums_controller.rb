@@ -5,7 +5,7 @@ module Admin
     #
     # def index
     #   super
-    #   @resources = Album.all.paginate(9, params[:page])
+    #   @resources = Album.all.paginate(10, params[:page])
     # end
 
     # Define a custom finder by overriding the `find_resource` method:

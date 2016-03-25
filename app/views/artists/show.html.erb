@@ -1,0 +1,12 @@
+<h1><%= @artist.name %></h1>
+
+<p>Hometown: <%= @areas.name %> </p>
+<p>Years Active: <%= @artist.start_year %> - <%= @artist.end_year %> </p>
+<p>Members: 
+<% @members.each do | member | %>
+  <%= member.first_name %> <%= member.last_name %>
+<% end %></p>
+
+<p>Bio: <%= @artist.bio %> </p>
+
+<img src="<%= @artist_images.image_1 %>">

@@ -1,0 +1,9 @@
+<% @artists.each do |artist| %>
+  <b><%= artist.name %> </b>
+  <p>Hometown: <%= artist.area_id %> </p>
+  <p>Years Active: <%= artist.start_year %> - <%= artist.end_year %> </p>
+  <p>Bio: <%= artist.bio %> </p>
+  <img src="<%= artist.artist_images.image_1 %>">
+  <br>
+  <br>
+<% end %>
