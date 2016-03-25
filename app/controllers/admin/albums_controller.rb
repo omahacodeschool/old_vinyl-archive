@@ -15,10 +15,5 @@ module Admin
 
     # See https://administrate-docs.herokuapp.com/customizing_controller_actions
     # for more information
-    def index
-      @albums = Album.all
-      @artists = Artist.all
-      render "albums/index"
-    end
   end
 end
