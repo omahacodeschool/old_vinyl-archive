@@ -5,7 +5,7 @@ module Admin
     #
     # def index
     #   super
-    #   @resources = Album.all.paginate(10, params[:page])
+    #   @resources = Album.all.paginate(9, params[:page])
     # end
 
     # Define a custom finder by overriding the `find_resource` method:
@@ -15,5 +15,10 @@ module Admin
 
     # See https://administrate-docs.herokuapp.com/customizing_controller_actions
     # for more information
+    def index
+      @albums = Album.all
+      @artists = Artist.all
+      render "albums/index"
+    end
   end
 end

@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     resources :releases
     resources :album_images
     resources :tracks
-    # Added the 3 below but dashboards are still not being generated
     resources :formats
     resources :genres
     resources :instruments
@@ -21,6 +20,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "home#index"
 
-  get "albums/:id" => 'album#show'
-  get "albums/index" => "album#show_all"
+  get "albums/index" => 'albums#index'
+  get "albums/:id" => 'albums#show'
 end

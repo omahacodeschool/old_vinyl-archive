@@ -1,9 +1,9 @@
-class AlbumController < ApplicationController
+class AlbumsController < ApplicationController
   def show
     @album = Album.find_by_id(params[:id])
   end
 
-  def show_all
+  def index
     @albums = Album.all
     @artists = Artist.all
     @artist_images = ArtistImage.all
@@ -11,6 +11,5 @@ class AlbumController < ApplicationController
     @album_images = AlbumImage.all
     @members = Member.all
     @areas = Area.all
-    render "albums/index"
   end
 end

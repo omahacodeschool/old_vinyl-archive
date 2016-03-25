@@ -1,0 +1,22 @@
+<!-- Retrieve album info for first 9 releases ordered by latest addition -->
+<!-- Cover image -->
+<!-- Title -->
+<!-- Artist -->
+<% @albums.each do |album| %>
+  <%= album.title %>
+  <%= album.artist.name %>
+  <img src="<%= album.album_image.cover_image %>">
+<% end %>
+<!-- Retrieve info for first 3 cities (areas) ordered by most number of artists -->
+<!-- Name -->
+<!-- Count of artists associated with that area -->
+
+<!-- Retrieve info for first 3 genres ordered by most number of artists -->
+<!-- Name -->
+<!-- Count of artists associated with that genre -->
+
+<!-- List decades from 2010’s to 1960’s -->
+<!-- Retrieve artist count for each decade based on artist start_year -->
+
+<!-- List first 3 or 5 formats based either on count of artists associated with that format or most common format types -->
+<!-- Retrieve release count associated with that format type -->
