@@ -3,6 +3,6 @@ class Area < ActiveRecord::Base
 
   # Return a count of artists associated with a given area
   def artist_count
-    Artist.where({"area.id" => self.id}).count
+    Artist.where({"area.id" => self.id})
   end
 end

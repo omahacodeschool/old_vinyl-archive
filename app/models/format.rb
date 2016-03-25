@@ -4,6 +4,6 @@ class Format < ActiveRecord::Base
 
   # Return a count of releases associated with a certain format
   def release_count
-    Release.where({"format.id" => self.id}).count
+    Release.where({"format.id" => self.id})
   end
 end
