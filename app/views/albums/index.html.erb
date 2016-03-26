@@ -16,18 +16,16 @@
 <% @areas.each do |area| %>
   <br />
   <%= area.name %>
-  <%= area.artist_count %>
+  (<%= Artist.where({"area_id" => area.id}).count %>)
 <% end %>
-
 <!-- Retrieve info for first 3 genres ordered by most number of albums -->
 <!-- Name -->
 <!-- Count of albums associated with that genre -->
 <% @genres.each do |genre| %>
   <br />
   <%= genre.name %>
-  <%= genre.album_count %>
+  (<%= Album.where({"genre_id" => genre.id}).count %>)
 <% end %>
-
 <!-- List decades from 2010’s to 1960’s -->
 <!-- Retrieve artist count for each decade based on artist start_year -->
 
@@ -37,5 +35,5 @@
 <% @formats.each do |format| %>
   <br />
   <%= format.name %>
-  <%= format.release_count %>
+  (<%= Release.where({"format_id" => format.id}).count %>)
 <% end %>
