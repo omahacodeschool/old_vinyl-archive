@@ -3,6 +3,6 @@ class Genre < ActiveRecord::Base
 
   # Return a count of albums associated with a certain genre
   def album_count
-    Album.where({"genre.id" => self.id})
+    Album.where({"genre_id" => self.id}).count
   end
 end

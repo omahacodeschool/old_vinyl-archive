@@ -13,10 +13,12 @@
 <!-- Retrieve info for first 3 cities (areas) ordered by most number of artists -->
 <!-- Name -->
 <!-- Count of artists associated with that area -->
+
+
 <% @areas.each do |area| %>
   <br />
   <%= area.name %>
-  (<%= Artist.where({"area_id" => area.id}).count %>)
+  (<%= area.artist_count %>)
 <% end %>
 <!-- Retrieve info for first 3 genres ordered by most number of albums -->
 <!-- Name -->
@@ -24,7 +26,7 @@
 <% @genres.each do |genre| %>
   <br />
   <%= genre.name %>
-  (<%= Album.where({"genre_id" => genre.id}).count %>)
+  (<%= genre.album_count %>)
 <% end %>
 <!-- List decades from 2010’s to 1960’s -->
 <!-- Retrieve artist count for each decade based on artist start_year -->
@@ -35,5 +37,5 @@
 <% @formats.each do |format| %>
   <br />
   <%= format.name %>
-  (<%= Release.where({"format_id" => format.id}).count %>)
+  (<%= format.release_count %>)
 <% end %>
