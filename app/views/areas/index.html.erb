@@ -1,4 +1,4 @@
-<!-- This page should list all areas by name with a list of artists associated with that area -->
+<!-- Show all areas by name with a list of albums associated with that area -->
 <% @areas.each do |area| %>
   <br />
   <%= area.name %>
@@ -7,6 +7,8 @@
     <img src="<%= area_album.album_image.cover_image %>" style="width:100px;height:100px">
     <br />
     <%= area_album.title %>
+    <br />
+    <%= area_album.artist.name %>
     <br />
   <% end %>
 <% end %>

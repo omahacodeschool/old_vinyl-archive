@@ -1,11 +1,16 @@
-<!-- Show all formats with the titles of the albums assocaited with each format -->
+<!-- Show all formats with the titles of the albums associated with each format -->
 <% @formats.each do |format| %>
   <br />
   <%= format.name %>
+  <br />
   <% format.with_these_albums.each do |format_album| %>
     <br />
     <img src="<%= format_album.album_image.cover_image %>" style="width:100px;height:100px">
+    <br />
     <%= format_album.title %>
+    <br />
+    <%= format_album.artist.name %>
+    <br />
   <% end %>
 <% end %>
 
