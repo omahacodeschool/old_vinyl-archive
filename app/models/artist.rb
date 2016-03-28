@@ -1,6 +1,7 @@
 class Artist < ActiveRecord::Base
   belongs_to :area
   has_many :members
+  has_many :albums
 
   # Finds count of artists associated with a given decade and returns a hash with decade keys and artist count values
   def self.count_by_decade
