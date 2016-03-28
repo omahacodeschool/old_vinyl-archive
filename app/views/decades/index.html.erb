@@ -1,17 +1,23 @@
-<!-- Show all areas by name with a list of albums associated with that area -->
-<% @areas.each do |area| %>
+<!-- List decades from current to 1860’s -->
+<!-- Retrieve release count for each decade based on artist start_year -->
+<% @releases.info_by_decade.each do |decade, info| %>
   <br />
-  <%= area.name %>
-  <br />
-  <% area.with_these_albums.each do |area_album| %>
-    <img src="<%= area_album.album_image.cover_image %>" style="width:100px;height:100px">
+  <%= "#{decade}'s" %>
     <br />
-    <%= area_album.title %>
+  <!-- 'info' is a Release object -->
+  <% info.each do |info| %>
+  <!-- Calling 'album_info' on 'info' returns an Album object -->
+    <% info.album_info.each do |album| %>
     <br />
-    <%= area_album.artist.name %>
-    <br />
+      <img src="<%= album.album_image.cover_image %>" style="width:100px;height:100px">
+      <br />
+      <%= album.title %>
+      <br />
+      <%= album.artist.name %>
+    <% end %>
   <% end %>
 <% end %>
+
 
 <!-- SIDEBAR NAVIGATION AREA BELOW -->
 
@@ -24,7 +30,7 @@
   (<%= genre.album_count %>)
 <% end %>
 
-<!-- List decades from 2010’s to 1960’s -->
+<!-- List decades from current to 1860’s -->
 <!-- Retrieve release count for each decade based on artist start_year -->
 <% @releases.count_by_decade.each do |decade, count| %>
   <br />

@@ -35,7 +35,7 @@
 <% end %>
 
 <!-- List decades from 2010’s to 1960’s -->
-<!-- Retrieve artist count for each decade based on artist start_year -->
+<!-- Retrieve release count for each decade based on artist start_year -->
 <br />
 <% @releases.count_by_decade.each do |decade, count| %>
   <%= "#{decade}'s (#{count})" %>
