@@ -14,7 +14,7 @@
 <p><b>Bio:</b> <%= @artist.bio %> </p>
 
 <p><b>Albums:</b></p>
-  <% @albums.each do | x | %>
+  <% @albums.show_artist_albums.each do | x | %>
     <p><img src="<%= x.album_image.cover_image %>" style="width:200px;height:200px"></p>
     <p><b><%= x.title %></b></p>
     <br>
