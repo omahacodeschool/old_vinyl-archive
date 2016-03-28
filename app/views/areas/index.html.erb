@@ -1,0 +1,10 @@
+<!-- This page should list all areas by name with a list of artists associated with that area -->
+<% @areas.each do |area| %>
+  <br />
+  <%= area.name %>
+  <br />
+  <% area.with_these_artists.each do |area_artist| %>
+    <%= area_artist.name %>
+    <br />
+  <% end %>
+<% end %>

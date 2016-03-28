@@ -5,4 +5,9 @@ class Area < ActiveRecord::Base
   def artist_count
     Artist.where({"area_id" => self.id}).count
   end
+
+  # Return artists associated with a given area
+  def with_these_artists
+    Artist.where({"area_id" => self.id})
+  end
 end
