@@ -1,6 +1,6 @@
 <h1><%= @artist.name %></h1>
 
-<img src="<%= @artist_images.image_1 %>">
+<img src="<%= @artist_images.image_1 %>" style="width:400px;height:300px">
 
 <p><b>Hometown:</b> <%= @areas.name %> </p>
 <p><b>Years Active:</b> <%= @artist.start_year %> - <%= @artist.end_year %> </p>
@@ -13,8 +13,10 @@
 
 <p><b>Bio:</b> <%= @artist.bio %> </p>
 
-<p><b>Albums:</b>
-  <% @artist.show_artist_members.each do | x | %>
-    <p><%= x.first_name %> <%= x.last_name %></p>
-  <% end %>
-</p>
+<p><b>Albums:</b></p>
+  <p><% @artist.show_artist_album_covers.each do | x | %>
+    <img src="<%= x.cover_image %>" style="width:200px;height:200px"></p>
+  <% end %> 
+  <p><% @artist.artist_albums.each do | x | %>
+    <%= x.title %></p>
+  <% end %> 
