@@ -22,15 +22,17 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "home#index"
 
-  get "albums/index" => 'albums#index'
-  get "albums/:id"   => 'albums#show'
+  get "albums/index"  => 'albums#index'
+  get "albums/:id"    => 'albums#show'
 
   get "artists/index" => 'artists#index'
   get "artists/:id"   => 'artists#show'
 
-  get "areas/index" => 'areas#index'
+  get "areas/index"   => 'areas#index'
 
-  get "genres/index" => 'genres#index'
+  get "genres/index"  => 'genres#index'
 
   get "formats/index" => 'formats#index'
+
+  get "decades/index" => 'decades#index'
 end
