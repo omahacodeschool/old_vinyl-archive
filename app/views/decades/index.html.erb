@@ -4,7 +4,9 @@
   <br />
   <%= "#{decade}'s" %>
     <br />
+  <!-- 'info' is a Release object -->
   <% info.each do |info| %>
+  <!-- Calling 'album_info' on 'info' returns an Album object -->
     <% info.album_info.each do |album| %>
     <br />
       <img src="<%= album.album_image.cover_image %>" style="width:100px;height:100px">
