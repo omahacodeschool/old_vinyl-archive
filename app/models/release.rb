@@ -15,6 +15,7 @@ class Release < ActiveRecord::Base
     decade_releases
   end
 
+  # Finds releases associated with a given decade and returns a hash with decade keys and Release Object values
   def self.info_by_decade
     decade = Time.now.year - (Time.now.year % 10)
     decade_releases = {}
@@ -27,6 +28,7 @@ class Release < ActiveRecord::Base
     decade_releases    
   end
 
+  # Returns Album objects associated with a given Release
   def album_info
     Album.where({"id" => self.id})
   end
