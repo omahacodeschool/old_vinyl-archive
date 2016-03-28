@@ -10,16 +10,16 @@
   <%= album.artist.name %>
   <br />
 <% end %>
+
 <!-- Retrieve info for first 3 cities (areas) ordered by most number of artists -->
 <!-- Name -->
 <!-- Count of artists associated with that area -->
-
-
 <% @areas.each do |area| %>
   <br />
   <%= area.name %>
   (<%= area.artist_count %>)
 <% end %>
+
 <!-- Retrieve info for first 3 genres ordered by most number of albums -->
 <!-- Name -->
 <!-- Count of albums associated with that genre -->
@@ -28,9 +28,12 @@
   <%= genre.name %>
   (<%= genre.album_count %>)
 <% end %>
+
 <!-- List decades from 2010’s to 1960’s -->
 <!-- Retrieve artist count for each decade based on artist start_year -->
 
+<!-- Place artist in decade based on their start_year -->
+<%=  %>
 
 <!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
 <!-- Retrieve release count associated with that format type -->
