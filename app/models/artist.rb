@@ -6,4 +6,10 @@ class Artist < ActiveRecord::Base
     x = self.id
     return Member.where({"artist_id" => x})
   end
+
+  def show_artist_albums
+    
+
+  end
+  
 end
