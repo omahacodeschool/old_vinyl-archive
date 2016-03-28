@@ -23,10 +23,12 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   get "albums/index" => 'albums#index'
-  get "albums/:id" => 'albums#show'
+  get "albums/:id"   => 'albums#show'
 
   get "artists/index" => 'artists#index'
-  get "artists/:id" => 'artists#show'
+  get "artists/:id"   => 'artists#show'
 
   get "areas/index" => 'areas#index'
+
+  get "genres/index" => 'genres#index'
 end
