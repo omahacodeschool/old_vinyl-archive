@@ -4,6 +4,7 @@
   <%= genre.name %>
   <br />
   <% genre.with_these_albums.each do |genre_album| %>
+    <img src="<%= genre_album.album_image.cover_image %>" style="width:100px;height:100px">
     <%= genre_album.title %>
     <br />
   <% end %>
