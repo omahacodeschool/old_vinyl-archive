@@ -13,7 +13,8 @@ class Artist < ActiveRecord::Base
       decade -= 10
     end
     decade_artists
-
+  end
+  
   def show_artist_members
     x = self.id
     return Member.where({"artist_id" => x})
