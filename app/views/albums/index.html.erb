@@ -34,15 +34,15 @@
 <!-- List decades from 2010’s to 1960’s -->
 <!-- Retrieve artist count for each decade based on artist start_year -->
 <br />
-<% @artists.count_by_decade.each do |decade, count| %>
+<% @releases.count_by_decade.each do |decade, count| %>
   <%= "#{decade}'s (#{count})" %>
   <br />
 <% end %>
 
 <!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
-<!-- Retrieve release count associated with that format type -->
+<!-- Retrieve album count associated with that format type -->
 <% @formats.each do |format| %>
   <br />
   <%= format.name %>
-  (<%= format.release_count %>)
+  (<%= format.album_count %>)
 <% end %>
