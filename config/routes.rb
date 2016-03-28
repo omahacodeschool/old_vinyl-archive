@@ -31,4 +31,6 @@ Rails.application.routes.draw do
   get "areas/index" => 'areas#index'
 
   get "genres/index" => 'genres#index'
+
+  get "formats/index" => 'formats#index'
 end
