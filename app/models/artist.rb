@@ -15,7 +15,7 @@ class Artist < ActiveRecord::Base
     end
     decade_artists
   end
-  
+
   # Lists all members for a particular band
   def show_artist_members
     x = self.id

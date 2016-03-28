@@ -1,14 +1,13 @@
-<!-- Retrieve album info for first 9 releases ordered by latest addition -->
-<!-- Cover image -->
-<!-- Title -->
-<!-- Artist -->
-<% @albums.each do |album| %>
-  <img src="<%= album.album_image.cover_image %>" style="width:100px;height:100px">
+<!-- Show all genres with the titles of the albums associated with each genre -->
+<% @genres.each do |genre| %>
   <br />
-  <%= album.title %>
+  <%= genre.name %>
   <br />
-  <%= album.artist.name %>
-  <br />
+  <% genre.with_these_albums.each do |genre_album| %>
+    <img src="<%= genre_album.album_image.cover_image %>" style="width:100px;height:100px">
+    <%= genre_album.title %>
+    <br />
+  <% end %>
 <% end %>
 
 <!-- SIDEBAR NAVIGATION AREA BELOW -->
@@ -20,15 +19,6 @@
   <br />
   <%= area.name %>
   (<%= area.album_count %>)
-<% end %>
-
-<!-- Retrieve info for first 3 genres ordered by most number of albums -->
-<!-- Name -->
-<!-- Count of albums associated with that genre -->
-<% @genres.each do |genre| %>
-  <br />
-  <%= genre.name %>
-  (<%= genre.album_count %>)
 <% end %>
 
 <!-- List decades from 2010’s to 1960’s -->
