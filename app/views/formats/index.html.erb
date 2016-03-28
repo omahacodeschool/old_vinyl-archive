@@ -1,14 +1,17 @@
-<!-- Retrieve album info for first 9 releases ordered by latest addition -->
-<!-- Cover image -->
-<!-- Title -->
-<!-- Artist -->
-<% @albums.each do |album| %>
-  <img src="<%= album.album_image.cover_image %>" style="width:100px;height:100px">
+<!-- Show all formats with the titles of the albums associated with each format -->
+<% @formats.each do |format| %>
   <br />
-  <%= album.title %>
+  <%= format.name %>
   <br />
-  <%= album.artist.name %>
-  <br />
+  <% format.with_these_albums.each do |format_album| %>
+    <br />
+    <img src="<%= format_album.album_image.cover_image %>" style="width:100px;height:100px">
+    <br />
+    <%= format_album.title %>
+    <br />
+    <%= format_album.artist.name %>
+    <br />
+  <% end %>
 <% end %>
 
 <!-- SIDEBAR NAVIGATION AREA BELOW -->
