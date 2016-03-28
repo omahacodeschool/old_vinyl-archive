@@ -1,3 +1,28 @@
 <h1><%= @album.title %></h1>
 
-<img src="<%= @album.album_image.cover_image %>">
+<h2>By: <%= @artist.name %></h2>
+
+<img src="<%= @album.album_image.cover_image %>" style="width:300px;height:300px">
+
+<p><b>Tracks:</b> 
+  <% @album.show_album_tracks.each do | x | %>
+    <p><%= x.title %></p>
+  <% end %>
+</p>
+
+<br>
+
+<p><b>Released:</b> <%= @release.release_date %> </p>
+
+<p><b>City:</b> <%= @area.name %> </p>
+
+<p><b>Genre:</b> <%= @genre.name %> </p>
+
+<p><b>Label:</b> <%= @release.label %> </p>
+
+<p><b>Format:</b> <%= @format.name %> </p>
+
+<br>
+
+<p><b>Other info:</b> </p>
+<p><%= @artist.bio %> </p>

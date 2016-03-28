@@ -8,4 +8,14 @@ class Album < ActiveRecord::Base
     AlbumImage.find_by_album_id(self.id)
   end
 
+  def show_album_tracks
+    x = self.id
+    Track.where({"album_id" => x})
+  end
+
+  def show_album_format
+    x = self.id
+    Format.where({"album_id" => x})
+  end
+
 end
