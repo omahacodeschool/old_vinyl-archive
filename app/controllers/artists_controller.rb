@@ -8,8 +8,6 @@ class ArtistsController < ApplicationController
 
   def index
     @artists = Artist.all
-    @artist_images = ArtistImage.all
-    @members = Member.all
-    @areas = Area.all
+    @album_images = AlbumImage.all
   end
 end
