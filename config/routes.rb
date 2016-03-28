@@ -27,4 +27,6 @@ Rails.application.routes.draw do
 
   get "artists/index" => 'artists#index'
   get "artists/:id" => 'artists#show'
+
+  get "areas/index" => 'areas#index'
 end
