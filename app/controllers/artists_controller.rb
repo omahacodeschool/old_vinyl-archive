@@ -4,7 +4,7 @@ class ArtistsController < ApplicationController
     @artist_images = ArtistImage.find_by_id(params[:id])
     @members = Member.all
     @areas = Area.find_by_id(params[:id])
-    @albums = Album.find_by_id(params[:id])
+    @albums = Album.all
   end
 
   def index

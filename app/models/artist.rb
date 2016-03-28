@@ -18,23 +18,26 @@ class Artist < ActiveRecord::Base
   # Lists all members for a particular band
   def show_artist_members
     x = self.id
-    return Member.where({"artist_id" => x})
+    Member.where({"artist_id" => x})
   end
 
-  # Shows album name and cover image for a particular band
-  def artist_albums
+  # Shows album name(s) for a particular band
+  def artist_album_names
     x = self.id
-    return Album.where({"artist_id" => x})
+    Album.where({"artist_id" => x})
   end
 
+  # Shows corresponding album covers
   def show_artist_album_covers
-    y = self.album_id
-    return AlbumImage.where({"album_id" => y})
+    x = Album.where({"artist_id" => self.id})
+    AlbumImage.where({"album_id" => x})
+  end
+
+  # Lists all albums for a particular band
+  def show_artist_albums
+    x = self.id
+    Album.where({"artist_id" => x})
   end
 
 end
-
-  
-
-
 
