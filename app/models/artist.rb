@@ -1,7 +1,8 @@
 class Artist < ActiveRecord::Base
   belongs_to :area
-  has_many :members
-  has_many :albums
+  has_many   :members
+  has_many   :albums
+  has_many   :artist_images
 
   # Lists all members for a particular band
   def show_artist_members
@@ -14,6 +15,5 @@ class Artist < ActiveRecord::Base
     x = self.id
     Album.where({"artist_id" => x})
   end
-
 end
 

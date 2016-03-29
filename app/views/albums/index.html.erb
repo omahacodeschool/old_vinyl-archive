@@ -19,7 +19,7 @@
 <% @areas.each do |area| %>
   <br />
   <%= area.name %>
-  (<%= area.album_count %>)
+  (<%= area.with_these_albums.count %>)
 <% end %>
 
 <!-- Retrieve info for first 3 genres ordered by most number of albums -->
@@ -28,7 +28,7 @@
 <% @genres.each do |genre| %>
   <br />
   <%= genre.name %>
-  (<%= genre.album_count %>)
+  (<%= genre.with_these_albums.count %>)
 <% end %>
 
 <!-- List decades from 2010’s to 1960’s -->
@@ -44,5 +44,5 @@
 <% @formats.each do |format| %>
   <br />
   <%= format.name %>
-  (<%= format.album_count %>)
+  (<%= format.with_these_albums.count %>)
 <% end %>

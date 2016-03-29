@@ -21,14 +21,14 @@
 <% @genres.each do |genre| %>
   <br />
   <%= genre.name %>
-  (<%= genre.album_count %>)
+  (<%= genre.with_these_albums.count %>)
 <% end %>
 
 <!-- List decades from 2010’s to 1960’s -->
 <!-- Retrieve release count for each decade based on artist start_year -->
-<% @releases.count_by_decade.each do |decade, count| %>
+<% @releases.info_by_decade.each do |decade, album| %>
   <br />
-  <%= "#{decade}'s (#{count})" %>
+  <%= "#{decade}'s (#{album.count})" %>
 <% end %>
 
 <!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
@@ -36,5 +36,5 @@
 <% @formats.each do |format| %>
   <br />
   <%= format.name %>
-  (<%= format.album_count %>)
+  (<%= format.with_these_albums.count %>)
 <% end %>
