@@ -33,9 +33,23 @@ class Album < ActiveRecord::Base
     Release.find_by_id(self.id).label
   end
   
-  def show_album_format
-    x = self.id
-    Format.where({"album_id" => x})
-  end
+  # def show_album_format
+  #   x = self.release
+  #   y = Release.find_by_id(x).format_id
+  #   z = Format.find_by_id(y)
+  # end
+
+  # def show_album_format
+  #   format = Release.includes(:formats).find_by_id(params[:id])
+  # end
+
+  # def show_album_format
+  #   Release.find_by_id(self.id).format_id
+  # end
+
+  # def show_album_format
+  #   x = Release.where({"album_id" => self.id})
+  #   Format.where({"id" => x})
+  # end
 
 end
