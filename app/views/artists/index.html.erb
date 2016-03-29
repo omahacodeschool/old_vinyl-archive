@@ -1,6 +1,41 @@
-<!-- Retrieves the name and active years of each Artist -->
 <% @artists.each do |artist| %>
-  <b><%= artist.name %> </b>
-  <p><%= artist.start_year %> - <%= artist.end_year %> </p>
   <br />
+  <h1><%= artist.name %></h1>
+  <br />
+  <% artist.show_artist_albums.each do |album| %>
+    <img src="<%= album.album_image.cover_image %>" style="width:200px;height:200px"></p>
+    <%= album.title %>
+    <br />
+    <%= album.artist.name %>
+    <br>
+    <br>
+    <br>
+  <% end %>
+<% end %>
+
+
+<!-- SIDEBAR NAVIGATION AREA BELOW -->
+
+<!-- Retrieve info for first 3 genres ordered by most number of albums -->
+<!-- Name -->
+<!-- Count of albums associated with that genre -->
+<% @genres.each do |genre| %>
+  <br />
+  <%= genre.name %>
+  (<%= genre.with_these_albums.count %>)
+<% end %>
+
+<!-- List decades from 2010’s to 1960’s -->
+<!-- Retrieve release count for each decade based on artist start_year -->
+<% @releases.info_by_decade.each do |decade, album| %>
+  <br />
+  <%= "#{decade}'s (#{album.count})" %>
+<% end %>
+
+<!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
+<!-- Retrieve album count associated with that format type -->
+<% @formats.each do |format| %>
+  <br />
+  <%= format.name %>
+  (<%= format.with_these_albums.count %>)
 <% end %>

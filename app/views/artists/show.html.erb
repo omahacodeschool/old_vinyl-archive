@@ -3,7 +3,7 @@
 <!-- Shows primary image of the artist -->
 <img src="<%= @artist_images.image_1 %>" style="width:400px;height:300px">
 <!-- Shows name of the artist's hometown -->
-<p><b>Hometown:</b> <%= @areas.name %> </p>
+<p><b>Hometown:</b> <%= @artist.area.name %> </p>
 <!-- Shows the range of the artist's active years -->
 <p><b>Years Active:</b> <%= @artist.start_year %> - <%= @artist.end_year %> </p>
 <!-- Shows the first and last names of the artist's members -->

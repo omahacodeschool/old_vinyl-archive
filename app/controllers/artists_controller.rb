@@ -8,6 +8,11 @@ class ArtistsController < ApplicationController
   end
 
   def index
-    @artists = Artist.all
+    @genres   = Genre.all
+    @artists  = Artist.all
+    @albums   = Album.all
+    @releases = Release.all
+    @areas    = Area.all
+    @formats  = Format.all
   end
 end
