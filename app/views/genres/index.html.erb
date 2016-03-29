@@ -2,11 +2,13 @@
 <% @genres.each do |genre| %>
   <br />
   <%= genre.name %>
-  <br />
   <% genre.with_these_albums.each do |genre_album| %>
+    <br />
     <img src="<%= genre_album.album_image.cover_image %>" style="width:100px;height:100px">
+    <br />
     <%= genre_album.title %>
     <br />
+    <%= genre_album.artist.name %>
   <% end %>
 <% end %>
 
@@ -23,10 +25,9 @@
 
 <!-- List decades from 2010’s to 1960’s -->
 <!-- Retrieve release count for each decade based on artist start_year -->
-<br />
 <% @releases.count_by_decade.each do |decade, count| %>
-  <%= "#{decade}'s (#{count})" %>
   <br />
+  <%= "#{decade}'s (#{count})" %>
 <% end %>
 
 <!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->

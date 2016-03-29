@@ -7,5 +7,5 @@ class Album < ActiveRecord::Base
   def album_image
     AlbumImage.find_by_album_id(self.id)
   end
-
+  
 end
