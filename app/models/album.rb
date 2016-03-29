@@ -53,10 +53,7 @@ class Album < ActiveRecord::Base
   # end
 
   def show_album_format
-    release = Release.where({"album_id" => self.id})
-
-    release.each do |release|
-      release.formats.name
-    end
+    format = Release.find_by_id(self.id).format_id
+    Format.find_by_id(format).name
   end
 end
