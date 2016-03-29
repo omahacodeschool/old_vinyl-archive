@@ -1,6 +1,6 @@
 module ApplicationHelper
   # ????
-  def albums_index_link(album)
+  def albums_index_link
     link_to(Albums, "/albums/index")
   end
 
