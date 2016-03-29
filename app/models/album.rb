@@ -13,10 +13,6 @@ class Album < ActiveRecord::Base
   end
 
   # Retrieve tracks associated with a given album and return hash with track number keys and track title values
-<<<<<<< HEAD
-=======
-  # NOT YET WORKING
->>>>>>> master
   def tracklist
     tracks = Track.where({"album_id" => self.id})
     tracklist = {}
@@ -27,16 +23,6 @@ class Album < ActiveRecord::Base
       track_number += 1
     end
     tracklist
-<<<<<<< HEAD
-=======
-  end
-
-  # Shows all tracks for album
-  def show_album_tracks
-    x = self.id
-    Track.where({"album_id" => x})
->>>>>>> master
-  end
 
   def show_release_date
     Release.find_by_id(self.id).release_date
@@ -45,8 +31,7 @@ class Album < ActiveRecord::Base
   def show_album_label
     Release.find_by_id(self.id).label
   end
-<<<<<<< HEAD
-  
+
   # def show_album_format
   #   x = self.release
   #   y = Release.find_by_id(x).format_id
@@ -66,10 +51,7 @@ class Album < ActiveRecord::Base
   #   Format.where({"id" => x})
   # end
 
-=======
-
   def show_album_format
     Release.find_by_id(self.id).format_id #Need format name to show
   end
->>>>>>> master
 end
