@@ -1,10 +1,12 @@
+<!-- Shows album title -->
 <h1><%= @album.title %></h1>
 <br />
+<!-- Shows album artist's name -->
 <%= @album.artist.name %>
 <br />
 <img src="<%= @album.album_image.cover_image %>" style="width:100px;height:100px">
-
-<% @album.tracks.each do |track| %>
+<!-- Shows the title of each of the album's tracks -->
+<% @album.tracks.each do |number, track| %>
   <br />
-  <%= track.title %>
+  <%= "#{number}. #{track}" %>
 <% end %>
