@@ -8,6 +8,10 @@ class ArtistImagesController < ApplicationController
 
     artist_image = ArtistImage.new
     artist_image.artist_id = @artist.id
+
+    # 1. Save the image somewhere.
+    # 2. Save the path to that image as this artist_image's 'image_1' value.
+
     artist_image.image_1 = params[:image_url]
     artist_image.save
 
