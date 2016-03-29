@@ -1,10 +1,10 @@
-<h1><%= @area.name %></h1>
+<h1><%= areas_show_link(@area) %></h1>
 
 <% @area.with_these_albums.each do |album| %>
   <br />
   <img src="<%= album.album_image.cover_image %>" style="width:100px;height:100px">
   <br />
-  <%= album.title %>
+  <%= albums_show_link(album) %>
   <br />
-  <%= album.artist.name %>
+  <%= artists_show_link(artist.name) %>
 <% end %>
