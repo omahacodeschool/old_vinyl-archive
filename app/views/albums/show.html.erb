@@ -6,7 +6,8 @@
 <br />
 <img src="<%= @album.album_image.cover_image %>" style="width:100px;height:100px">
 <!-- Shows the title of each of the album's tracks -->
-<% @album.tracks.each do |number, track| %>
+
+<% @album.tracklist.each do |number, track| %>
   <br />
   <%= "#{number}. #{track}" %>
 <% end %>

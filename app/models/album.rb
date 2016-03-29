@@ -11,14 +11,14 @@ class Album < ActiveRecord::Base
   end
   # Retrieve tracks associated with a given album and return hash with track number keys and track title values
   # NOT YET WORKING
-  def self.tracks
-    album_tracks = Track.where({"album_id" => self.id})
+  def tracklist
+    tracks = Track.where({"album_id" => self.id})
     tracklist = {}
     track_number = 1
 
-    while track_number <= album_tracks.count
-     tracklist[track_number] = album_tracks.title
-     track_number += 1
+    tracks.each do |track|
+      tracklist[track_number] = track.title
+      track_number += 1
     end
     tracklist
   end
