@@ -1,11 +1,11 @@
 class AlbumsController < ApplicationController
   def show
-    @album = Album.find_by_id(params[:id])
-    @artist = Artist.all
-    @release = Release.all
-    @format = Format.all
-    @area = Area.all
-    @genre = Genre.all
+    @album    = Album.find_by_id(params[:id])
+    @artists  = Artist.all
+    @releases = Release.all
+    @formats  = Format.all
+    @areas    = Area.all
+    @genres   = Genre.all
   end
 
   def index
