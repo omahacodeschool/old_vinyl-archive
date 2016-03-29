@@ -1,7 +1,7 @@
 class Album < ActiveRecord::Base
   belongs_to :genre
   belongs_to :artist
-  belongs_to :release
+  has_many   :releases
   has_many   :album_images
   has_many   :tracks
 
@@ -14,8 +14,8 @@ class Album < ActiveRecord::Base
   def album_image
     AlbumImage.find_by_album_id(self.id)
   end
-  # Retrieve tracks associated with a given album and return hash with track number keys and track title values
-  # NOT YET WORKING
+  
+  # Retrieve tracks associated with a given album and returns a hash with track number keys and track title values
   def tracklist
     tracks = Track.where({"album_id" => self.id})
     tracklist = {}

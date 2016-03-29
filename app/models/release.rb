@@ -12,7 +12,7 @@ class Release < ActiveRecord::Base
 
       decade -= 10
     end
-    decade_releases    
+    decade_releases
   end
 
   # Returns Album objects associated with a given Release
