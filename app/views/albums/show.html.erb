@@ -30,4 +30,18 @@
 <!-- Shows album artist's bio -->
 <p><%= @album.artist.bio %> </p>
 
+<<<<<<< HEAD
+=======
+<br />
+<!-- Shows album artist's name -->
+<%= @album.artist.name %>
+<br />
+<img src="<%= @album.album_image.cover_image %>" style="width:100px;height:100px">
+<!-- Shows the title of each of the album's tracks -->
+
+<% @album.tracklist.each do |number, track| %>
+  <br />
+  <%= "#{number}. #{track}" %>
+<% end %>
+>>>>>>> master
 
