@@ -23,6 +23,7 @@ class Album < ActiveRecord::Base
       track_number += 1
     end
     tracklist
+  end
 
   def show_release_date
     Release.find_by_id(self.id).release_date
