@@ -16,4 +16,3 @@ class Artist < ActiveRecord::Base
     Album.where({"artist_id" => self.id})
   end
 end
-

@@ -6,4 +6,12 @@ class FormatsController < ApplicationController
     @areas    = Area.all
     @artists  = Artist.all
   end
+
+  def show
+    @format   = Format.find_by_id(params[:id])
+    @areas    = Area.all
+    @artists  = Artist.all
+    @genres   = Genre.all
+    @releases = Release.all   
+  end
 end

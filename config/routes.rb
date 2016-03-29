@@ -29,10 +29,14 @@ Rails.application.routes.draw do
   get "artists/:id"   => 'artists#show'
 
   get "areas/index"   => 'areas#index'
+  get "areas/:id"     => 'areas#show'
 
   get "genres/index"  => 'genres#index'
+  get "genres/:id"    => 'genres#show'
 
   get "formats/index" => 'formats#index'
+  get "formats/:id"   => 'formats#show'
 
   get "decades/index" => 'decades#index'
+  get "decades/:id"   => 'decades#show'
 end
