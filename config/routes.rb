@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "home#index"
 
+  get "artist_images/:artist_id/new" => 'artist_images#new'
+
   get "albums/index"  => 'albums#index'
   get "albums/:id"    => 'albums#show'
 
