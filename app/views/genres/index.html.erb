@@ -27,7 +27,7 @@
 <!-- Retrieve release count for each decade based on artist start_year -->
 <% @releases.info_by_decade.each do |decade, album| %>
   <br />
-  <%= "#{decade}'s (#{album.count})" %>
+  <%= "#{decade}s (#{album.count})" %>
 <% end %>
 
 <!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
