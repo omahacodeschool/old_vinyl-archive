@@ -2,6 +2,8 @@ class Album < ActiveRecord::Base
   belongs_to :genre
   belongs_to :artist
   belongs_to :release
+  has_many   :album_images
+  has_many   :tracks
 
   def show_artist_name
     x = Album.find_by_artist_id(self.id)
@@ -12,6 +14,12 @@ class Album < ActiveRecord::Base
   def album_image
     AlbumImage.find_by_album_id(self.id)
   end
+  # Retrieve tracks associated with a given album and return hash with track number keys and track title values
+  # NOT YET WORKING
+  def self.tracks
+    album_tracks = Track.where({"album_id" => self.id})
+    tracklist = {}
+    track_number = 1
 
   # Shows all tracks for album
   def show_album_tracks
@@ -37,6 +45,13 @@ class Album < ActiveRecord::Base
 
   def show_album_format
     Release.find_by_id(self.id).format_id #Need format name to show
+  end
+
+    while track_number <= album_tracks.count
+     tracklist[track_number] = album_tracks.title
+     track_number += 1
+    end
+    tracklist
   end
 
 end

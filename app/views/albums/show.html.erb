@@ -1,3 +1,4 @@
+<!-- Shows album title -->
 <h1><%= @album.title %></h1>
 
 <h2>By: <%= @album.show_artist_name %></h2>
@@ -21,3 +22,22 @@
 <p><b>Label:</b> <%= @album.show_album_label %> </p>
 
 <p><b>Format:</b> <%= @album.show_album_format %> </p>
+
+<p><b>Format:</b> <%= @format.name %> </p>
+
+<br>
+
+<p><b>Other info:</b> </p>
+<p><%= @artist.bio %> </p>
+
+<br />
+<!-- Shows album artist's name -->
+<%= @album.artist.name %>
+<br />
+<img src="<%= @album.album_image.cover_image %>" style="width:100px;height:100px">
+<!-- Shows the title of each of the album's tracks -->
+<% @album.tracks.each do |number, track| %>
+  <br />
+  <%= "#{number}. #{track}" %>
+<% end %>
+
