@@ -5,7 +5,7 @@ class Album < ActiveRecord::Base
   has_many   :album_images
   has_many   :tracks
   has_one    :area, through: :artist
-  has_many   :formats, through: :releases
+  has_many   :formats, through: :release
 
   # Return the AlbumImage object for this album.
   def album_image
@@ -53,6 +53,10 @@ class Album < ActiveRecord::Base
   # end
 
   def show_album_format
-    Release.find_by_id(self.id).format_id #Need format name to show
+    release = Release.where({"album_id" => self.id})
+
+    release.each do |release|
+      release.formats.name
+    end
   end
 end
