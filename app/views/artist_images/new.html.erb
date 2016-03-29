@@ -1,1 +1,7 @@
 <h1>New Artist Image for <%= @artist.name %></h1>
+
+<%= form_tag "/save_artist_image/#{@artist.id}" do %>
+  <input type="text" name="image_url">
+
+  <input type="submit">
+<% end %>
