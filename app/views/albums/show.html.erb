@@ -1,44 +1,31 @@
 <!-- Shows album title -->
 <h1><%= @album.title %></h1>
 
-<h2>By: <%= @album.show_artist_name %></h2>
+<!-- Shows album artist's name -->
+<h2>By: <%= @album.artist.name %> </h2>
 
 <img src="<%= @album.album_image.cover_image %>" style="width:300px;height:300px">
 
-<p><b>Tracks:</b> 
-  <% @album.show_album_tracks.each do | x | %>
-    <p><%= x.title %></p>
-  <% end %>
-</p>
-
-<br>
-
-<p><b>Released:</b> <%= @album.show_release_date %> </p>
-
-<p><b>City:</b>                                   </p>
-
-<p><b>Genre:</b> <%= @album.show_album_genre %> </p>
-
-<p><b>Label:</b> <%= @album.show_album_label %> </p>
-
-<p><b>Format:</b> <%= @album.show_album_format %> </p>
-
-<p><b>Format:</b> <%= @format.name %> </p>
-
-<br>
-
-<p><b>Other info:</b> </p>
-<p><%= @artist.bio %> </p>
-
-<br />
-<!-- Shows album artist's name -->
-<%= @album.artist.name %>
-<br />
-<img src="<%= @album.album_image.cover_image %>" style="width:100px;height:100px">
 <!-- Shows the title of each of the album's tracks -->
-
 <% @album.tracklist.each do |number, track| %>
   <br />
   <%= "#{number}. #{track}" %>
 <% end %>
 
+<br>
+
+<!-- Shows album's release date -->
+<p><b>Released:</b> <%= @album.show_release_date %> </p>
+<!-- Shows album artist's hometown -->
+<p><b>City:</b> <%= @album.area.name %> </p>
+<!-- Shows album's genre -->
+<p><b>Genre:</b> <%= @album.genre.name %> </p>
+<!-- Shows album's record label -->
+<p><b>Label:</b> <%= @album.show_album_label %> </p> 
+<!-- Shows album's format -->
+<p><b>Format:</b> <%= @album.show_album_format %></p>
+<br>
+
+<p><b>Other info:</b> </p>
+<!-- Shows album artist's bio -->
+<p><%= @album.artist.bio %> </p>

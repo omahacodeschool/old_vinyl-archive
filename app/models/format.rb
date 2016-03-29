@@ -1,6 +1,6 @@
 class Format < ActiveRecord::Base
   belongs_to :release
-  has_many   :albums
+  has_many   :albums, through: :release
 
   # Return albums associated with the Format of a given Release
   def with_these_albums
