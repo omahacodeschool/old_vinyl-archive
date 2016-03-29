@@ -6,14 +6,12 @@ class Artist < ActiveRecord::Base
 
   # Lists all members for a particular band
   def show_artist_members
-    x = self.id
-    Member.where({"artist_id" => x})
+    Member.where({"artist_id" => self.id})
   end
 
   # Shows all albums for a particular band
   def show_artist_albums
-    x = self.id
-    Album.where({"artist_id" => x})
+    Album.where({"artist_id" => self.id})
   end
 end
 
