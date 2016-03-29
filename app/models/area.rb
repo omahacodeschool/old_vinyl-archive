@@ -1,5 +1,5 @@
 class Area < ActiveRecord::Base
-  belongs_to :artist
+  has_many :artists
 
   # Return albums associated with a given area
   def with_these_albums
