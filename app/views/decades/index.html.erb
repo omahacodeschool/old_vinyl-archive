@@ -1,20 +1,18 @@
 <!-- List decades from current to 1860’s -->
 <!-- Retrieve release count for each decade based on artist start_year -->
-<% @releases.info_by_decade.each do |decade, info| %>
+<% @releases.info_by_decade.each do |decade, decades_releases| %>
   <br />
   <%= "#{decade}'s" %>
     <br />
-  <!-- 'info' is a Release object -->
-  <% info.each do |info| %>
-  <!-- Calling 'album_info' on 'info' returns an Album object -->
-    <% info.album_info.each do |album| %>
+  <!-- 'decades_releases' is a Release collection -->
+  <% decades_releases.each do |release| %>
+  <!-- Calling 'album_info' on 'release' returns the Album object -->
     <br />
-      <img src="<%= album.album_image.cover_image %>" style="width:100px;height:100px">
-      <br />
-      <%= album.title %>
-      <br />
-      <%= album.artist.name %>
-    <% end %>
+    <img src="<%= release.album_info.album_image.cover_image %>" style="width:100px;height:100px">
+    <br />
+    <%= release.album_info.title %>
+    <br />
+    <%= release.album_info.artist.name %>
   <% end %>
 <% end %>
 
