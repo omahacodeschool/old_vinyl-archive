@@ -18,6 +18,6 @@
 <p><b>Albums:</b></p>
   <% @artist.show_artist_albums.each do |album| %>
     <p><img src="<%= album.album_image.cover_image %>" style="width:200px;height:200px"></p>
-    <p><b><%= album.title %></b></p>
+    <p><b> <%= album_link(album) %> </b></p>
     <br>
   <% end %>
