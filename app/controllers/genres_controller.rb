@@ -10,6 +10,7 @@ class GenresController < ApplicationController
 
   def show
     @genre    = Genre.find_by_id(params[:id])
+    @genres   = Genre.all
     @areas    = Area.all
     @artists  = Artist.all
     @formats  = Format.all

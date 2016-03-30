@@ -3,8 +3,11 @@ class ArtistsController < ApplicationController
     @artist        = Artist.find_by_id(params[:id])
     @artist_images = ArtistImage.find_by_artist_id(params[:id])
     @members       = Member.all
-    @areas         = Area.find_by_id(params[:id])
+    @areas         = Area.all
     @albums        = Album.all
+    @genres        = Genre.all
+    @releases      = Release.all
+    @formats       = Format.all
   end
 
   def index

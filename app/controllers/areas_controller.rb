@@ -9,6 +9,7 @@ class AreasController < ApplicationController
 
   def show
     @area     = Area.find_by_id(params[:id])
+    @areas    = Area.all
     @artists  = Artist.all
     @genres   = Genre.all
     @formats  = Format.all
