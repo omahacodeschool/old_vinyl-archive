@@ -1,9 +1,9 @@
 <!-- Shows artist name -->
-<h1><%= @artist.name %></h1>
+<h1><%= artists_show_link(@artist) %></h1>
 <!-- Shows primary image of the artist -->
 <%= artists_show_image_link(@artist) %>
 <!-- Shows name of the artist's hometown -->
-<p><b>Hometown:</b> <%= @artist.area.name %> </p>
+<p><b>Hometown:</b> <%= areas_show_link(@artist.area) %> </p>
 <!-- Shows the range of the artist's active years -->
 <p><b>Years Active:</b> <%= @artist.start_year %> - <%= @artist.end_year %> </p>
 <!-- Shows the first and last names of the artist's members -->
