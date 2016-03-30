@@ -42,5 +42,5 @@ Rails.application.routes.draw do
   get "formats/:id"   => 'formats#show'
 
   get "decades/index" => 'decades#index'
-  get "decades/:id"   => 'decades#show'
+  get "decades/"   => 'decades#show'
 end
