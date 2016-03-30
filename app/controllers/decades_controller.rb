@@ -8,6 +8,7 @@ class DecadesController < ApplicationController
   end
 
   def show
+    @albums   = Album.all
     @genres   = Genre.all
     @areas    = Area.all
     @artists  = Artist.all

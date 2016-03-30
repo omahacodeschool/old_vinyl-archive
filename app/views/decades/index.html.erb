@@ -9,11 +9,11 @@
   <!-- Calling 'album_info' on 'release' returns the Album object -->
     <br />
       <!-- CHECK THIS LATER -->
-    <%= albums_show_image_link(album) %>
+    <%= albums_show_image_link(release.album) %>
     <br />
-    <%= albums_show_link(album) %>
+    <%= albums_show_link(release.album) %>
     <br />
-    <%= artists_show_link(album.artist) %>
+    <%= artists_show_link(release.album.artist) %>
   <% end %>
 <% end %>
 
