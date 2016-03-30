@@ -1,10 +1,10 @@
-<h1><%= @format.name %></h1>
+<h1><%= formats_show_link(@format) %></h1>
 
 <% @format.with_these_albums.each do |album| %>
   <br />
-  <img src="<%= album.album_image.cover_image %>" style="width:100px;height:100px">
+  <%= albums_show_image_link(album) %>
   <br />
-  <%= album.title %>
+  <%= albums_show_link(album) %>
   <br />
-  <%= album.artist.name %>
+  <%= artists_show_link(album.artist) %>
 <% end %>

@@ -25,35 +25,20 @@ class Album < ActiveRecord::Base
     tracklist
   end
 
+  # Returns the release date for a given album from the associated releases table
   def show_release_date
     Release.find_by_id(self.id).release_date
   end
 
+  # Returns the label for a given album from the associated releases table
   def show_album_label
     Release.find_by_id(self.id).label
   end
 
-  # def show_album_format
-  #   x = self.release
-  #   y = Release.find_by_id(x).format_id
-  #   z = Format.find_by_id(y)
-  # end
-
-  # def show_album_format
-  #   format = Release.includes(:formats).find_by_id(params[:id])
-  # end
-
-  # def show_album_format
-  #   Release.find_by_id(self.id).format_id
-  # end
-
-  # def show_album_format
-  #   x = Release.where({"album_id" => self.id})
-  #   Format.where({"id" => x})
-  # end
-
+  # Retrieves the format_id for a given album from the associated releases table, then returns the format for that album
+  # Refactored by removing the '.name' call on at the end of the last line to accommodate the 'formats_show_link' method
   def show_album_format
     format = Release.find_by_id(self.id).format_id
-    Format.find_by_id(format).name
+    Format.find_by_id(format)
   end
 end

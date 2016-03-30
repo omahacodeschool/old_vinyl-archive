@@ -4,7 +4,7 @@ class Release < ActiveRecord::Base
 
   # Finds releases associated with a given decade and returns a hash with decade keys and Release Object values
   def self.info_by_decade
-    decade = Time.now.year - (Time.now.year % 10)
+    decade = Time.current.year - (Time.current.year % 10)
     decade_releases = {}
 
     while decade >= 1860 do
