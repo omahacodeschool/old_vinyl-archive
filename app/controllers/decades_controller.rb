@@ -8,13 +8,13 @@ class DecadesController < ApplicationController
   end
 
   def show
-    @decade   = params[:year]
-    @decade_releases = (Release.info_by_decade)[params[:year].to_i]
-    @albums   = Album.all
-    @genres   = Genre.all
-    @areas    = Area.all
-    @artists  = Artist.all
-    @formats  = Format.all
-    @releases = Release.all
+    @decade          = (params[:year].to_i - (params[:year].to_i % 10))
+    @decade_releases = (Release.info_by_decade)[@decade]
+    @albums          = Album.all
+    @genres          = Genre.all
+    @areas           = Area.all
+    @artists         = Artist.all
+    @formats         = Format.all
+    @releases        = Release.all
   end
 end
