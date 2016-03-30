@@ -36,13 +36,29 @@ if true
     { name: 'Pop' }
     { name: 'Rap/Hip Hop' }
     { name: 'Soul/R&B' }
+    { name: 'Garage' }
+    { name: 'Indie' }
     { name: 'Punk' }
-    { name: 'Ska' }
-    { name: 'Folk' }
+    { name: 'Hardcore' } 
     { name: 'Metal' }
+    { name: 'Noise' } 
+    { name: 'Ska' }
+    { name: 'Reggae' }
+    { name: 'Folk' }
     { name: 'Bluegrass' }
     { name: 'Country' }
+    { name: 'Americana' }
+    { name: 'Rockabilly' }
     { name: 'Electronic' }
+    { name: 'Jazz' }
+    { name: 'Swing' }
+    { name: 'Blues' }
+    { name: 'Classical' }
+    { name: 'New Age' }
+    { name: 'Instrumental' }
+    { name: 'Latin' }
+    { name: 'World' }
+    { name: 'Christian' }
     ])
 
   instruments = Instrument.create([
@@ -54,8 +70,12 @@ if true
     { name: 'Violin' }
     { name: 'Banjo' }
     { name: 'Trumpet' }
+    { name: 'Trombone' }
     { name: 'Sax' }
-    { name: 'Multi-instrumentalist' }
+    { name: 'Multi-Instrumentalist' }
+    { name: 'Percussion' 
     { name: 'Other' }
     ])
 end
+
+

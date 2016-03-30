@@ -1,12 +1,12 @@
 <% @artists.each do |artist| %>
   <br />
-  <h1><%= artist.name %></h1>
+  <h1><%= artist_link(artist) %></h1>
   <br />
   <% artist.show_artist_albums.each do |album| %>
     <%= albums_show_image_link(album) %>
-    <%= album.title %>
+    <%= albums_show_link(album) %>
     <br />
-    <%= album.artist.name %>
+    <%= artist_link(artist) %>
     <br>
     <br>
     <br>

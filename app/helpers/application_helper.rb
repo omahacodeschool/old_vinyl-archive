@@ -51,5 +51,5 @@ module ApplicationHelper
   def formats_show_link(format)
     link_to(format.name, "/formats/#{format.id}")
   end
-  
+
 end

@@ -17,6 +17,6 @@ class Release < ActiveRecord::Base
 
   # Returns Album objects associated with a given Release
   def album_info
-    Album.where({"id" => self.id})
+    Album.find_by_id(self.album_id)
   end
 end
