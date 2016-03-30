@@ -1,15 +1,15 @@
 <% @artists.each do |artist| %>
   <br />
-  <h1><%= artist_link(artist) %></h1>
+  <h1><%= artists_show_link(artist) %></h1>
   <br />
   <% artist.show_artist_albums.each do |album| %>
     <%= albums_show_image_link(album) %>
+    <br />
     <%= albums_show_link(album) %>
     <br />
-    <%= artist_link(artist) %>
-    <br>
-    <br>
-    <br>
+    <%= artists_show_link(artist) %>
+    <br />
+    <br />
   <% end %>
 <% end %>
 
