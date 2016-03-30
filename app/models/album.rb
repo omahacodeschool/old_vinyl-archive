@@ -8,7 +8,7 @@ class Album < ActiveRecord::Base
   has_many   :formats, through: :release
 
   # Return the AlbumImage object for this album.
-  def album_image
+  def album_images
     AlbumImage.find_by_album_id(self.id)
   end
 

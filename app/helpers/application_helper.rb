@@ -9,7 +9,7 @@ module ApplicationHelper
   end
   
   def albums_show_image_link(album)
-    link_to(image_tag(album.album_image.cover_image, size:"100x100"), "/albums/#{album.id}")
+    link_to(image_tag(album.album_images.cover_image, size:"100x100"), "/albums/#{album.id}")
   end
 
   def artists_index_link
@@ -21,7 +21,7 @@ module ApplicationHelper
   end
   # ???? I think it's working, but it's hard to tell since the artist images link to the their own pages, that the link is on...
   def artists_show_image_link(artist)
-    link_to(image_tag(@artist_images.image_1, size:"100x100"), "/artists/#{artist.id}")
+    link_to(image_tag(artist.artist_images.image_2, size:"100x100"), "/artists/#{artist.id}")
   end
 
   def areas_index_link
