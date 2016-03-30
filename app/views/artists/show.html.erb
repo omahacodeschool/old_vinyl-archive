@@ -1,9 +1,11 @@
-<!-- Shows artist name -->
-<h1><%= @artist.name %></h1>
-<!-- Shows primary image of the artist -->
 <img src="<%= @artist_images.image_1 %>" style="width:400px;height:300px">
+
+<!-- Shows artist name -->
+<h1><%= artists_show_link(@artist) %></h1>
+<!-- Shows primary image of the artist -->
+<%= artists_show_image_link(@artist) %>
 <!-- Shows name of the artist's hometown -->
-<p><b>Hometown:</b> <%= @areas.name %> </p>
+<p><b>Hometown:</b> <%= areas_show_link(@artist.area) %> </p>
 <!-- Shows the range of the artist's active years -->
 <p><b>Years Active:</b> <%= @artist.start_year %> - <%= @artist.end_year %> </p>
 <!-- Shows the first and last names of the artist's members -->
@@ -17,7 +19,7 @@
 <!-- Shows each of the artist's albums with cover image and title -->
 <p><b>Albums:</b></p>
   <% @artist.show_artist_albums.each do |album| %>
-    <p><img src="<%= x.album_image.cover_image %>" style="width:200px;height:200px"></p>
-    <p><b><%= album.title %></b></p>
+    <%= albums_show_image_link(album) %>
+    <p><b> <%= albums_show_link(album) %> </b></p>
     <br>
   <% end %>

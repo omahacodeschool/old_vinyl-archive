@@ -3,11 +3,11 @@
 <!-- Title -->
 <!-- Artist -->
 <% @albums.each do |album| %>
-  <img src="<%= album.album_image.cover_image %>" style="width:100px;height:100px">
+  <%= albums_show_image_link(album) %>
   <br />
-  <%= album.title %>
+  <%= albums_show_link(album) %>
   <br />
-  <%= album.artist.name %>
+  <%= artists_show_link(album.artist) %>
   <br />
 <% end %>
 
@@ -16,24 +16,26 @@
 <!-- Retrieve info for first 3 cities (areas) ordered by most number of artists -->
 <!-- Name -->
 <!-- Count of albums associated with that area -->
+<h3><%= areas_index_link %></h3>
 <% @areas.each do |area| %>
-  <br />
   <%= area.name %>
   (<%= area.with_these_albums.count %>)
+  <br />
 <% end %>
 
 <!-- Retrieve info for first 3 genres ordered by most number of albums -->
 <!-- Name -->
 <!-- Count of albums associated with that genre -->
+<h3><%= genres_index_link %></h3>
 <% @genres.each do |genre| %>
-  <br />
   <%= genre.name %>
   (<%= genre.with_these_albums.count %>)
+  <br />
 <% end %>
 
 <!-- List decades from 2010’s to 1960’s -->
 <!-- Retrieve release count for each decade based on artist start_year -->
-<br />
+<h3><%= decades_index_link %></h3>
 <% @releases.info_by_decade.each do |decade, album| %>
   <%= "#{decade}'s (#{album.count})" %>
   <br />
@@ -41,8 +43,9 @@
 
 <!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
 <!-- Retrieve album count associated with that format type -->
+<h3><%= formats_index_link %></h3>
 <% @formats.each do |format| %>
-  <br />
   <%= format.name %>
   (<%= format.with_these_albums.count %>)
+  <br />
 <% end %>

@@ -1,10 +1,10 @@
 <!-- Shows album title -->
-<h1><%= @album.title %></h1>
+<h1><%= albums_show_link(@album) %></h1>
 
 <!-- Shows album artist's name -->
-<h2>By: <%= @album.artist.name %> </h2>
+<h2>By: <%= artists_show_link(@album.artist) %> </h2>
 
-<img src="<%= @album.album_image.cover_image %>" style="width:300px;height:300px">
+<%= albums_show_image_link(@album) %>
 
 <!-- Shows the title of each of the album's tracks -->
 <% @album.tracklist.each do |number, track| %>
@@ -17,13 +17,13 @@
 <!-- Shows album's release date -->
 <p><b>Released:</b> <%= @album.show_release_date %> </p>
 <!-- Shows album artist's hometown -->
-<p><b>City:</b> <%= @album.area.name %> </p>
+<p><b>City:</b> <%= areas_show_link(@album.area) %> </p>
 <!-- Shows album's genre -->
-<p><b>Genre:</b> <%= @album.genre.name %> </p>
+<p><b>Genre:</b> <%= genres_show_link(@album.genre) %> </p>
 <!-- Shows album's record label -->
 <p><b>Label:</b> <%= @album.show_album_label %> </p> 
 <!-- Shows album's format -->
-<p><b>Format:</b> <%= @album.show_album_format %></p>
+<p><b>Format:</b> <%= formats_show_link(@album.show_album_format) %></p>
 <br>
 
 <p><b>Other info:</b> </p>

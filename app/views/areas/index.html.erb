@@ -1,14 +1,14 @@
 <!-- Show all areas by name with a list of albums associated with that area -->
 <% @areas.each do |area| %>
   <br />
-  <%= area.name %>
+  <%= areas_show_link(area) %>
   <br />
   <% area.with_these_albums.each do |area_album| %>
-    <img src="<%= area_album.album_image.cover_image %>" style="width:100px;height:100px">
+    <%= albums_show_image_link(area_album) %>
     <br />
-    <%= area_album.title %>
+    <%= albums_show_link(area_album) %>
     <br />
-    <%= area_album.artist.name %>
+    <%= artists_show_link(area_album.artist) %>
     <br />
   <% end %>
 <% end %>
@@ -20,7 +20,7 @@
 <!-- Count of albums associated with that genre -->
 <% @genres.each do |genre| %>
   <br />
-  <%= genre.name %>
+  <%= genres_show_link(genre) %>
   (<%= genre.with_these_albums.count %>)
 <% end %>
 
@@ -35,6 +35,6 @@
 <!-- Retrieve album count associated with that format type -->
 <% @formats.each do |format| %>
   <br />
-  <%= format.name %>
+  <%= formats_show_link(format) %>
   (<%= format.with_these_albums.count %>)
 <% end %>

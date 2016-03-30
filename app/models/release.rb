@@ -8,7 +8,7 @@ class Release < ActiveRecord::Base
   end
 
   def self.info_by_decade
-    decade = Time.now.year - (Time.now.year % 10)
+    decade = Time.current.year - (Time.current.year % 10)
     decade_releases = {}
 
     while decade >= 1860 do
@@ -21,6 +21,6 @@ class Release < ActiveRecord::Base
 
   # Returns Album objects associated with a given Release
   def album_info
-    Album.where({"id" => self.id})
+    Album.find_by_id(self.album_id)
   end
 end

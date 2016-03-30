@@ -1,14 +1,14 @@
 <!-- Show all genres with the titles of the albums associated with each genre -->
 <% @genres.each do |genre| %>
   <br />
-  <%= genre.name %>
+  <%= genres_show_link(genre) %>
   <% genre.with_these_albums.each do |genre_album| %>
     <br />
-    <img src="<%= genre_album.album_image.cover_image %>" style="width:100px;height:100px">
+    <%= albums_show_image_link(genre_album) %>
     <br />
-    <%= genre_album.title %>
+    <%= albums_show_link(genre_album) %>
     <br />
-    <%= genre_album.artist.name %>
+    <%= artists_show_link(genre_album.artist) %>
   <% end %>
 <% end %>
 
