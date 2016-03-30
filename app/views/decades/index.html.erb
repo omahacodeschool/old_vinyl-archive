@@ -1,9 +1,9 @@
 <!-- List decades from current to 1860’s -->
 <!-- Retrieve release count for each decade based on artist start_year -->
+<h1>Decades</h1>
+
 <% @releases.info_by_decade.each do |decade, decades_releases| %>
-  <br />
-  <%= decades_show_link(decade) %>
-    <br />
+  <h3><%= decades_show_link(decade) %>s</h3>
   <!-- 'decades_releases' is a Release collection -->
   <% decades_releases.each do |release| %>
   <!-- Calling 'album_info' on 'release' returns the Album object -->
