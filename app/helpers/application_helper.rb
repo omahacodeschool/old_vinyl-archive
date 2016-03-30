@@ -36,6 +36,10 @@ module ApplicationHelper
     link_to("Decades", "/decades/index")
   end
 
+  def decades_show_link(decade)
+    link_to(decade.to_s, "/decades/#{decade}")
+  end
+
   def genres_index_link
     link_to("Genres", "/genres/index")
   end

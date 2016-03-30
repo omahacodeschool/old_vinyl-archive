@@ -2,7 +2,7 @@
 <!-- Retrieve release count for each decade based on artist start_year -->
 <% @releases.info_by_decade.each do |decade, decades_releases| %>
   <br />
-  <%= "#{decade}'s" %>
+  <%= decades_show_link(decade) %>
     <br />
   <!-- 'decades_releases' is a Release collection -->
   <% decades_releases.each do |release| %>

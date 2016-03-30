@@ -1,2 +1,7 @@
+<%= @decade %>
 
+<% @decade_releases.each do |release| %>
+  <%= release.album.title %>
+  <br />
+<% end %>
 
