@@ -5,6 +5,7 @@ class DecadesController < ApplicationController
     @artists  = Artist.all
     @genres   = Genre.all
     @formats  = Format.all
+    @areas    = Area.all
   end
 
   def show

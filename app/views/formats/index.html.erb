@@ -14,38 +14,3 @@
   <% end %>
 <% end %>
 
-<!-- SIDEBAR NAVIGATION AREA BELOW -->
-
-<!-- Retrieve info for first 3 cities (areas) ordered by most number of artists -->
-<!-- Name -->
-<!-- Count of albums associated with that area -->
-<% @areas.each do |area| %>
-  <br />
-  <%= area.name %>
-  (<%= area.with_these_albums.count %>)
-<% end %>
-
-<!-- Retrieve info for first 3 genres ordered by most number of albums -->
-<!-- Name -->
-<!-- Count of albums associated with that genre -->
-<% @genres.each do |genre| %>
-  <br />
-  <%= genre.name %>
-  (<%= genre.with_these_albums.count %>)
-<% end %>
-
-<!-- List decades from 2010’s to 1960’s -->
-<!-- Retrieve release count for each decade based on artist start_year -->
-<br />
-<% @releases.by_decade.each do |decade, album| %>
-  <%= "#{decade}'s (#{album.count})" %>
-  <br />
-<% end %>
-
-<!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
-<!-- Retrieve album count associated with that format type -->
-<% @formats.each do |format| %>
-  <br />
-  <%= format.name %>
-  (<%= format.with_these_albums.count %>)
-<% end %>
