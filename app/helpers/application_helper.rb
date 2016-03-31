@@ -19,7 +19,7 @@ module ApplicationHelper
   def artists_show_link(artist)
     link_to(artist.name, "/artists/#{artist.id}")
   end
-  # ???? I think it's working, but it's hard to tell since the artist images link to the their own pages, that the link is on...
+  
   def artists_show_image_link(artist)
     link_to(image_tag(artist.artist_images.image_2, size:"100x100"), "/artists/#{artist.id}")
   end
