@@ -1,13 +1,17 @@
-<!-- Retrieve album info for first 9 releases ordered by latest addition -->
-<!-- Cover image -->
-<!-- Title -->
-<!-- Artist -->
-<% @albums.each do |album| %>
-  <%= albums_show_image_link(album) %>
-  <br />
-  <%= albums_show_link(album) %>
-  <br />
-  <%= artists_show_link(album.artist) %>
-  <br />
-<% end %>
-
+<div class="list">
+  <div class="row">
+    <!-- Retrieve album info for first 9 releases ordered by latest addition -->
+    <!-- Cover image -->
+    <!-- Title -->
+    <!-- Artist -->
+    <% @albums.each do |album| %>
+      <div class="col-4">
+        <div class="album">
+          <%= albums_show_image_link(album) %>
+          <div><%= albums_show_link(album) %></div>
+          <div><%= artists_show_link(album.artist) %></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
