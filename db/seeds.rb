@@ -159,7 +159,7 @@ if true
       bio: 'Drugs and stuff',
       area_id: 2,
       start_year: 1961,
-      end_year:  },
+      end_year: null },
     { name: 'The Kinks',
       bio: 'Fights and stuff',
       area_id: 2,
@@ -174,7 +174,7 @@ if true
       bio: 'Being fast and stuff',
       area_id: 4,
       start_year: 1995,
-      end_year:  },
+      end_year: null },
     { name: 'The Blood Brothers',
       bio: 'Being loud and stuff',
       area_id: 5,
@@ -189,7 +189,7 @@ if true
       bio: 'Post-hardcore and stuff',
       area_id: 7,
       start_year: 1994,
-      end_year:  },
+      end_year: null },
     { name: 'Dead Kennedys',
       bio: 'Controversy and stuff',
       area_id: 8,
@@ -204,7 +204,7 @@ if true
       bio: 'Punk and Folk and stuff',
       area_id: 10,
       start_year: 2006,
-      end_year:  }
+      end_year: null }
     ])
     
 
