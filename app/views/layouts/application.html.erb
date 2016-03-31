@@ -25,21 +25,7 @@
 
   <div class="container">
     <div class="controls">
-      <div class="search_bar">
-        <input type="text">
-      </div>
-
-      <div class="sort_by">
-        <label>Sort By</label>
-        <select>
-          <option>Choose One</option>
-        </select>
-      </div>
-
-      <div class="view_toggles">
-        <a href="#" class="large_pictures">Large Pictures</a>
-        <a href="#" class="small_pictures">Small Pictures</a>
-      </div>
+      <%= content_for :controls %>
     </div><!-- /controls -->
 
     <div class="main">
