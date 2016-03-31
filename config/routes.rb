@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   post "save_artist_image/:artist_id" => 'artist_images#create'
-  get "artist_images/:artist_id/new" => 'artist_images#new'
+  get "artist_images/:artist_id/new"  => 'artist_images#new'
 
   get "albums/user_addition" => 'albums#user_addition'
   get "albums/index"  => 'albums#index'
@@ -42,5 +42,5 @@ Rails.application.routes.draw do
   get "formats/:id"   => 'formats#show'
 
   get "decades/index" => 'decades#index'
-  get "decades/:id"   => 'decades#show'
+  get "decades/:year" => 'decades#show'
 end

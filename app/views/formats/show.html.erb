@@ -1,5 +1,5 @@
 <h1><%= formats_show_link(@format) %></h1>
-
+<!-- Cycle through each album associated with a given format -->
 <% @format.with_these_albums.each do |album| %>
   <br />
   <%= albums_show_image_link(album) %>

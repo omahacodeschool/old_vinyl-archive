@@ -6,16 +6,17 @@ class Artist < ActiveRecord::Base
   has_many   :artist_images
   has_many   :genres, through: :albums
 
+  # Returns artist_images collection got a particular artist
   def artist_images
     ArtistImage.find_by_artist_id(self.id)
   end
 
-  # Lists all members for a particular band
+  # Returns all members for a particular band
   def show_artist_members
     Member.where({"artist_id" => self.id})
   end
 
-  # Shows all albums for a particular band
+  # Returns all albums for a particular band
   def show_artist_albums
     Album.where({"artist_id" => self.id})
   end

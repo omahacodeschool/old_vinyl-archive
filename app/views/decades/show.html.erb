@@ -1,0 +1,10 @@
+<h1><%= @decade %>s</h1>
+<!-- Cycles through each release associated with a given decade -->
+<% @decade_releases.each do |release| %>
+  <br />
+  <%= albums_show_image_link(release.album) %>
+  <br />
+  <%= albums_show_link(release.album) %>
+  <br />
+  <%= artists_show_link(release.album.artist) %>
+<% end %>

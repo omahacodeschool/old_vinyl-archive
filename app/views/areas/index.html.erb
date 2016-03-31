@@ -1,8 +1,7 @@
 <!-- Show all areas by name with a list of albums associated with that area -->
 <% @areas.each do |area| %>
   <br />
-  <%= areas_show_link(area) %>
-  <br />
+  <h3><%= areas_show_link(area) %></h3>
   <% area.with_these_albums.each do |area_album| %>
     <%= albums_show_image_link(area_album) %>
     <br />
@@ -26,9 +25,9 @@
 
 <!-- List decades from 2010’s to 1960’s -->
 <!-- Retrieve release count for each decade based on artist start_year -->
-<% @releases.info_by_decade.each do |decade, album| %>
+<% @releases.by_decade.each do |decade, release| %>
   <br />
-  <%= "#{decade}'s (#{album.count})" %>
+  <%= "#{decade}'s (#{release.count})" %>
 <% end %>
 
 <!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->

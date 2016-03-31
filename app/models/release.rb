@@ -2,8 +2,13 @@ class Release < ActiveRecord::Base
   belongs_to :album
   has_many   :formats
 
-  # Finds releases associated with a given decade and returns a hash with decade keys and Release Object values
-  def self.info_by_decade
+  # Returns the current decade
+  def self.current_decade
+    Time.current.year - (Time.current.year % 10)
+  end
+
+  # Finds releases associated with a given decade and returns a hash with decade keys and Release collection values
+  def self.by_decade
     decade = Time.current.year - (Time.current.year % 10)
     decade_releases = {}
 

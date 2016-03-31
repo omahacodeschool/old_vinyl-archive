@@ -1,5 +1,5 @@
 <h1><%= genres_show_link(@genre) %></h1>
-
+<!-- Cycles through each album associated with a given genre -->
 <% @genre.with_these_albums.each do |album| %>
   <br />
   <%= albums_show_image_link(album) %>
