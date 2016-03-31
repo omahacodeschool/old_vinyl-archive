@@ -2,10 +2,10 @@
 <!-- Retrieve release count for each decade based on artist start_year -->
 <h1>Decades</h1>
 
-<% @releases.info_by_decade.each do |decade, decades_releases| %>
+<% @releases.by_decade.each do |decade, releases| %>
   <h3><%= decades_show_link(decade) %>s</h3>
-  <!-- 'decades_releases' is a Release collection -->
-  <% decades_releases.each do |release| %>
+  <!-- 'releases' is a Release collection -->
+  <% releases.each do |release| %>
   <!-- Calling 'album_info' on 'release' returns the Album object -->
     <br />
     <%= albums_show_image_link(release.album) %>
@@ -30,9 +30,9 @@
 
 <!-- List decades from current to 1860’s -->
 <!-- Retrieve release count for each decade based on artist start_year -->
-<% @releases.info_by_decade.each do |decade, album| %>
+<% @releases.by_decade.each do |decade, release| %>
   <br />
-  <%= "#{decade}'s (#{album.count})" %>
+  <%= "#{decade}'s (#{release.count})" %>
 <% end %>
 
 <!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
