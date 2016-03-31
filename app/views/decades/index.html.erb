@@ -1,7 +1,7 @@
 <!-- List decades from current to 1860’s -->
-<!-- Retrieve release count for each decade based on artist start_year -->
 <h1>Decades</h1>
 
+<!-- Retrieve release count for each decade based on artist start_year -->
 <% @releases.by_decade.each do |decade, releases| %>
   <h3><%= decades_show_link(decade) %>s</h3>
   <!-- 'releases' is a Release collection -->
@@ -15,7 +15,6 @@
     <%= artists_show_link(release.album.artist) %>
   <% end %>
 <% end %>
-
 
 <!-- SIDEBAR NAVIGATION AREA BELOW -->
 

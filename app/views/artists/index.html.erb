@@ -2,6 +2,7 @@
   <br />
   <h1><%= artists_show_link(artist) %></h1>
   <br />
+  <!-- Cycles through each album associated with a given artist -->
   <% artist.show_artist_albums.each do |album| %>
     <%= albums_show_image_link(album) %>
     <br />
