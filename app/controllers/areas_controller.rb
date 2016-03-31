@@ -14,8 +14,4 @@ class AreasController < ApplicationController
     @formats  = Format.all
     @releases = Release.all   
   end
-
-  def user_addition
-
-  end
 end
