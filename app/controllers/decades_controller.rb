@@ -9,7 +9,7 @@ class DecadesController < ApplicationController
 
   def show
     @decade          = (params[:year].to_i - (params[:year].to_i % 10))
-    @decade_releases = (Release.by_decade)[@decade]
+    @decade_releases = Release.by_decade[@decade]
     @albums          = Album.all
     @genres          = Genre.all
     @areas           = Area.all
