@@ -28,8 +28,6 @@
 </html>
 
 
-
-
 <!-- SIDEBAR NAVIGATION AREA BELOW -->
 
 <!-- Retrieve info for first 3 cities (areas) ordered by most number of artists -->
@@ -37,7 +35,7 @@
 <!-- Count of albums associated with that area -->
 <h3><%= areas_index_link %></h3>
 <% @areas.each do |area| %>
-  <%= area.name %>
+  <%= areas_show_link(area) %>
   (<%= area.with_these_albums.count %>)
   <br />
 <% end %>
@@ -47,7 +45,7 @@
 <!-- Count of albums associated with that genre -->
 <h3><%= genres_index_link %></h3>
 <% @genres.each do |genre| %>
-  <%= genre.name %>
+  <%= genres_show_link(genre) %>
   (<%= genre.with_these_albums.count %>)
   <br />
 <% end %>
@@ -56,7 +54,8 @@
 <!-- Retrieve release count for each decade based on artist start_year -->
 <h3><%= decades_index_link %></h3>
 <% @releases.by_decade.each do |decade, album| %>
-  <%= "#{decade}'s (#{album.count})" %>
+  <%= decades_show_link(decade) %>s
+  (<%= album.count %>)
   <br />
 <% end %>
 
@@ -64,7 +63,7 @@
 <!-- Retrieve album count associated with that format type -->
 <h3><%= formats_index_link %></h3>
 <% @formats.each do |format| %>
-  <%= format.name %>
+  <%= formats_show_link(format) %>
   (<%= format.with_these_albums.count %>)
   <br />
 <% end %>
