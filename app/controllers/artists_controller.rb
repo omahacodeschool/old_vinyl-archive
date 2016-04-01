@@ -28,5 +28,11 @@ class ArtistsController < ApplicationController
     @formats  = Format.all
     @releases = Release.all
 
+    @artist = Artist.find_by_id(params[:artist_name])
+
+  end
+
+  def create_members
+
   end
 end

@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get "albums/index"  => 'albums#index'
   get "albums/:id"    => 'albums#show'
 
+  post "artist/:id/create_members" => 'artists#create_members'
   get "artists/:id/new_members" => 'artists#new_members'
   get "artists/index" => 'artists#index'
   get "artists/:id"   => 'artists#show'

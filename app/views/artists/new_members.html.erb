@@ -1,1 +1,8 @@
-HELLO
+<h1>Add <%= @artist.name %> members</h1>
+
+<%= form_tag "/artists/#{@artist.id}/create_members", multipart: true do %>
+  <input type="text" name="member_name">
+
+  <input type="submit">
+<% end %>
+
