@@ -9,7 +9,10 @@
 <!-- Shows the first and last names of the artist's members -->
 <p><b>Members:</b> 
   <% @members.each do |member| %>
-    <p><%= member.first_name %> <%= member.last_name %> - <%= member.role.instrument.name %></p>
+    <p><%= member.first_name %> 
+       <%= member.last_name %> - 
+       <%= member.role.instrument.name %>
+    </p>
   <% end %>
 </p>
 <!-- Shows the artist's bio -->

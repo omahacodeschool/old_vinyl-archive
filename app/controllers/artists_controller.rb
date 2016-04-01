@@ -4,7 +4,6 @@ class ArtistsController < ApplicationController
     @artist_images = ArtistImage.where({"artist_id" => params[:id]})
     @members       = Member.where({"artist_id" => params[:id]})
     @artist_albums = Album.where({"artist_id" => params[:id]})
-    @roles         = Role.all
     @areas         = Area.all
     @albums        = Album.all
     @genres        = Genre.all
