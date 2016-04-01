@@ -21,7 +21,7 @@ class ArtistsController < ApplicationController
   end
 
   def new_members
-    #NEED TO REMOVE THESE ONCE SIDEBAR INFO IS EXCLUDED FROM THIS PAGE
+    # REMOVE THESE ONCE SIDEBAR INFO IS EXCLUDED FROM THIS PAGE
     @albums   = Album.all
     @artists  = Artist.all
     @areas    = Area.all
@@ -29,11 +29,22 @@ class ArtistsController < ApplicationController
     @formats  = Format.all
     @releases = Release.all
 
-    @artist = Artist.find_by_id(params[:artist_name])
-
+    @artist = Artist.find_by_id(params[:id])
+    @instruments = Instrument.all
   end
 
   def create_members
+    @member = Member.new
+    @member.name = (params[:member_name])
+    @member.save
+
+    @instruments = Instrument.find_by_id(params[:id])
+    @instruments.name = (params[:instrument_name])
+    @instruments.save
+
+    # Need to modify to NOT add new instruments but rather select from 
+
+    redirect_to("/artists/#{@artist.id}/new_members")
 
   end
 end

@@ -28,7 +28,6 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    # @album = Album.find_by_id(params[:album_title])
     @album = Album.new
     @album.title = (params[:album_title])
     @album.save
@@ -37,6 +36,6 @@ class AlbumsController < ApplicationController
     @artist.name = (params[:artist_name])
     @artist.save
 
-    redirect_to("/artists/#{:id}/new_members")
+    redirect_to("/artists/#{@artist.id}/new_members")
   end
 end
