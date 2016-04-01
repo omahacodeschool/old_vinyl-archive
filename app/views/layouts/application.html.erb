@@ -16,11 +16,13 @@
 <body class="<%= body_class %>">
   <%= render "flashes" -%>
 
-  <div class="container" id="header">
-    <!-- HEADER NAVIGATION AREA BELOW -->
-    <a id="vinyl_archive" href="/albums/index/">The Vinyl Archive</a>
-    <a id="hear_nebraska" href="https://www.hearnebraska.org">by Hear Nebraska</a>
-    <a id="albums_user_addition" href="/albums/user_addition">Add An Album</a>
+  <div class="container">
+    <div id="header">
+      <!-- HEADER NAVIGATION AREA BELOW -->
+      <%= albums_index_link %>
+      <%= hear_nebraska_link %>
+      <%= albums_user_addition_link %>
+    </div>
   </div>
 
   <div class="container">
@@ -45,7 +47,7 @@
             <h3><%= areas_index_link %></h3>
             <% @areas.each do |area| %>
               <%= areas_show_link(area) %>
-              (<%= area.with_these_albums.count %>)
+              <div class="count">(<%= area.with_these_albums.count %>)</div>
               <br />
             <% end %>
 
@@ -55,7 +57,7 @@
             <h3><%= genres_index_link %></h3>
             <% @genres.each do |genre| %>
               <%= genres_show_link(genre) %>
-              (<%= genre.with_these_albums.count %>)
+              <div class="count">(<%= genre.with_these_albums.count %>)</div>
               <br />
             <% end %>
 
@@ -64,7 +66,7 @@
             <h3><%= decades_index_link %></h3>
             <% @releases.by_decade.each do |decade, album| %>
               <%= decades_show_link(decade) %>s
-              (<%= album.count %>)
+              <div class="count">(<%= album.count %>)</div>
               <br />
             <% end %>
 
@@ -73,7 +75,7 @@
             <h3><%= formats_index_link %></h3>
             <% @formats.each do |format| %>
               <%= formats_show_link(format) %>
-              (<%= format.with_these_albums.count %>)
+              <div class="count">(<%= format.with_these_albums.count %>)</div>
               <br />
             <% end %>
           </div><!-- /sidebar -->

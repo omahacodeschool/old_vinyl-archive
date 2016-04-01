@@ -14,11 +14,10 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #3A3939;
   padding: 30px;
-  margin: 0 50px;
   color: #FFFFFF;
 }
 
-#vinyl_archive{
+.vinyl_archive{
   font-size: 25px;
   font-weight: 500;
   color: #FFFFFF;
@@ -26,18 +25,47 @@
   text-transform: uppercase;
 }
 
-#hear_nebraska{
+.hear_nebraska{
   font-size: 20px;
   font-weight: 100;
   color: #FFFFFF;
   text-decoration: none;
 }
 
-#albums_user_addition{
+.albums_user_addition{
   font-size: 25px;
   font-weight: 500;
   color: #FFFFFF;
   text-decoration: none;
   text-transform: uppercase;
   float: right;
+}
+
+.sidebar{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.sidebar h3{
+  background: #999;
+  color: #FFFFFF;
+  padding: 10px 0;
+  padding-left: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.index_link{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.show_link{
+  color: #3A3939;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+.count{
+  color: #3A3939;
+  display: inline;
 }
