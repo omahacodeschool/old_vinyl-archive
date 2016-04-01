@@ -18,4 +18,15 @@ class ArtistsController < ApplicationController
     @areas    = Area.all
     @formats  = Format.all
   end
+
+  def new_members
+    #NEED TO REMOVE THESE ONCE SIDEBAR INFO IS EXCLUDED FROM THIS PAGE
+    @albums   = Album.all
+    @artists  = Artist.all
+    @areas    = Area.all
+    @genres   = Genre.all
+    @formats  = Format.all
+    @releases = Release.all
+
+  end
 end

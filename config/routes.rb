@@ -25,10 +25,15 @@ Rails.application.routes.draw do
   post "save_artist_image/:artist_id" => 'artist_images#create'
   get "artist_images/:artist_id/new"  => 'artist_images#new'
 
-  get "albums/user_addition" => 'albums#user_addition'
+  get "albums/new"     => 'albums#new'
+  post "albums/create" => 'albums#create'
+  get "albums/:id/edit" => 'albums#edit'
+  put "albums/:id/update" => 'albums#update'
+  delete "albums/:id/delete" => 'albums#delete'
   get "albums/index"  => 'albums#index'
   get "albums/:id"    => 'albums#show'
 
+  get "artists/:id/new_members" => 'artists#new_members'
   get "artists/index" => 'artists#index'
   get "artists/:id"   => 'artists#show'
 
