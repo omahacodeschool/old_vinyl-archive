@@ -1,13 +1,35 @@
-<!-- Retrieve album info for first 9 releases ordered by latest addition -->
-<!-- Cover image -->
-<!-- Title -->
-<!-- Artist -->
-<% @albums.each do |album| %>
-  <%= albums_show_image_link(album) %>
-  <br />
-  <%= albums_show_link(album) %>
-  <br />
-  <%= artists_show_link(album.artist) %>
-  <br />
+<% content_for :controls do %>
+  <div class="search_bar">
+    <input type="text">
+  </div>
+
+  <div class="sort_by">
+    <label>Sort By</label>
+    <select>
+      <option>Choose One</option>
+    </select>
+  </div>
+
+  <div class="view_toggles">
+    <a href="#" class="large_pictures">Large Pictures</a>
+    <a href="#" class="small_pictures">Small Pictures</a>
+  </div>
 <% end %>
 
+<div class="list">
+  <div class="row">
+    <!-- Retrieve album info for first 9 releases ordered by latest addition -->
+    <!-- Cover image -->
+    <!-- Title -->
+    <!-- Artist -->
+    <% @albums.each do |album| %>
+      <div class="col-4">
+        <div class="album">
+          <%= albums_show_image_link(album) %>
+          <div><%= albums_show_link(album) %></div>
+          <div><%= artists_show_link(album.artist) %></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
