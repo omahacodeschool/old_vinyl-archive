@@ -9,7 +9,7 @@ module ApplicationHelper
   end
   
   def albums_show_image_link(album)
-    link_to(image_tag(album.album_images.cover_image, size:"100x100"), "/albums/#{album.id}")
+    link_to(image_tag(album.album_images.cover_image, size:"200x200"), "/albums/#{album.id}")
   end
 
   def artists_index_link
@@ -25,7 +25,7 @@ module ApplicationHelper
   end
 
   def areas_index_link
-    link_to("Areas", "/areas/index")
+    link_to("Cities", "/areas/index")
   end
 
   def areas_show_link(area)
