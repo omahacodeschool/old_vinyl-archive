@@ -1,7 +1,7 @@
 
 if true
 
-  album_images = AlbumImages.create([
+  album_images = AlbumImage.create([
     { album_id: 1, 
       cover_image: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRuKOTntgVlsj6o_ASwVYvkpR7a4GY0R_Kbr2aDuWzBbBCnyJn3FP9q1g' },
     { album_id: 2, 
@@ -131,25 +131,25 @@ if true
 
   artist_images = ArtistImage.create([
     { artist_id: 1, 
-      image_2: 'http://www.apple.com/itunesaffiliates/beatles/beatles_300x250.jpg' }
+      image_2: 'http://www.apple.com/itunesaffiliates/beatles/beatles_300x250.jpg' },
     { artist_id: 2, 
-      image_2: 'http://assets.rollingstone.com/assets/images/list_container/100-greatest-rolling-stones-songs-20131015/stones-624-1381341116.jpg' }
+      image_2: 'http://assets.rollingstone.com/assets/images/list_container/100-greatest-rolling-stones-songs-20131015/stones-624-1381341116.jpg' },
     { artist_id: 3, 
-      image_2: 'http://i.dailymail.co.uk/i/pix/2014/10/24/1414109764217_wps_36_The_Kinks_Dave_Davies_Mic.jpg' }
+      image_2: 'http://i.dailymail.co.uk/i/pix/2014/10/24/1414109764217_wps_36_The_Kinks_Dave_Davies_Mic.jpg' },
     { artist_id: 4, 
-      image_2: 'http://www.slate.com/content/dam/slate/articles/arts/culturebox/2016/01/david-bowie/160111_CBOX_David-Bowie-08.jpg.CROP.promo-xlarge2.jpg' }
+      image_2: 'http://www.slate.com/content/dam/slate/articles/arts/culturebox/2016/01/david-bowie/160111_CBOX_David-Bowie-08.jpg.CROP.promo-xlarge2.jpg' },
     { artist_id: 5, 
-      image_2: 'https://cdn.discogs.com/AYLO3X6OOJloDu7s7bFcJ7sDHY4=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb()/discogs-images/A-125425-1132046941.jpeg.jpg' }
+      image_2: 'https://cdn.discogs.com/AYLO3X6OOJloDu7s7bFcJ7sDHY4=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb()/discogs-images/A-125425-1132046941.jpeg.jpg' },
     { artist_id: 6, 
-      image_2: 'http://www.mxdwn.com/wp-content/uploads/2014/08/bloodbrothers.jpg' }
+      image_2: 'http://www.mxdwn.com/wp-content/uploads/2014/08/bloodbrothers.jpg' },
     { artist_id: 7, 
-      image_2: 'https://consequenceofsound.files.wordpress.com/2014/03/jay-reatard.jpg' }
+      image_2: 'https://consequenceofsound.files.wordpress.com/2014/03/jay-reatard.jpg' },
     { artist_id: 8, 
-      image_2: 'http://www.altpress.com/images/made/chrootimages/uploads/news/news_glassjaw_633_461_70_s_c1.jpg' }
+      image_2: 'http://www.altpress.com/images/made/chrootimages/uploads/news/news_glassjaw_633_461_70_s_c1.jpg' },
     { artist_id: 9, 
-      image_2: 'https://i.ytimg.com/vi/ytoJAL20Rr8/maxresdefault.jpg' }
+      image_2: 'https://i.ytimg.com/vi/ytoJAL20Rr8/maxresdefault.jpg' },
     { artist_id: 10, 
-      image_2: 'http://assets.rollingstone.com/assets/images/artists/miles-davis.jpg' }
+      image_2: 'http://assets.rollingstone.com/assets/images/artists/miles-davis.jpg' },
     { artist_id: 11, 
       image_2: 'http://thefirenote.com/wp-content/uploads/2013/07/buildersandbutchers-pic.jpg' }
     ])
@@ -535,14 +535,14 @@ if true
       length: 240 },
     { title: 'Song', 
       album_id: 4,
-      length: 240,
+      length: 240 },
     { title: 'Song', 
       album_id: 4,
       length: 240 },
     { title: 'Song', 
       album_id: 5,
       length: 240 },
-    { title: 'Song', 
+    { title: 'Song',
       album_id: 5,
       length: 240 },
     { title: 'Song', 
