@@ -1,8 +1,9 @@
 class ArtistsController < ApplicationController
   def show
     @artist        = Artist.find_by_id(params[:id])
-    @artist_images = ArtistImage.find_by_artist_id(params[:id])
-    @members       = Member.all
+    @artist_images = ArtistImage.where({"artist_id" => params[:id]})
+    @members       = Member.where({"artist_id" => params[:id]})
+    @artist_albums = Album.where({"artist_id" => params[:id]})
     @areas         = Area.all
     @albums        = Album.all
     @genres        = Genre.all

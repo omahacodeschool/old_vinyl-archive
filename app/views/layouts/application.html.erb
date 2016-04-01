@@ -1,9 +1,3 @@
-<!-- HEADER NAVIGATION AREA BELOW -->
-
-<p><a href="/albums/index/">THE VINYL ARCHIVE</a></p>
-<p><a href="https://www.hearnebraska.org">Hear Nebraska</a></p>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,50 +15,81 @@
 </head>
 <body class="<%= body_class %>">
   <%= render "flashes" -%>
-  <%= yield %>
+
+  <div class="container">
+    <!-- HEADER NAVIGATION AREA BELOW -->
+
+    <p><a href="/albums/index/">THE VINYL ARCHIVE</a></p>
+    <p><a href="https://www.hearnebraska.org">Hear Nebraska</a></p>
+  </div>
+
+  <div class="container">
+    <div class="controls">
+      <%= content_for :controls %>
+    </div><!-- /controls -->
+
+    <div class="main">
+
+      <div class="row">
+        <div class="col-8">
+          <%= yield %>
+        </div>
+
+        <div class="col-4">
+          <div class="sidebar">
+            <!-- SIDEBAR NAVIGATION AREA BELOW -->
+
+            <!-- Retrieve info for first 3 cities (areas) ordered by most number of artists -->
+            <!-- Name -->
+            <!-- Count of albums associated with that area -->
+            <h3><%= areas_index_link %></h3>
+            <% @areas.each do |area| %>
+              <%= areas_show_link(area) %>
+              (<%= area.with_these_albums.count %>)
+              <br />
+            <% end %>
+
+            <!-- Retrieve info for first 3 genres ordered by most number of albums -->
+            <!-- Name -->
+            <!-- Count of albums associated with that genre -->
+            <h3><%= genres_index_link %></h3>
+            <% @genres.each do |genre| %>
+              <%= genres_show_link(genre) %>
+              (<%= genre.with_these_albums.count %>)
+              <br />
+            <% end %>
+
+            <!-- List decades from 2010’s to 1960’s -->
+            <!-- Retrieve release count for each decade based on artist start_year -->
+            <h3><%= decades_index_link %></h3>
+            <% @releases.by_decade.each do |decade, album| %>
+              <%= decades_show_link(decade) %>s
+              (<%= album.count %>)
+              <br />
+            <% end %>
+
+            <!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
+            <!-- Retrieve album count associated with that format type -->
+            <h3><%= formats_index_link %></h3>
+            <% @formats.each do |format| %>
+              <%= formats_show_link(format) %>
+              (<%= format.with_these_albums.count %>)
+              <br />
+            <% end %>
+          </div><!-- /sidebar -->
+        </div><!-- /col-4 -->
+      </div><!-- /row -->
+    </div><!-- /main -->
+  </div>
+
+  <div class="container">
+    <footer>
+      Footer
+    </footer>
+  </div>
+
+
   <%= render "javascript" %>
   <%= render "css_overrides" %>
 </body>
 </html>
-
-
-
-
-<!-- SIDEBAR NAVIGATION AREA BELOW -->
-
-<!-- Retrieve info for first 3 cities (areas) ordered by most number of artists -->
-<!-- Name -->
-<!-- Count of albums associated with that area -->
-<h3><%= areas_index_link %></h3>
-<% @areas.each do |area| %>
-  <%= area.name %>
-  (<%= area.with_these_albums.count %>)
-  <br />
-<% end %>
-
-<!-- Retrieve info for first 3 genres ordered by most number of albums -->
-<!-- Name -->
-<!-- Count of albums associated with that genre -->
-<h3><%= genres_index_link %></h3>
-<% @genres.each do |genre| %>
-  <%= genre.name %>
-  (<%= genre.with_these_albums.count %>)
-  <br />
-<% end %>
-
-<!-- List decades from 2010’s to 1960’s -->
-<!-- Retrieve release count for each decade based on artist start_year -->
-<h3><%= decades_index_link %></h3>
-<% @releases.by_decade.each do |decade, album| %>
-  <%= "#{decade}'s (#{album.count})" %>
-  <br />
-<% end %>
-
-<!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
-<!-- Retrieve album count associated with that format type -->
-<h3><%= formats_index_link %></h3>
-<% @formats.each do |format| %>
-  <%= format.name %>
-  (<%= format.with_these_albums.count %>)
-  <br />
-<% end %>
