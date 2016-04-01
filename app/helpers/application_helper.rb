@@ -12,6 +12,10 @@ module ApplicationHelper
     link_to(image_tag(album.album_images.cover_image, size:"200x200"), "/albums/#{album.id}")
   end
 
+  def albums_user_addition_link
+    link_to("Add an Album", "albums/user_addition")
+  end
+
   def artists_index_link
     link_to("Artists", "artists/index")
   end
