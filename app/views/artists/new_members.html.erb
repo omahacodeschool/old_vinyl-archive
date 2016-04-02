@@ -1,12 +1,15 @@
-<h1>Add <%= @artist.name %> members</h1>
+Add <%= @artist.name %> members
 
 <%= form_tag "/artists/#{@artist.id}/create_members", multipart: true do %>
-  <input type="text" name="member_name" placeholder="Name"><br>
+  <p>
+    <input type="text" name="first_name" placeholder="First Name">
+    <input type="text" name="last_name" placeholder="Last Name">
+  </p>
     <p>
       <select name="instrument_name">
         <option> Instrument(s) </option>
         <% @instruments.each do |instrument| %>
-          <option value="<%= instrument.name %>"></option>
+          <option value="<% instrument.id %>"><%= instrument.name %></option>
         <% end %>
       </select>
     <p>

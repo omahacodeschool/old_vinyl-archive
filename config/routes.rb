@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   post "save_artist_image/:artist_id" => 'artist_images#create'
   get "artist_images/:artist_id/new"  => 'artist_images#new'
 
+  post "albums/:id/create_album_image" => 'albums#create_album_image'
+  get "albums/:id/new_album_image" => 'albums#new_album_image'
   get "albums/new"     => 'albums#new'
   post "albums/create" => 'albums#create'
   get "albums/:id/edit" => 'albums#edit'
@@ -33,6 +35,8 @@ Rails.application.routes.draw do
   get "albums/index"  => 'albums#index'
   get "albums/:id"    => 'albums#show'
 
+  post "artists/:id/create_location_and_image" => 'artists#create_location_and_image'
+  get "artists/:id/new_location_and_image" => 'artists#new_location_and_image'
   post "artist/:id/create_members" => 'artists#create_members'
   get "artists/:id/new_members" => 'artists#new_members'
   get "artists/index" => 'artists#index'

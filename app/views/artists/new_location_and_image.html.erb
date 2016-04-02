@@ -1,0 +1,16 @@
+<%= @artist.name %> location
+
+<%= form_tag "/artists/#{@artist.id}/create_location_and_image", multipart: true do %>
+    <p>
+      <select name="area_name">
+        <option> City name... </option>
+        <% @areas.each do |area| %>
+          <option value="<%= area.id %>"><%= area.name %></option>
+        <% end %>
+      </select>
+    <p>
+
+  <%= @artist.name %> image
+    <input type="file" name="image_url">
+  <input type="submit" value=">">
+<% end %>
