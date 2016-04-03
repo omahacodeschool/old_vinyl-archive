@@ -2,9 +2,9 @@ class Artist < ActiveRecord::Base
   belongs_to :area
   has_many   :members
   has_many   :albums
-  has_many   :album_images
+  # has_many   :album_images
   has_many   :artist_images
-  has_many   :genres, through: :albums
+  # has_many   :genres, through: :albums
 
   # Returns artist_images collection got a particular artist
   # I BELIEVE this can be achieved through ActiveRecord relations (needed?)

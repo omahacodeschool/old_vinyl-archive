@@ -73,7 +73,7 @@
             <h3><%= formats_index_link %></h3>
             <% @formats.each do |format| %>
               <%= formats_show_link(format) %>
-              (<%= format.with_these_albums.count %>)
+              (<%= format.albums.count %>)
               <br />
             <% end %>
           </div><!-- /sidebar -->
