@@ -26,8 +26,8 @@
       <div class="col-4">
         <div class="album">
           <%= albums_show_image_link(album) %>
-          <div><%= albums_show_link(album) %></div>
-          <div><%= artists_show_link(album.artist) %></div>
+          <%= albums_show_link(album) %>
+          <%= artists_show_link(album.artist) %>
         </div>
       </div>
     <% end %>
