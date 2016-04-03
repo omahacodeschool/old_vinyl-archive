@@ -6,7 +6,6 @@
   <h3><%= decades_show_link(decade) %>s</h3>
   <!-- 'releases' is a Release collection -->
   <% releases.each do |release| %>
-  <!-- Calling 'album_info' on 'release' returns the Album object -->
     <br />
     <%= albums_show_image_link(release.album) %>
     <br />

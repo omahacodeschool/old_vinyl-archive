@@ -3,6 +3,7 @@ class Release < ActiveRecord::Base
   has_many   :formats
 
   # Returns the current decade
+  # Probably not going to be used (needed?)
   def self.current_decade
     Time.current.year - (Time.current.year % 10)
   end
@@ -21,7 +22,8 @@ class Release < ActiveRecord::Base
   end
 
   # Returns Album objects associated with a given Release
-  def album_info
-    Album.find_by_id(self.album_id)
-  end
+  # Unused. Same result achieved through ActiveRecord ralation
+  # def album_info
+  #   Album.find_by_id(self.album_id)
+  # end
 end

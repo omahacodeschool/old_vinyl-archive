@@ -3,7 +3,7 @@
   <br />
   <%= formats_show_link(format) %>
   <br />
-  <% format.with_these_albums.each do |format_album| %>
+  <% format.albums.each do |format_album| %>
     <br />
     <%= albums_show_image_link(format_album) %>
     <br />

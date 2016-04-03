@@ -45,7 +45,7 @@
             <h3><%= areas_index_link %></h3>
             <% @areas.each do |area| %>
               <%= areas_show_link(area) %>
-              (<%= area.with_these_albums.count %>)
+              (<%= area.albums.count %>)
               <br />
             <% end %>
 
@@ -55,7 +55,7 @@
             <h3><%= genres_index_link %></h3>
             <% @genres.each do |genre| %>
               <%= genres_show_link(genre) %>
-              (<%= genre.with_these_albums.count %>)
+              (<%= genre.albums.count %>)
               <br />
             <% end %>
 

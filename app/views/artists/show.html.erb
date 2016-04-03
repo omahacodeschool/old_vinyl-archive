@@ -8,7 +8,7 @@
 <p><b>Years Active:</b> <%= @artist.start_year %> - <%= @artist.end_year %> </p>
 <!-- Shows the first and last names of the artist's members -->
 <p><b>Members:</b> 
-  <% @members.each do |member| %>
+  <% @artist.members.each do |member| %>
     <p><%= member.first_name %> 
        <%= member.last_name %> - 
        <%= member.role.instrument.name %>
@@ -19,7 +19,7 @@
 <p><b>Bio:</b> <%= @artist.bio %> </p>
 <!-- Shows each of the artist's albums with cover image and title -->
 <p><b>Albums:</b></p>
-  <% @artist_albums.each do |album| %>
+  <% @artist.albums.each do |album| %>
     <%= albums_show_image_link(album) %>
     <p><b> <%= albums_show_link(album) %> </b></p>
     <br>

@@ -2,7 +2,7 @@
 <% @areas.each do |area| %>
   <br />
   <h3><%= areas_show_link(area) %></h3>
-  <% area.with_these_albums.each do |area_album| %>
+  <% area.albums.each do |area_album| %>
     <%= albums_show_image_link(area_album) %>
     <br />
     <%= albums_show_link(area_album) %>

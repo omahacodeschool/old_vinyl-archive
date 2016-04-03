@@ -2,7 +2,7 @@
 <% @genres.each do |genre| %>
   <br />
   <%= genres_show_link(genre) %>
-  <% genre.with_these_albums.each do |genre_album| %>
+  <% genre.albums.each do |genre_album| %>
     <br />
     <%= albums_show_image_link(genre_album) %>
     <br />
