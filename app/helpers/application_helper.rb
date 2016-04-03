@@ -9,7 +9,7 @@ module ApplicationHelper
   end
   
   def albums_show_image_link(album)
-    link_to(image_tag(album.album_images.cover_image, size:"200x200"), "/albums/#{album.id}", {class: "show_link"})
+    link_to(image_tag(album.album_images.cover_image, size:"200x200"), "/albums/#{album.id}", {class: "show_album_image_link"})
   end
 
   def albums_user_addition_link
@@ -21,7 +21,7 @@ module ApplicationHelper
   end
 
   def artists_show_link(artist)
-    link_to(artist.name, "/artists/#{artist.id}")
+    link_to(artist.name, "/artists/#{artist.id}", {class: "show_link"})
   end
   
   def artists_show_image_link(artist)
