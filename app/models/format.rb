@@ -1,5 +1,6 @@
 class Format < ActiveRecord::Base
   has_many   :releases
+  # belongs_to :release
   has_many   :albums, through: :releases
 
   # Return albums associated with the Format of a given Release
