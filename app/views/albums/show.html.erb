@@ -22,8 +22,8 @@
 <p>
 <b>Released:</b> 
 <% @album.show_release_date.each do |date| %>
-  <br />
   <%= date %>
+  <br />
 <% end %>
 </p>
 <!-- Shows album artist's hometown -->
@@ -34,16 +34,16 @@
 <p>
 <b>Label:</b> 
 <% @album.show_album_label.each do |label| %>
-  <br />
   <%= label %>
+  <br />
 <% end %> 
 </p> 
 <!-- Shows album's format -->
 <p>
 <b>Format:</b> 
 <% @album.show_album_format.each do |album_format| %>
-<br />
 <%= formats_show_link(album_format) %>
+<br />
 <% end %>
 </p>
 <br>

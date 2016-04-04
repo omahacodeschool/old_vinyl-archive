@@ -7,8 +7,8 @@ RSpec.describe Release, type: :model do
     context "when decades have album release's release dates" do
       it "returns a hash of decades keys and Release collection values" do
         # Not sure about testing for class method
-        release = Release.new(release_date: "1965")
-        assert_equal(, Release.by_decade)
+        release = Release.new(release_date: 1965)
+        assert_equal(1965, release.by_decade)
       end
     end
 

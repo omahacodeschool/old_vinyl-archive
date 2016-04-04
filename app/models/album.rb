@@ -26,7 +26,7 @@ class Album < ActiveRecord::Base
     tracklist
   end
 
-  # Returns the release date for a given album from the associated releases table
+  # Returns hash of release dates for a given album from the associated releases table
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_release_date
     @dates = []
@@ -39,7 +39,7 @@ class Album < ActiveRecord::Base
     @dates
   end
 
-  # Returns the label for a given album from the associated releases table
+  # Returns hash of labels for a given album from the associated releases table
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_album_label
     @labels = []
@@ -53,7 +53,6 @@ class Album < ActiveRecord::Base
   end
 
   # Retrieves the format_id for a given album from the associated releases table, then returns the format for that album
-  # Refactored by removing the '.name' call on at the end of the last line to accommodate the 'formats_show_link' method
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_album_format
     @formats = []

@@ -38,7 +38,8 @@ RSpec.describe Album, type: :model do
   describe "#show_album_label" do
     context "when albums have a label" do
       it "returns the name of a label for a particular release of an album" do
-        # place assertions here
+        album = Album.new(releases.label: "this label")
+        assert_equal("this label", album.show_album_label)
       end
     end
   end
