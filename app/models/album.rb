@@ -29,20 +29,20 @@ class Album < ActiveRecord::Base
   # Returns the release date for a given album from the associated releases table
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_release_date
-    Release.find_by_id(self.id).release_date
+    Release.find_by_album_id(self.id).release_date
   end
 
   # Returns the label for a given album from the associated releases table
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_album_label
-    Release.find_by_id(self.id).label
+    Release.find_by_album_id(self.id).label
   end
 
   # Retrieves the format_id for a given album from the associated releases table, then returns the format for that album
   # Refactored by removing the '.name' call on at the end of the last line to accommodate the 'formats_show_link' method
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_album_format
-    format = Release.find_by_id(self.id).format_id
+    format = Release.find_by_album_id(self.id).format_id
     Format.find_by_id(format)
   end
 end
