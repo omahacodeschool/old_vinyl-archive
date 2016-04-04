@@ -32,6 +32,7 @@ class Album < ActiveRecord::Base
   end
 
   # Attempting to refactor the below 'show' methods into a master method
+  # YET TO BE IMPLEMENTED
   def show_album(attribute)
     array = []
     
