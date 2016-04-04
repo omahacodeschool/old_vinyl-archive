@@ -26,47 +26,46 @@ class Album < ActiveRecord::Base
     tracklist
   end
 
+  def releases
+    releases = []
+    releases = Release.where({"album_id" => self.id})
+  end
+
   # Returns hash of release dates for a given album from the associated releases table
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_release_date
-    @dates = []
-    releases = []
+    dates = []
 
-    releases = Release.where({"album_id" => self.id})
     releases.each do |release|
-      @dates << release.release_date
+      dates << release.release_date
     end
-    @dates
+    dates
   end
 
   # Returns hash of labels for a given album from the associated releases table
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_album_label
-    @labels = []
-    releases = []
+    labels = []
 
-    releases = Release.where({"album_id" => self.id})
     releases.each do |release|
-      @labels << release.label
+      labels << release.label
     end
-    @labels
+    labels
   end
 
   # Retrieves the format_id for a given album from the associated releases table, then returns the format for that album
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_album_format
-    @formats = []
-    @format_ids = []
-    releases = []
+    formats = []
+    format_ids = []
 
-    releases = Release.where({"album_id" => self.id})
     releases.each do |release|
-      @format_ids << release.format_id
+      format_ids << release.format_id
     end
     
-    @format_ids.each do |this_id|
-      @formats << Format.find_by_id(this_id)
+    format_ids.each do |this_id|
+      formats << Format.find_by_id(this_id)
     end
-    @formats
+    formats
   end
 end
