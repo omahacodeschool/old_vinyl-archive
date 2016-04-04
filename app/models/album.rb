@@ -26,9 +26,18 @@ class Album < ActiveRecord::Base
     tracklist
   end
 
-  def releases
-    releases = []
+  def album_releases
     releases = Release.where({"album_id" => self.id})
+  end
+
+  # Attempting to refactor the below 'show' methods into a master method
+  def show_release(attribute)
+    array = []
+
+    album_releases.each do |release|
+      array << release.attribute
+    end
+    array
   end
 
   # Returns hash of release dates for a given album from the associated releases table
@@ -36,7 +45,7 @@ class Album < ActiveRecord::Base
   def show_release_date
     dates = []
 
-    releases.each do |release|
+    album_releases.each do |release|
       dates << release.release_date
     end
     dates
@@ -47,7 +56,7 @@ class Album < ActiveRecord::Base
   def show_album_label
     labels = []
 
-    releases.each do |release|
+    album_releases.each do |release|
       labels << release.label
     end
     labels
@@ -59,7 +68,7 @@ class Album < ActiveRecord::Base
     formats = []
     format_ids = []
 
-    releases.each do |release|
+    album_releases.each do |release|
       format_ids << release.format_id
     end
     
