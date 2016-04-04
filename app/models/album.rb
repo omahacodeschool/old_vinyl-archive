@@ -29,9 +29,11 @@ class Album < ActiveRecord::Base
   # Returns the release date for a given album from the associated releases table
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_release_date
+    @date = []
+    release = []
     release = Release.where({"album_id" => self.id})
     release.each do |release|
-      @date = release.release_date
+      @date << release.release_date
     end
     @date
   end
@@ -39,9 +41,11 @@ class Album < ActiveRecord::Base
   # Returns the label for a given album from the associated releases table
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_album_label
+    @label = []
+    release = []
     release = Release.where({"album_id" => self.id})
     release.each do |release|
-      @label = release.label
+      @label << release.label
     end
     @label
   end
