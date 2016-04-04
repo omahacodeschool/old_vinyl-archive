@@ -10,7 +10,7 @@ RSpec.describe Album, type: :model do
       end
     end
 
-    context "when an image is uploaded via Carrierwave" do
+    context "when an album image is uploaded via Carrierwave" do
       it "returns an image file that pertains to an album" do
         # place assertions here
       end
