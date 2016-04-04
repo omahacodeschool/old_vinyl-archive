@@ -33,6 +33,7 @@ class Album < ActiveRecord::Base
   end
 
   # Returns the label for a given album from the associated releases table
+  # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_album_label
     Release.find_by_id(self.id).label
   end
