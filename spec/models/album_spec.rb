@@ -28,26 +28,26 @@ RSpec.describe Album, type: :model do
 
   describe "#show_release_date" do
     context "when albums have a release date" do
-      it "returns a year integer for a particular release of an album" do
+      it "returns array of year integers for all releases of an album" do
         album = Album.new(releases.release_date: 1965)
-        assert_equal(1965, album.release_date)
+        assert_equal([1965], album.release_date)
       end
     end
   end
 
   describe "#show_album_label" do
     context "when albums have a label" do
-      it "returns the name of a label for a particular release of an album" do
+      it "returns array of names of labels for all releases of an album" do
         album = Album.new(releases.label: "this label")
-        assert_equal("this label", album.show_album_label)
+        assert_equal(["this label"], album.show_album_label)
       end
     end
   end
 
   describe "#show_album_format" do
     context "when albums have a format" do
-      it "returns the name of a format for a particular release of an album" do
-        # place assertions here
+      it "returns Format collection for all releases of an album" do
+        album = Album.new(releases.format_id)
       end
     end
   end
