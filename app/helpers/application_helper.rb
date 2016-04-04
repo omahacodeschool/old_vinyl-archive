@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def artists_index_link
-    link_to("Artists", "artists/index", {class: "index_link"})
+    link_to("Artists", "/artists/index", {class: "index_link"})
   end
 
   def artists_show_link(artist)
