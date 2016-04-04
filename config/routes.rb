@@ -30,8 +30,10 @@ Rails.application.routes.draw do
   get "albums/new"     => 'albums#new'
   post "albums/create" => 'albums#create'
   get "albums/:id/edit" => 'albums#edit'
+  # Is there a reason why this is a 'put' request?
   put "albums/:id/update" => 'albums#update'
   delete "albums/:id/delete" => 'albums#delete'
+  
   get "albums/index"  => 'albums#index'
   get "albums/:id"    => 'albums#show'
 
@@ -39,6 +41,7 @@ Rails.application.routes.draw do
   get "artists/:id/new_location_and_image" => 'artists#new_location_and_image'
   post "artist/:id/create_members" => 'artists#create_members'
   get "artists/:id/new_members" => 'artists#new_members'
+  
   get "artists/index" => 'artists#index'
   get "artists/:id"   => 'artists#show'
 
