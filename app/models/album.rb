@@ -29,13 +29,21 @@ class Album < ActiveRecord::Base
   # Returns the release date for a given album from the associated releases table
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_release_date
-    Release.find_by_album_id(self.id).release_date
+    release = Release.where({"album_id" => self.id})
+    release.each do |release|
+      @date = release.release_date
+    end
+    @date
   end
 
   # Returns the label for a given album from the associated releases table
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_album_label
-    Release.find_by_album_id(self.id).label
+    release = Release.where({"album_id" => self.id})
+    release.each do |release|
+      @label = release.label
+    end
+    @label
   end
 
   # Retrieves the format_id for a given album from the associated releases table, then returns the format for that album
