@@ -19,17 +19,33 @@
 <br>
 
 <!-- Shows album's release date -->
-<p><b>Released:</b> <%= @album.show_release_date %> </p>
+<p>
+<b>Released:</b> 
+<% @album.show_release_date.each do |date| %>
+  <br />
+  <%= date %>
+<% end %>
+</p>
 <!-- Shows album artist's hometown -->
 <p><b>City:</b> <%= areas_show_link(@album.area) %> </p>
 <!-- Shows album's genre -->
 <p><b>Genre:</b> <%= genres_show_link(@album.genre) %> </p>
 <!-- Shows album's record label -->
-<p><b>Label:</b> <%= @album.show_album_label %> </p> 
+<p>
+<b>Label:</b> 
+<% @album.show_album_label.each do |label| %>
+  <br />
+  <%= label %>
+<% end %> 
+</p> 
 <!-- Shows album's format -->
+<p>
+<b>Format:</b> 
 <% @album.show_album_format.each do |album_format| %>
-<p><b>Format:</b> <%= formats_show_link(album_format) %></p>
+<br />
+<%= formats_show_link(album_format) %>
 <% end %>
+</p>
 <br>
 
 <p><b>Other info:</b> </p>
