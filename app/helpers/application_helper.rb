@@ -13,7 +13,7 @@ module ApplicationHelper
   end
 
   def albums_user_addition_link
-    link_to("Add an Album", "/albums/user_addition", {class: "albums_user_addition"})
+    link_to("Add an Album", "/albums/new", {class: "albums_user_addition"})
   end
 
   def artists_index_link
