@@ -26,7 +26,7 @@ class Album < ActiveRecord::Base
     tracklist
   end
 
-  # Extracted method for below methods
+  # Extracted method for below 'show' methods
   def album_releases
     releases = Release.where({"album_id" => self.id})
   end
