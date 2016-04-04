@@ -31,9 +31,9 @@ class Album < ActiveRecord::Base
   end
 
   # Attempting to refactor the below 'show' methods into a master method
-  def show_release(attribute)
+  def show_album(attribute)
     array = []
-
+    
     album_releases.each do |release|
       array << release.attribute
     end
