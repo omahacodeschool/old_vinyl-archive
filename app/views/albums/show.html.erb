@@ -27,7 +27,9 @@
 <!-- Shows album's record label -->
 <p><b>Label:</b> <%= @album.show_album_label %> </p> 
 <!-- Shows album's format -->
-<p><b>Format:</b> <%= formats_show_link(@album.show_album_format) %></p>
+<% @album.show_album_format.each do |album_format| %>
+<p><b>Format:</b> <%= formats_show_link(album_format) %></p>
+<% end %>
 <br>
 
 <p><b>Other info:</b> </p>

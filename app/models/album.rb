@@ -29,32 +29,45 @@ class Album < ActiveRecord::Base
   # Returns the release date for a given album from the associated releases table
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_release_date
-    @date = []
-    release = []
-    release = Release.where({"album_id" => self.id})
-    release.each do |release|
-      @date << release.release_date
+    @dates = []
+    releases = []
+
+    releases = Release.where({"album_id" => self.id})
+    releases.each do |release|
+      @dates << release.release_date
     end
-    @date
+    @dates
   end
 
   # Returns the label for a given album from the associated releases table
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_album_label
-    @label = []
-    release = []
-    release = Release.where({"album_id" => self.id})
-    release.each do |release|
-      @label << release.label
+    @labels = []
+    releases = []
+
+    releases = Release.where({"album_id" => self.id})
+    releases.each do |release|
+      @labels << release.label
     end
-    @label
+    @labels
   end
 
   # Retrieves the format_id for a given album from the associated releases table, then returns the format for that album
   # Refactored by removing the '.name' call on at the end of the last line to accommodate the 'formats_show_link' method
   # I BELIEVE there is a way to achieve this with ActiveRecord relations
   def show_album_format
-    format = Release.find_by_album_id(self.id).format_id
-    Format.find_by_id(format)
+    @formats = []
+    @format_ids = []
+    releases = []
+
+    releases = Release.where({"album_id" => self.id})
+    releases.each do |release|
+      @format_ids << release.format_id
+    end
+    
+    @format_ids.each do |this_id|
+      @formats << Format.find_by_id(this_id)
+    end
+    @formats
   end
 end
