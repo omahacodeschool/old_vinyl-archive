@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
   def show
     @artist        = Artist.find_by_id(params[:id])
+    # Commented out instance variables achieved through ActiveRecord relations
     # @artist_images = ArtistImage.where({"artist_id" => params[:id]})
     # @members       = Member.where({"artist_id" => params[:id]})
     # @artist_albums = Album.where({"artist_id" => params[:id]})
