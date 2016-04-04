@@ -19,16 +19,18 @@ RSpec.describe Album, type: :model do
 
   describe "#tracklist" do
     context "when albums have tracks" do
-      it "returns track names and their associated track numbers" do
-        # place assertions here
+      it "returns hash of track number keys and track name values" do
+        album = Album.new(tracks.title: "this song")
+        assert_equal({1=>"this song"}, album.tracklist)
       end
     end
   end
 
   describe "#show_release_date" do
     context "when albums have a release date" do
-      it "returns a release date for a particular release of an album" do
-        # place assertions here
+      it "returns a year integer for a particular release of an album" do
+        album = Album.new(releases.release_date: 1965)
+        assert_equal(1965, album.release_date)
       end
     end
   end
