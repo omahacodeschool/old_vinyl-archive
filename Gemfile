@@ -66,3 +66,5 @@ group :staging, :production do
 end
 
 gem 'carrierwave'
+gem 'fog'
+gem 'fog-aws'
