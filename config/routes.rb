@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
-  root to: "home#index"
+  root to: "albums#index"
 
   post "save_artist_image/:artist_id" => 'artist_images#create'
   get "artist_images/:artist_id/new"  => 'artist_images#new'
