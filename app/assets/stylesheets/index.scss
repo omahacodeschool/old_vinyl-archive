@@ -1,0 +1,1061 @@
+
+//---Headers for styleguide items------
+
+
+
+//--------Default text-----------
+
+.default-body-text {
+  font: $oswaldLight;
+  color: #a6a6a6;}
+
+  //--------Album detail title-----------
+
+.album_detail_title {
+    font: $yanone;
+    color: #5d5e5e;
+}
+
+  //--------Default text-----------
+
+.album_detail_song {
+    font: $oswaldLight;
+    color: #5d5e5e;
+}
+
+  //--------album detail artist-----------
+
+.album_detail_song {
+    font: $oswald;
+    color: #5d5e5e;
+}
+
+
+ //--------album detail artist additional detail-----------
+
+  .album_detail_artist {
+      font: $oswaldItalic;
+      color: #a6a6a6;
+  }
+
+//-----------------Reusable 4  column input box ---------
+
+.input-box {
+      display: block;
+      appearance: none;
+      border-radius: 5px;
+      background-color: #efefef;
+      width: 33.3%;
+      padding: 0px 0px;
+      margin: 0px 0px;}
+  .input-box-text {
+      font: $oswaldItalic;
+      color: #5d5e5e;
+      appearance: none;
+      outline-color: #5d5e5e;
+      width: 300px;
+      padding: 5px 10px 5px 10px;
+      border-width: 0px;
+      border-color: #5d5e5e;}
+
+
+
+
+//---------9 col---artist page mid page header---------
+
+.members {
+  position: relative;
+  display: inline-block;
+  margin-left: 48%;
+}
+
+
+
+    
+
+
+
+//----------reusable vinyl archive header ----
+
+//-----testing
+
+
+.title-bar {
+  display: block;
+  position: relative;
+  color: black;
+  height: 80px;
+}
+
+.title-bar-title {
+  font: $oswald;
+
+}
+
+.menu-icon {
+  color: #FFFFFF;
+  display: inline-block;
+}
+
+
+
+
+     
+//----modifications to the va header for admin pages----
+
+.vinyl-archive-header-admin-pages {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 93px;
+      padding: 0px 0px;
+      top: -93px;
+
+      
+}
+
+.link-text-vinyl-archive-header-admin-pages {
+       position: relative;
+       // top: -84px;
+       float: right;
+       display: block;
+       color: white;
+       font: $montserrat;
+       text-decoration: none;
+       // vertical-align: middle;
+       padding-top: 30px;
+       padding-right: 20px;
+   }
+
+
+
+
+//-----------4 column text entry box for admin pages----
+.four-column-text-entry-object {
+  position: relative;
+  width: 100%; 
+  vertical-align: middle;
+  top: -500px;
+  right: -341px;
+  margin: 10px 0px;
+}
+.four-column-text-entry-box-title {
+  display: block;
+  position: relative;
+  font: $oswaldLight;
+  color: white;
+  width: 100%;
+  text-align: center;  
+}
+
+.four-column-text-entry-box {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 100%;
+  border-radius: 10px 10px;
+  color: #5d5e5e;
+  font: $oswald;
+}
+
+.four-column-explanatory-text {
+  display: block;
+  position: relative;
+  font: $smallOswaldItalic;
+  color: #cecece;
+
+}
+
+//-----one album object - block format ---
+
+          
+ .one-album-object {
+    position: relative;
+    display: block;
+    float: left;
+    height: 300px;
+    width: 100%;
+    padding: 20px 5px 20px 5px;}
+ .album-image {
+    position: relative;
+    display: block;
+    height: 205px;
+    width: 100%;
+    padding-bottom: 0px;}
+ .album-title {
+    position: relative;
+    display: block;
+    font: $oswald;
+    color: #5d5e5e;
+    padding-top: 5px;
+    text-align: left;}
+ .album-artist {
+    position: relative;
+    display: block;
+    font: $oswaldItalic;
+    color: #5d5e5e;
+    text-align: left;
+}
+
+
+
+
+
+//----one album object - list format ---
+
+
+          
+ .one-album-list-object {
+    position: relative;
+    display: block;
+    float: left;
+    height: 120px;
+    width: 100%;
+    padding: 20px 20px 20px 20px;}
+ .album-list-image {
+    position: relative;
+    float: left;
+    display: block;
+    height: 55px;
+    width: 55px; 
+    margin-right: 10px;}
+ .album-list-title {
+    position: relative;
+    display: block;
+    font: $oswald;
+    color: #5d5e5e;
+    text-align: left;}
+ .album-list-artist {
+    position: relative;
+    display: block;
+    font: $oswaldItalic;
+    color: #5d5e5e;
+    text-align: left;}
+
+
+
+
+//--9 column page content header------
+
+  .page-content-header-object {
+    padding: 10px 0px;
+  }
+  .page-content-header {
+      background-color: #5d5e5e;
+      width: 100%;
+      padding: 13px 10px 12px 10px;
+  }
+  .page-content-header-text {
+      color: #FFFFFF;
+      font: $montserrat;
+   }
+  .page-content-modifier-text {
+      font: $oswaldItalic;
+  }
+  .link-text {
+      position: block;
+      float: right;
+      color: white;
+      font: $montserrat;
+      text-decoration: none;
+
+  }
+
+
+//--9 column page content header - ALT------
+
+  .page-content-header-object-alt {
+    padding: 10px 0px;
+  }
+  .page-content-header-alt {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 50px;
+    padding: 10px 0px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-color: #a6a6a6;
+    border-style: solid;
+  }
+  .page-content-header-text-alt {
+      color: #a6a6a6;
+      font: $oswaldLight;
+   }
+  .page-content-modifier-text-alt {
+      font: $oswaldItalic;
+  }
+  .link-text-alt {
+      position: block;
+      float: right;
+      color: #a6a6a6;
+      font: $montserrat;
+      text-decoration: none;
+
+  }
+
+
+
+
+
+
+//---3 column page content divider----
+
+               
+  .page-content-divider {
+      display: block;
+      background-color: #a6a6a6;
+      width: 100%;
+      padding: 10px 10px;
+  }
+  .page-content-divider-text {
+      color: #FFFFFF; 
+      font: $oswaldLight;
+      
+   }
+                
+
+//------------3-column block of copy with header bar-------------
+
+.one-copy-block-object {
+  padding: 10px 0px;
+}
+
+.one-copy-block-text {
+  padding: 10px 0px;
+}
+
+
+//-------album page - 12 column page content header ---
+
+
+  .page-content-header {
+      background-color: #5d5e5e;
+      width: 100%;
+      padding: 10px 10px;
+  }
+  .page-content-header-text {
+      color: #FFFFFF;
+      font: $montserrat;
+   }
+  .page-content-modifier-text {
+      font: $oswaldItalic;
+  }
+  .link-text {
+      display: block;
+      float: right;
+      color: white;
+      font: $montserrat;
+      text-decoration: none;
+  }
+                
+
+
+
+
+//---------album page - album page track list---
+
+  .album-detail-object {
+
+  }
+  .album-detail-title {
+      display: block;
+      font: $yanone;
+      color: #868686;
+      font-size: 42px;
+  }
+  .album-detail-artist {
+      display: block;
+      font: $oswaldLight;
+      color: #868686;
+  }
+
+  .album-track-list-object {
+    margin: 20px 0px;
+
+  }
+  .album-track-number {
+      display: inline-block;
+      font: $oswald;
+      color: #a6a6a6;
+  }
+  .album-track-song-title {
+      display: inline-block;
+      font: $oswald;
+      color: #2b2b2b;
+  }
+  .album-track-info {
+      display: inline-block;
+      font: $oswaldItalic;
+      color: #a6a6a6;
+  }
+  
+
+
+
+
+//---------album page - album cover object------- 
+ .album-cover-object {
+    display: block;
+    padding: 10px 10px;
+    float: left;
+    // height: 100%;
+    height: 800px;
+
+  }
+
+  .album-cover-main-image {
+    display: block;
+    width: 100%;
+    height: 432px;
+    width: 432px;
+  }
+
+  .album-cover-small-image {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    width: 84px;
+    height: 84px;
+    margin: 10px 0px;
+  }
+
+  .album-release-text-object {
+    display: block;
+    position: relative;
+    margin: 20px 0px 20px 0px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .album-release-info {
+    display: block;
+    position: relative;
+    list-style-type: none;
+    font: $oswaldItalic;
+    color: #2b2b2b;
+  }
+
+  .album-release-data {
+    display: inline-block;
+    list-style-type: none;
+    font: $oswaldLight;
+    color: #cecece;
+
+
+  }
+
+//---------album page other info paragraph----
+
+.other-info-header {
+  display: block;
+  position: relative;
+  font: $oswaldItalic;
+  color: #2b2b2b;
+
+
+}
+
+.other-info-text {
+  display: block;
+  position: relative;
+  font: $oswaldLight;
+  color: #868686;
+  padding: 20px 0px;
+
+}
+
+
+
+
+
+//---------9 column page navigation-------
+
+  ul {
+      padding: 0;
+      text-align: center;
+  }
+  ul li {
+      display: inline-block;     
+  }
+  ul li a {
+      background-color: white;
+      color: #5d5e5e;
+      font: $oswald;
+      padding: 10px 10px;
+      text-decoration: none;
+      border-radius: 4px 4px 0 0;
+  }
+  ul li a:hover {
+      background-color: orange;
+  }
+                        
+  //------ cargo from header alt
+
+    .pagination-object {
+    padding: 10px 0px;
+  }
+  .pagination-box {
+      background-color: #FFFFFF;
+      width: 100%;
+      padding: 10px 10px;
+      border-top-width: 2px;
+      border-left-width: 0px;
+      border-right-width: 0px;
+      border-bottom-width: 0px;
+      border-color: #a6a6a6;
+      border-style: solid;
+  }
+            
+
+//------12 column background art of vinyl album-----
+
+.vinyl-album-background-art {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: "/images/header-footer-backgrounds/record-background.png";
+}
+
+
+//-------------Reusable page footer--------------
+
+.vinyl-archive-footer {
+  position: relative;
+  display: block;
+  width: 1000px;
+  height: 93px;
+  padding: 0px 0px;
+  margin-left: -15px;
+  background-color: gray; 
+
+}
+
+
+.vinyl-archive-footer-text {
+   position: relative;
+    top: 25px;
+    left: 0px;
+    color: red;
+    display: inline-block;
+    font: $oswald;
+    padding-top: 00px;
+    padding-left: 20px;
+}
+.vinyl-archive-developer-credit {
+   position: relative;
+   float: right;
+    top: 25px;
+    left: 0px;
+    color: red;
+    display: inline-block;
+    font: $oswald;
+    padding-top: 00px;
+    padding-left: 20px;
+
+}
+
+
+
+//-----------------bullet list on artist page------
+
+.artist {
+
+    
+    list-style-type: none;
+}
+
+.artist-text {
+
+  padding: 10px 0px;
+}
+
+//-----------lower bar on 9 col artist page-----------
+
+
+
+
+// begin full page container stuff---------------------
+
+.container {
+  background-color: white;
+  max-width: 1000px;
+  height: 100%;
+  padding-left: 15px;
+  background-position: center;
+}
+
+.container-admin-pages {
+  background-color: #5d5e5e;
+  max-width: 1000px;
+  height: 100%;
+  padding-left: 15px;
+  background-position: center;
+}
+
+.site-background {
+  background-color: #5d5e5e;
+  height: 100%;
+  width: 100%;
+}
+
+//-----end of full page container stuff-----
+
+// ----not sure why this is here------------
+
+.album-musician-page {
+
+  display: block;
+  float: left;
+}
+
+//--------admin pages that open in new window have this close---
+
+.close-window-icon {
+
+    display: block;
+    position: relative;
+    float: right;
+    background: #FFF;
+    font: $oswald;
+    color: #5d5e5e;
+    top: -900px;
+}
+
+.submit-button {
+
+    display: block;
+    position: relative;
+    background: #5d5e5e;
+    font: $icons;
+    font-size: 36px;
+    color: white;
+    margin: 15px 0px;
+    text-align: center;
+}
+
+
+//--------text entry for bio pages - admin section-----------------------
+
+.four-column-biography-text-entry-object {
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+  top: -553px;
+  right: -341px;
+  margin: 10px 0px;
+}
+.four-column-biography-text-entry-box-title {
+  display: block;
+  position: relative;
+  font: $oswaldLight;
+  color: white;
+  width: 100%;
+  text-align: center;
+  background: none;  
+}
+
+.four-column-biography-text-entry-box {
+  display: block;
+  position: relative;
+  height: 175px;
+  width: 100%;
+  border-radius: 10px 10px;
+  color: #5d5e5e;
+  font: $oswald;
+}
+
+.four-column-explanatory-text {
+  display: block;
+  position: relative;
+  font: $smallOswaldItalic;
+  color: #cecece;
+
+}
+//----------just the add-extra-info page-----
+
+.four-column-extra-info-text-entry-object {
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+  top: -553px;
+  right: -341px;
+  margin: 10px 0px;
+
+  .four-column-extra-info-text-entry-box-title {
+  display: block;
+  position: relative;
+  font: $oswaldLight;
+  color: white;
+  width: 100%;
+  text-align: center;
+  background: none;  
+}
+
+}
+
+//----------just the add tracks one page-----
+
+
+  .two-column-add-tracks-one-text-entry-box-title {
+  display: block;
+  position: relative;
+  font: $oswaldLight;
+  color: white;
+  width: 100%;
+  text-align: center;
+  background: none; } 
+
+.two-column-text-entry-box {
+    display: block;
+    position: relative;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px 10px;
+    color: black;
+    font: normal lighter 1.5rem "Oswald";
+    top: -486px;
+    right: -341px;
+}
+
+.two-column-explanatory-text {
+  display: block;
+  position: relative;
+  font: $smallOswaldItalic;
+  color: #cecece;
+  right: -488px;
+  top: -601px;
+
+
+}
+
+.plus-sign-icon {
+    display: block;
+    position: relative;
+    font: normal lighter 1.5rem "Oswald";
+    font-size: 54px;
+    color: black;
+    top: -584px;
+    right: -650px;
+    border-color: none;
+    background-size: 40px 0px;
+    background-color: #cecece;
+}
+
+
+.four-column-add-tracks-text-entry-object {
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    top: -496px;
+    right: -341px;
+    margin: 10px 0px;
+}
+
+.add-tracks-pagination {
+
+    position: relative;
+    display: block;
+    color: #5d5e5e;
+    font: $oswald;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+    top: -586px;
+    right: -427px;
+
+}
+
+.vinyl-archive-footer-option {
+
+width: 8px;
+height: 8px;
+background-width: 960px;
+background-height: 93px;
+background: "images/footer-background_2x.png";
+background-repeat: repeat;
+margin-bottom: 40px;
+
+
+}
+
+
+
+
+ //This is all upside down. Make the container, 1000 x 93, make the 
+ //background, also 1000x93, make the text and the images all left
+ //to right on a line, save as a unit.
+
+ //I think I have found 500 ways not to do front end design, and a 
+ //few ways to do it. The block is my friend. Make the block, 
+ //fill the block, use the block where you need it over and over.
+
+//-------large blocks below----------
+
+//--header
+//--second header (3 kinds)
+//--right column (most pages)
+//--left column elements (has some variety)
+//--footer
+//--album page left column (unique)
+//--album page right column (unique)
+
+//--BEGIN VA HEADER CONTAINER AND ELEMENTS--------------------
+
+  .vinyl-archive-header {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 93px;
+  }
+
+  .vinyl-archive-header-background-image {
+      position: relative;
+      background-image: "/images/record-background2.png";
+      background-color: black;   
+  }
+
+  .vinyl-archive-header-background-image-alt {
+      position: relative;
+      background: transparent;
+  }
+ 
+  .vinyl-archive-header-text {
+    position: absolute;
+    top: 25px;
+    left: 151px;
+    color: #FFFFFF;
+    display: block;
+    font: $oswald;
+    padding-top: 00px;
+    padding-left: 20px;   
+  }
+
+  .icon {
+      float: left;
+      position: absolute;
+      height: 93px;
+      top: 0px;
+      left: 50px;
+      display: inline-block;
+      font: $icons;
+      padding: 10px 10px;
+      background-color: white;
+  }
+  
+  .byline {
+      font: $oswaldLight;
+      padding-left: 10px;
+  }
+
+  .link-text-vinyl-archive-header {
+       position: relative;
+       top: -84px;
+       float: right;
+       display: block;
+       color: white;
+       font: $montserrat;
+       text-decoration: none;
+       vertical-align: middle;
+       padding-top: 20px;
+       padding-right: 20px;
+  }
+
+
+
+
+  
+//--END OF HEADER AND ALL OF ITS ELEMENTS------------------
+
+//--BEGIN VA SECOND HEADER CONTAINER AND ELEMENTS--------------------
+
+.second-level-header-container {
+  width: 970px;
+  height: 93px;
+  padding: 20px 2%;
+}
+
+
+
+
+//---------search box----------
+
+  // .action-header {
+  //   padding: 20px 0px 20px 0px;
+  // }
+
+  .search-bar {
+    display: block;
+    float: left;
+    border-radius: 5px;
+    background-color: #efefef;
+    width: 400px;
+    padding: 0px 0px;
+    margin: 0px 0px;
+  }
+  .search-bar-text {
+    font: italic lighter 1.5rem "Oswald";
+    color: #5d5e5e;
+    appearance: none;
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+    border-width: 0px;
+    position: relative;
+    display: inline-block;
+  }
+  .spyglass {
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    color: #a6a6a6;
+    width: 20px;
+    height: 20px;}
+
+//----sort bar (not formatted correctly what does it do?)-------
+  .sort-bar-object {
+    width: 300px;
+    height: 50px;
+    vertical-align: middle;
+  }
+
+
+  .sort-bar {
+    display: block;
+    position: relative;
+    float: left;
+    font: $oswald;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  .sort-input {
+    position: relative;
+    display: inline-block;
+    height: 36px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  .sort {
+    position: relative;
+    display: inline-block;
+    font: $oswald;
+    float: left;
+  }
+
+//------icons for toggle between box format and list format homepage---
+
+    // .navigation-icon {
+    //   height: 48px;
+    //   width: 100%;
+    //   vertical-align: middle;  
+    // }
+
+    .material-icons {
+      display: inline-block;
+      position: relative;
+      font-size: 48px;
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;  
+    }
+
+//--------social media icons (on albums, artist, musician, search) -----
+.social-media-icon {
+  position: inline-block;
+  font: $icons;
+  font-size: 30px;
+  float: right;
+  padding: 10px 5px;
+  color: #a6a6a6;
+}
+ 
+.social-media-links-text {
+  position: inline-block;
+  float: right;
+  padding: 10px 5px;
+  font: $oswaldItalic;
+
+}
+
+
+
+
+//--END OF VA SECOND HEADER AND ALL OF ITS ELEMENTS------------------
+
+
+//--VA FOOTER CONTAINER AND ELEMENTS---------------------
+
+//v-a-footer-container2 
+
+.v-a-footer-container2 {
+  width: 970px;
+  height: 93px;
+ }
+  
+//v-a-footer-background2
+
+.v-a-footer-background2{
+
+    color: white;
+    background: linear-gradient(to bottom, #868686, #868686 12%, #222222 12%, #222222);
+    background-size: 100% 8px;
+    height: 93px;
+    vertical-align: middle;
+    padding-top: 24px;     
+}
+
+//ALL LOGOS AND TEXT ON VA FOOTER ARE HERE----------
+
+//v-a-footer-text2 ---
+
+.v-a-footer-text2{
+
+  color:white;
+  font: $oswald;
+  font-size: 18px;
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+//v-a-footer-image2
+
+  .v-a-footer-image2{
+
+      display: inline-block;
+      position: relative;
+      max-height: 30px;
+      max-width: auto;
+      vertical-align: middle;
+      margin-left: 10px;
+  }
+
+  .v-a-footer-design-credit-image2 {
+
+      display: inline-block;
+      position: relative;
+      /* float: right; */
+      max-height: 50px;
+      max-width: auto;
+      vertical-align: middle;
+      margin-left: 10px;
+  }
+
+  .v-a-footer-design-credit-text2 {
+
+      color: white;
+      font: normal normal 1.5rem "Oswald";
+      font-size: 18px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      margin-left: 43%; 
+  }
+
+// THE END OF EVERYTHING HAVING TO DO WITH THE VA FOOTER----
+
+
+
