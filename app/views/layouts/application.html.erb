@@ -50,53 +50,94 @@
     <div class="main">
 
       <div class="row">
-        <div class="col-8">
+        <div class="small-9 columns">
           <%= yield %>
         </div>
 
-        <div class="col-4">
-          <div class="sidebar">
-            <!-- SIDEBAR NAVIGATION AREA BELOW -->
+
+<!-- Start of right sidebar -->
+
+  <div class="small-3 columns">
+
+  <!-- SIDEBAR NAVIGATION AREA BELOW -->
 
             <!-- Retrieve info for first 3 cities (areas) ordered by most number of artists -->
             <!-- Name -->
             <!-- Count of albums associated with that area -->
-            <h3><%= areas_index_link %></h3>
-            <% @areas.each do |area| %>
-              <%= areas_show_link(area) %>
-              <div class="count">(<%= area.albums.count %>)</div>
-              <br />
-            <% end %>
-
-            <!-- Retrieve info for first 3 genres ordered by most number of albums -->
+    
+    <div class="one-copy-block-object">
+      <div class="page-content-divider">
+        <div class="page-content-divider-text"><%= areas_index_link %>
+        </div>
+      </div>
+      <div class="one-copy-block-text">
+        <% @areas.each do |area| %>
+          <div class="default-body-text">
+            <%= areas_show_link(area) %>(<%= area.albums.count %>)<br />
+          </div>
+        <% end %>
+      </div>
+    </div>
+      <!-- Retrieve info for first 3 genres ordered by most number of albums -->
             <!-- Name -->
             <!-- Count of albums associated with that genre -->
-            <h3><%= genres_index_link %></h3>
-            <% @genres.each do |genre| %>
-              <%= genres_show_link(genre) %>
-              <div class="count">(<%= genre.albums.count %>)</div>
-              <br />
-            <% end %>
+    <div class="one-copy-block-object">
+      <div class="page-content-divider">
+        <div class="page-content-divider-text"><%= genres_index_link %>
+        </div>
+      </div>
+      <div class="one-copy-block-text">
+        <% @genres.each do |genre| %>
+          <div class="default-body-text">
+            <%= genres_show_link(genre) %>(<%= genre.albums.count %>)<br />
+          </div>
+        <% end %>
+      </div>
+    </div>
 
-            <!-- List decades from 2010’s to 1960’s -->
-            <!-- Retrieve release count for each decade based on artist start_year -->
-            <h3><%= decades_index_link %></h3>
-            <% @releases.by_decade.each do |decade, album| %>
-              <%= decades_show_link(decade) %>s
-              <div class="count">(<%= album.count %>)</div>
-              <br />
-            <% end %>
+    <!-- List decades from 2010’s to 1960’s -->
+            <!-- Retrieve release count for each decade based on artist start_year --> 
+    <div class="one-copy-block-object">    
+      <div class="page-content-divider">
+        <div class="page-content-divider-text"><%= decades_index_link %>
+        </div>
+      </div>
+        <div class="one-copy-block-text">
+          <% @releases.by_decade.each do |decade, album| %>
+          <div class="default-body-text">
+            <%= decades_show_link(decade) %>s(<%= album.count %>)<br />       
+          </div>
+          <% end %>
+        </div>
+    </div>
 
-            <!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
-            <!-- Retrieve album count associated with that format type -->
-            <h3><%= formats_index_link %></h3>
-            <% @formats.each do |format| %>
-              <%= formats_show_link(format) %>
-              <div class="count">(<%= format.albums.count %>)</div>
-              <br />
-            <% end %>
-          </div><!-- /sidebar -->
-        </div><!-- /col-4 -->
+    <!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
+    <!-- Retrieve album count associated with that format type -->
+    <div class="one-copy-block-object">    
+      <div class="page-content-divider">
+        <div class="page-content-divider-text"><%= formats_index_link %>
+        </div>
+      </div>
+        <div class="one-copy-block-text">
+           <% @formats.each do |format| %>
+            <div class="default-body-text">
+                <%= formats_show_link(format) %>(<%= format.albums.count %>)<br />
+            </div>
+          <% end %>
+        </div>
+    </div>
+
+  </div>
+
+
+
+
+
+<!-- end of right sidebar -->
+
+
+
+        
       </div><!-- /row -->
     </div><!-- /main -->
   </div>
