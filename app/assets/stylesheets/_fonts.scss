@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'hn-radio-icons';
+  src: url('hn-radio-icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HN-icons';
+  src: url('HN-icons.ttf') format('truetype');   
+  font-weight: normal;
+  font-style: normal;
+
+  // ('HN-icons.eot');
+  // src: url('HN-icons.eot?#iefix') format('embedded-opentype'),
+  //   url('HN-icons.woff') format('woff'),
+
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('Oswald-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: url('YanoneKaffeesatz-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('Oswald.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('Oswald-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+// @font-face {
+//   font-family: 'Oswald';
+//   src: url('Oswald-Light.eot');
+//   src: url('Oswald-Light.eot?#iefix') format('embedded-opentype'),
+//     url('Oswald-Light.woff') format('woff'),
+//     url('Oswald-Light.ttf') format('truetype');
+//   font-weight: 300;
+//   font-style: normal;
+// }
+
+
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('Montserrat-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+$oswald: normal normal (24rem/16) 'Oswald';
+$oswaldLight: normal lighter (24rem/16) 'Oswald';
+$oswaldBold: normal bold (24rem/16) 'Oswald';
+$oswaldItalic: italic lighter (24rem/16) 'Oswald';
+$smallOswaldItalic: italic lighter (16rem/16) 'Oswald';
+$montserrat: normal bold (24rem/16) 'Montserrat';
+$yanone: normal bold (30rem/16) 'Yanone Kaffeesatz';
+$smallYanone: normal bold (22rem/16) 'Yanone Kaffeesatz';
+
+$icons: normal normal (80px) 'HN-icons';
+
+
+
