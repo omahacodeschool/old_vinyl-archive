@@ -129,10 +129,6 @@
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 //-----------4 column text entry box for admin pages----
 .four-column-text-entry-object {
   position: relative;
@@ -859,12 +855,28 @@ background-repeat: repeat-y;
     position: absolute;
     top: 25px;
     left: 151px;
-    color: #FFFFFF;
     display: block;
     font: $oswald;
     padding-top: 00px;
     padding-left: 20px;   
   }
+  .vinyl-archive-header-text a{
+
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  a.hear_nebraska {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+  a.albums_user_addition {
+    color: #FFFFFF;
+    text-decoration: none;
+    
+  }
+
 
   .icon {
       float: left;
