@@ -16,118 +16,107 @@
 <body class="<%= body_class %>">
   <%= render "flashes" -%>
 
-  <div class="container">
-    <div id="header">
-      <!-- HEADER NAVIGATION AREA BELOW -->
-      <%= albums_index_link %>
-      <%= hear_nebraska_link %>
-      <%= albums_user_addition_link %>
-    </div>
-  </div>
 
 
+<!-- HEADER NAVIGATION AREA BELOW -->
   <div class="row">
-          <div class="vinyl-archive-header">
-            <div class="small-12 columns">   
-              <div class="vinyl-archive-header-background">
-                <img src='/assets/record-background2.png'>
-                <div class="vinyl-archive-logo">
-                  <i class="icon"></i>
-                  <div class="vinyl-archive-header-text"><%= albums_index_link %><span class="byline"><%= hear_nebraska_link %></span>
-                  </div>
-                  <div class="link-text-vinyl-archive-header"><%= albums_user_addition_link %></div>
-                </div>
-              </div>
+    <div class="vinyl-archive-header">
+      <div class="small-12 columns">   
+        <div class="vinyl-archive-header-background">
+          <img src='/assets/record-background2.png'>
+          <div class="vinyl-archive-logo">
+            <i class="icon"></i>
+            <div class="vinyl-archive-header-text"><%= albums_index_link %><span class="byline"><%= hear_nebraska_link %></span>
             </div>
+            <div class="link-text-vinyl-archive-header"><%= albums_user_addition_link %></div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container">
     <div class="controls">
       <%= content_for :controls %>
     </div><!-- /controls -->
+  </div>
 
-    <div class="main">
-
-      <div class="row">
-        <div class="small-9 columns">
-          <%= yield %>
-        </div>
-
-
+  <div class="row">
+    <div class="small-9 columns">
+      <%= yield %>
+    </div>
 <!-- Start of right sidebar -->
 
-  <div class="small-3 columns">
-
+    <div class="small-3 columns">
   <!-- SIDEBAR NAVIGATION AREA BELOW -->
 
-            <!-- Retrieve info for first 3 cities (areas) ordered by most number of artists -->
-            <!-- Name -->
-            <!-- Count of albums associated with that area -->
+<!-- Retrieve info for first 3 cities (areas) ordered by most number of artists -->
+<!-- Name -->
+<!-- Count of albums associated with that area -->
     
-    <div class="one-copy-block-object">
-      <div class="page-content-divider">
-        <div class="page-content-divider-text"><%= areas_index_link %>
-        </div>
-      </div>
-      <div class="one-copy-block-text">
-        <% @areas.each do |area| %>
-          <div class="default-body-text">
-            <%= areas_show_link(area) %>(<%= area.albums.count %>)<br />
+      <div class="one-copy-block-object">
+        <div class="page-content-divider">
+          <div class="page-content-divider-text"><%= areas_index_link %>
           </div>
-        <% end %>
-      </div>
-    </div>
-      <!-- Retrieve info for first 3 genres ordered by most number of albums -->
-            <!-- Name -->
-            <!-- Count of albums associated with that genre -->
-    <div class="one-copy-block-object">
-      <div class="page-content-divider">
-        <div class="page-content-divider-text"><%= genres_index_link %>
         </div>
-      </div>
-      <div class="one-copy-block-text">
-        <% @genres.each do |genre| %>
-          <div class="default-body-text">
-            <%= genres_show_link(genre) %>(<%= genre.albums.count %>)<br />
-          </div>
-        <% end %>
-      </div>
-    </div>
-
-    <!-- List decades from 2010’s to 1960’s -->
-            <!-- Retrieve release count for each decade based on artist start_year --> 
-    <div class="one-copy-block-object">    
-      <div class="page-content-divider">
-        <div class="page-content-divider-text"><%= decades_index_link %>
-        </div>
-      </div>
         <div class="one-copy-block-text">
-          <% @releases.by_decade.each do |decade, album| %>
-          <div class="default-body-text">
-            <%= decades_show_link(decade) %>s(<%= album.count %>)<br />       
-          </div>
+          <% @areas.each do |area| %>
+            <div class="default-body-text">
+              <%= areas_show_link(area) %>(<%= area.albums.count %>)<br />
+            </div>
           <% end %>
         </div>
-    </div>
+      </div>
+<!-- Retrieve info for first 3 genres ordered by most number of albums -->
+    <!-- Name -->
+    <!-- Count of albums associated with that genre -->
+      <div class="one-copy-block-object">
+        <div class="page-content-divider">
+          <div class="page-content-divider-text"><%= genres_index_link %>
+          </div>
+        </div>
+        <div class="one-copy-block-text">
+          <% @genres.each do |genre| %>
+            <div class="default-body-text">
+              <%= genres_show_link(genre) %>(<%= genre.albums.count %>)<br />
+            </div>
+          <% end %>
+        </div>
+      </div>
 
-    <!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
-    <!-- Retrieve album count associated with that format type -->
+<!-- List decades from 2010’s to 1960’s -->
+    <!-- Retrieve release count for each decade based on artist start_year --> 
+      <div class="one-copy-block-object">    
+        <div class="page-content-divider">
+          <div class="page-content-divider-text"><%= decades_index_link %>
+          </div>
+        </div>
+        <div class="one-copy-block-text">
+          <% @releases.by_decade.each do |decade, album| %>
+            <div class="default-body-text">
+              <%= decades_show_link(decade) %>s(<%= album.count %>)<br />       
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+<!-- List first 3 or 5 formats based either on count of releases associated with that format or most common format types -->
+<!-- Retrieve album count associated with that format type -->
     <div class="one-copy-block-object">    
       <div class="page-content-divider">
         <div class="page-content-divider-text"><%= formats_index_link %>
         </div>
       </div>
-        <div class="one-copy-block-text">
-           <% @formats.each do |format| %>
-            <div class="default-body-text">
-                <%= formats_show_link(format) %>(<%= format.albums.count %>)<br />
-            </div>
-          <% end %>
-        </div>
+      <div class="one-copy-block-text">
+         <% @formats.each do |format| %>
+          <div class="default-body-text">
+            <%= formats_show_link(format) %>(<%= format.albums.count %>)<br />
+          </div>
+        <% end %>
+      </div>
     </div>
-
   </div>
+</div><!-- /row -->
 
 
 
@@ -138,15 +127,27 @@
 
 
         
-      </div><!-- /row -->
-    </div><!-- /main -->
-  </div>
+      
 
-  <div class="container">
-    <footer>
-      Footer
-    </footer>
-  </div>
+
+
+  
+
+<div class="row">
+      <div class="small-12 columns">
+        <div class="v-a-footer-container2">    
+          <div class="v-a-footer-background2">
+            <div class="v-a-footer-text2">SPONSORS</div>
+            <img class="v-a-footer-image2" src="/assets/logo-firespring-reverse.png">
+            <img class="v-a-footer-image2" src="/assets/bulu-box.png">
+            <img class="v-a-footer-image2" src="/assets/hudl.png">
+            <div class="v-a-footer-design-credit-text2">SITE BY</div>
+            <img class="v-a-footer-design-credit-image2" src="/assets/omaha-code-school.png"> 
+          </div>  
+        </div>
+      </div>
+    </div>
+
 
 
   <%= render "javascript" %>
