@@ -2,56 +2,6 @@
   Share on FB and Twitter.
 <% end %>
 
-<!-- Shows album title -->
-<h1><%= albums_show_link(@album) %></h1>
-
-<!-- Shows album artist's name -->
-<h2>By: <%= artists_show_link(@album.artist) %> </h2>
-
-<%= albums_show_image_link(@album) %>
-
-<!-- Shows the title of each of the album's tracks -->
-<% @album.tracklist.each do |number, track| %>
-  <br />
-  <%= "#{number}. #{track}" %>
-<% end %>
-
-<br>
-
-<!-- Shows album's release date -->
-<p>
-<b>Released:</b> 
-<% @album.show_release_date.each do |date| %>
-  <%= date %>
-  <br />
-<% end %>
-</p>
-<!-- Shows album artist's hometown -->
-<p><b>City:</b> <%= areas_show_link(@album.area) %> </p>
-<!-- Shows album's genre -->
-<p><b>Genre:</b> <%= genres_show_link(@album.genre) %> </p>
-<!-- Shows album's record label -->
-<p>
-<b>Label:</b> 
-<% @album.show_album_label.each do |label| %>
-  <%= label %>
-  <br />
-<% end %> 
-</p> 
-<!-- Shows album's format -->
-<p>
-<b>Format:</b> 
-<% @album.show_album_format.each do |album_format| %>
-<%= formats_show_link(album_format) %>
-<br />
-<% end %>
-</p>
-<br>
-
-<p><b>Other info:</b> </p>
-<!-- Shows album artist's bio -->
-<p><%= @album.artist.bio %> </p>
-
 
 
 <div class="row">
@@ -93,19 +43,22 @@
   <div class="row">
       <div class="small-12 columns">
           <div class="page-content-header">
-              <div class="page-content-header-text">Album Title |<span class="page-content-modifier-text"> What it is</span>
+<!-- Shows album title -->
+              <div class="page-content-header-text"><%= albums_show_link(@album) %> |<span class="page-content-modifier-text"> What it is</span>
                 <a class="link-text" href="url">EDIT ALBUM</a>
               </div>
           </div>
       </div>
   </div>
 
+ 
+
   <div class="row">
       <div class="small-6 columns">
 
             <div class="album-cover-object">
               <div class="album-cover-main-image">
-                <img class="album-cover-main-image" src="/images/tilly-and-the-wall-cover.jpg" alt="Smiley face">
+                <%= albums_show_image_link(@album) %>
               </div>
             <div class="row">
               <div class="small-3 columns">
@@ -134,15 +87,22 @@
             <div class="small-12 columns">
             <div class="album-release-text-object">
               <div class="album-release-info">
-                <!-- <div class="members-text"> -->
-                  <!-- <div class="default-body-text"> -->
-                    <li class="release-info" href="url">Released: <span class="album-release-data"> November 15 1994</span></li>
-                    <li class="release-info" href="url">Location: <span class="album-release-data"> Omaha</span></li>
-                    <li class="release-info" href="url">Genre: <span class="album-release-data"> Zydeco</span></li>
-                    <li class="release-info" href="url">Released: <span class="album-release-data"> November 15 1994</span></li>
-                    <li class="release-info" href="url">Released: <span class="album-release-data"> November 15 1994</span></li> 
-                  <!-- </div> -->
-               <!--  </div> -->
+<!-- Shows album's release date -->
+                  <% @album.show_release_date.each do |date| %>
+                    <li class="release-info" href="url">Released: <span class="album-release-data"> <%= date %></span></li>
+                  <% end %>
+<!-- Shows album artist's hometown -->
+                    <li class="release-info" href="url">Location: <span class="album-release-data"> <%= areas_show_link(@album.area) %></span></li>
+<!-- Shows album's genre -->
+                    <li class="release-info" href="url">Genre: <span class="album-release-data"> <%= genres_show_link(@album.genre) %></span></li>
+<!-- Shows album's record label -->
+                  <% @album.show_album_label.each do |label| %>
+                    <li class="release-info" href="url">Label: <span class="album-release-data"> <%= label %></span></li>
+                  <% end %>
+<!-- Shows album's format -->
+                  <% @album.show_album_format.each do |album_format| %>
+                    <li class="release-info" href="url">Format: <span class="album-release-data"> <%= formats_show_link(album_format) %></span></li>
+                  <% end %> 
               </div>   
             </div>
           </div>
@@ -151,21 +111,28 @@
       </div>
 
       <div class="small-6 columns">
+
           <div class="album-detail-object">
             <div class="album-detail-title">
-              Conquest of Oklahoma
+<!-- Shows album title -->
+              <%= albums_show_link(@album) %>
               <div class="album-detail-artist">
-                by various artists
+<!-- Shows album artist's name -->
+                By: <%= artists_show_link(@album.artist) %>
+<!-- Shows the title of each of the album's tracks -->
+                <% @album.tracklist.each do |number, track| %>
                 <div class="album-track-list-object">
                 <div class="album-track-list">
-                  <div class="album-track-number">1 <span class="album-track-song-title"> Bohemian Rhapsody</span> <span class="album-track-info"> Queens of the Stone Age</span></div>
+                  <div class="album-track-number"><%= "#{number}" %>  <span class="album-track-song-title"><%= "#{track}" %> </span> 
+                  <!-- <span class="album-track-info"></span> -->
+                  </div>
                 </div>
-                <div class="album-track-list">
-                  <div class="album-track-number">2 <span class="album-track-song-title"> Louie, Louie</span> <span class="album-track-info"> The Kingsmen</span></div>
-                </div>
-                <div class="album-track-list">
-                  <div class="album-track-number">3 <span class="album-track-song-title"> Cast Iron Arm</span> <span class="album-track-info"> Charlie Burton and Rock Therapy</span></div>
-                </div>
+                <% end %>
+               <!--  ALBUM TRACK INFO IS ADDITIONAL INFO FOR COMPILATION ALBUMS OR OTHER SPECIAL SITUATIONS. -->
+               
+             
+                
+
                 </div>
               </div>
             </div>
@@ -173,14 +140,14 @@
       </div>
 
       
-        <div class="small-6 columns">
+     <!-- Shows album artist's bio -->
           <div class="other-info-header">
               Other info:
           </div>
           <div class="other-info-text">
-              It's not every day you see a band whose instrumental inventory includes concertina wire, a Daisy air rifle and a trio of mice. The mice were not harmed by either the concertina wire or the Daisy air rifle, and they knew their cues. Somehow it all works, with an infectious Latin beat and lots of opportunities to get up and dance.
+              <%= @album.artist.bio %> 
           </div>
-        </div>
+       
       
   </div>
 

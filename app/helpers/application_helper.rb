@@ -9,7 +9,7 @@ module ApplicationHelper
   end
   
   def albums_show_image_link(album)
-    link_to(image_tag(album.album_images.cover_image, size:"200x200"), "/albums/#{album.id}", {class: "show_album_image_link"})
+    link_to(image_tag(album.album_images.cover_image, {class: "album-cover-main-image"}), "/albums/#{album.id}" )
   end
 
   def albums_user_addition_link
