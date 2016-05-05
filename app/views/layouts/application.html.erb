@@ -12,6 +12,8 @@
   <title><%= title %></title>
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body class="<%= body_class %>">
   <%= render "flashes" -%>
@@ -19,6 +21,7 @@
 
 
 <!-- HEADER NAVIGATION AREA BELOW -->
+<% if !@hide_sidebar %>
   <div class="row">
     <div class="vinyl-archive-header">
       <div class="small-12 columns">   
@@ -43,10 +46,13 @@
 
   <div class="row">
     <div class="small-9 columns">
+    <% end %>
       <%= yield %>
+      <% if !@hide_sidebar %>
     </div>
+    <% end %>
 <!-- Start of right sidebar -->
-
+<% if !@hide_sidebar %>
     <div class="small-3 columns">
   <!-- SIDEBAR NAVIGATION AREA BELOW -->
 
@@ -116,6 +122,7 @@
       </div>
     </div>
   </div>
+ <% end %> 
 </div><!-- /row -->
 
 
@@ -132,7 +139,7 @@
 
 
   
-
+<% if !@hide_sidebar %>
 <div class="row">
       <div class="small-12 columns">
         <div class="v-a-footer-container2">    
@@ -147,7 +154,7 @@
         </div>
       </div>
     </div>
-
+<% end %>
 
 
   <%= render "javascript" %>

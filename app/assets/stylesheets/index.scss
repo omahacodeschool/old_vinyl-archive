@@ -625,8 +625,8 @@ padding-top: 10px;
 
 .container-admin-pages {
   background-color: #5d5e5e;
-  max-width: 1000px;
-  height: 100%;
+ 
+ 
   padding-left: 15px;
   background-position: center;
 }
@@ -652,12 +652,12 @@ padding-top: 10px;
 .close-window-icon {
 
     display: block;
-    position: relative;
-    float: right;
+    position: absolute;
     background: #FFF;
     font: $oswald;
     color: #5d5e5e;
-    top: -900px;
+    top: 0px;
+    right: 0px;
 }
 
 .submit-button {
@@ -913,7 +913,13 @@ background-repeat: repeat-y;
        padding-right: 20px;
   }
 
-
+//-------vinyl record art --use on admin pages------
+.background-image{
+  position: relative;
+}
+.vinyl-record-art {
+  margin: 0 auto;
+}
 
 
   

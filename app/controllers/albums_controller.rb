@@ -19,12 +19,8 @@ class AlbumsController < ApplicationController
 
   def new
     # REMOVE THESE ONCE SIDEBAR INFO IS EXCLUDED FROM THIS PAGE
-    @albums   = Album.all
-    @artists  = Artist.all
-    @areas    = Area.all
-    @genres   = Genre.all
-    @formats  = Format.all
-    @releases = Release.all
+    @hide_sidebar = true
+    
   end
 
   def create
