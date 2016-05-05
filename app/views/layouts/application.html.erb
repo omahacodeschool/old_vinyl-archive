@@ -21,7 +21,7 @@
 
 
 <!-- HEADER NAVIGATION AREA BELOW -->
-<% if !@hide_sidebar %>
+<% if !@hide_header %>
   <div class="row">
     <div class="vinyl-archive-header">
       <div class="small-12 columns">   
@@ -43,12 +43,13 @@
       <%= content_for :controls %>
     </div><!-- /controls -->
   </div>
-
+    <% end %>
+     <% if !@hide_yield_classes %>
   <div class="row">
     <div class="small-9 columns">
-    <% end %>
-      <%= yield %>
-      <% if !@hide_sidebar %>
+       <% end %>
+        <%= yield %>
+      <% if !@hide_yield_classes %>
     </div>
     <% end %>
 <!-- Start of right sidebar -->
@@ -139,7 +140,7 @@
 
 
   
-<% if !@hide_sidebar %>
+<% if !@hide_footer %>
 <div class="row">
       <div class="small-12 columns">
         <div class="v-a-footer-container2">    

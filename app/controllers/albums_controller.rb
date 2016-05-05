@@ -6,6 +6,8 @@ class AlbumsController < ApplicationController
     @formats  = Format.all
     @areas    = Area.all
     @genres   = Genre.all
+    @hide_sidebar = true
+    @hide_yield_classes = true
   end
 
   def index
@@ -20,6 +22,9 @@ class AlbumsController < ApplicationController
   def new
     # REMOVE THESE ONCE SIDEBAR INFO IS EXCLUDED FROM THIS PAGE
     @hide_sidebar = true
+    @hide_header = true
+    @hide_footer = true
+    @hide_yield_classes = true
     
   end
 
