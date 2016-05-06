@@ -1,6 +1,5 @@
 
 <div class="container-admin-pages">
-
   <div class="row background-image">
     <img class="vinyl-record-art" src="/assets/record-background.png">
 
@@ -17,9 +16,13 @@
       <div class="vinyl-archive-header-admin-pages">
         <div class="vinyl-archive-logo">
           <i class="icon"></i>
-            <div class="vinyl-archive-header-text"><%= albums_index_link %> <span class="byline"><%= hear_nebraska_link %></span>
+            <div class="vinyl-archive-header-text">
+              <%= albums_index_link %> 
+              <span class="byline"><%= hear_nebraska_link %></span>
             </div>
-          <div class="link-text-vinyl-archive-header-admin-pages"><%= albums_user_addition_link %></div>
+          <div class="link-text-vinyl-archive-header-admin-pages">
+            <%= albums_user_addition_link %>
+          </div>
         </div>
       </div>
     </div>
@@ -28,13 +31,11 @@
   <div class="row">
     <div class="small-4 columns">
       <div class="four-column-text-entry-object">
-      <%= form_tag "/albums/create", multipart: true do %>
-  
+        <%= form_tag "/albums/create", multipart: true do %>
         <div class="four-column-text-entry-box-title">
           Add an album
           <input class="four-column-text-entry-box" type="text" name="album_title"> 
-        </div>
-         
+        </div> 
       </div>
     </div>
   </div>
@@ -53,9 +54,10 @@
         <ul class="pagination" role="navigation" aria-label="Pagination">
           <!-- <li><a href="#">❮</a></li> -->
           <li><input type="submit" value="❯"></li>
-          <% end %>
         </ul>
+        <% end %> <!-- end form_tag -->
       </div>
     </div>
   </div>         
-</div>
+</div> <!-- container-admin-pages -->
+

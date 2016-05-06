@@ -16,54 +16,52 @@
   </div>
 <% end %>
 
-
 <!--START ALBUMS LOOP - larger album image - -->
 
+<div class="page-content-header-object">
+  <div class="page-content-header">
+    <div class="page-content-header-text">Latest Uploads |<span class="page-content-modifier-text"> Musician</span>    
+      <a class="link-text" href="url">EDIT MUSICIAN</a>
+    </div>
+  </div>
+</div>
 
-
-      <div class="page-content-header-object">
-        <div class="page-content-header">
-          <div class="page-content-header-text">Latest Uploads |<span class="page-content-modifier-text"> Musician</span>    
-            <a class="link-text" href="url">EDIT MUSICIAN</a>
-          </div>
-        </div>
-      </div>
-      
-    <!-- Retrieve album info for first 9 releases ordered by latest addition -->
-    <!-- Cover image -->
-    <!-- Title -->
-    <!-- Artist -->   
-            <% @albums.each do |album| %>
-            <div class="small-4 columns">
-              <div class="one-album-object">
-                <div class="album-image"><%= albums_show_image_link(album) %></div>
-                <div class="album-title"><%= albums_show_link(album) %></div>
-                <div class="album-artist"><%= artists_show_link(album.artist) %></div> 
-              </div>
-            </div>
-            <% end %>
-
-
-        <div class="row">
-          <div class="small-12 columns">
-            <div class="pagination-object">
-              <div class="pagination-box">
-                  <ul class="pagination" role="navigation" aria-label="Pagination">
-                <li><a href="#">❮</a></li>
-                <li><a href="#" aria-label="Previous page"> PREV <span class="show-for-sr"></span></a></li>
-                <li><a href="#" aria-label="Albums 1-9">1-9 of 203</a></li>
-                <li><a href="#" aria-label="Next page"> NEXT <span class="show-for-sr"></span></a></li>
-                <li><a href="#">❯</a></li>
-              </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-
-
-
+<!-- Retrieve album info for first 9 releases ordered by latest addition -->
+<!-- Cover image -->
+<!-- Title -->
+<!-- Artist -->   
+<% @albums.each do |album| %>
+  <div class="small-4 columns">
+    <div class="one-album-object">
+      <div class="album-image"><%= albums_show_image_link(album) %></div>
+      <div class="album-title"><%= albums_show_link(album) %></div>
+      <div class="album-artist"><%= artists_show_link(album.artist) %></div> 
+    </div>
+  </div>
+<% end %>
 <!-- end albums loop -->
+
+<!-- Pagination. This may change -->
+<div class="row">
+  <div class="small-12 columns">
+    <div class="pagination-object">
+      <div class="pagination-box">
+          <ul class="pagination" role="navigation" aria-label="Pagination">
+        <li><a href="#">❮</a></li>
+        <li><a href="#" aria-label="Previous page"> PREV <span class="show-for-sr"></span></a></li>
+        <li><a href="#" aria-label="Albums 1-9">1-9 of 203</a></li>
+        <li><a href="#" aria-label="Next page"> NEXT <span class="show-for-sr"></span></a></li>
+        <li><a href="#">❯</a></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 
 
 

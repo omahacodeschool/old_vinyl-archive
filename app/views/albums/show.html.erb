@@ -114,40 +114,39 @@
   </div> <!-- small-6 columns -->
 
   <div class="small-6 columns">
-
     <div class="album-detail-object">
       <div class="album-detail-title">
-<!-- Shows album title -->
+        <!-- Shows album title -->
         <%= albums_show_link(@album) %>
+
         <div class="album-detail-artist">
-<!-- Shows album artist's name -->
-          By: <%= artists_show_link(@album.artist) %>
-<!-- Shows the title of each of the album's tracks -->
-          <% @album.tracklist.each do |number, track| %>
+        <!-- Shows album artist's name -->
+        By: <%= artists_show_link(@album.artist) %>
+
+        <!-- Shows the title of each of the album's tracks -->
+        <% @album.tracklist.each do |number, track| %>
           <div class="album-track-list-object">
           <div class="album-track-list">
-            <div class="album-track-number"><%= "#{number}" %>  <span class="album-track-song-title"><%= "#{track}" %> </span> 
+            <div class="album-track-number"><%= "#{number}" %>
+              <span class="album-track-song-title"><%= "#{track}" %> </span> 
             <!-- <span class="album-track-info"></span> -->
             </div>
           </div>
-          <% end %>
+        <% end %>
          <!--  ALBUM TRACK INFO IS ADDITIONAL INFO FOR COMPILATION ALBUMS OR OTHER SPECIAL SITUATIONS. -->
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        </div> <!-- album-detail-artist -->
+      </div> <!-- album-detail-title -->
+    </div> <!-- album-detail-object -->
+  </div> <!-- small-6 columns -->
 
-  
- <!-- Shows album artist's bio -->
-      <div class="other-info-header">
-          Other info:
-      </div>
-      <div class="other-info-text">
-          <%= @album.artist.bio %> 
-      </div>
-     
-    
+  <!-- Shows album artist's bio -->
+  <div class="other-info-header">
+      Other info:
+  </div>
+  <div class="other-info-text">
+      <%= @album.artist.bio %> 
+  </div>
 </div> <!-- row line 55 -->
 
 
