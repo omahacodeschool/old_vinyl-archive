@@ -3,7 +3,6 @@
 <% end %>
 
 
-
 <div class="row">
   <div class="small-12 columns">
     <div class="second-level-header-container">
@@ -35,121 +34,121 @@
           </div>
         </div>
       </div>     
+    </div> <!-- second-level-header-container --> 
+  </div> <!-- small-12 columns -->       
+</div> <!-- Row -->
+
+<!-- Gray bar above the album information -->
+<div class="row">
+  <div class="small-12 columns">
+    <div class="page-content-header">
+<!-- Shows album title -->
+      <div class="page-content-header-text"><%= albums_show_link(@album) %> |
+        <span class="page-content-modifier-text"> What it is</span>
+        <a class="link-text" href="url">EDIT ALBUM</a>
+      </div>
     </div>
-  </div>        
+  </div>
 </div>
 
-
-  <div class="row">
-      <div class="small-12 columns">
-          <div class="page-content-header">
-<!-- Shows album title -->
-              <div class="page-content-header-text"><%= albums_show_link(@album) %> |<span class="page-content-modifier-text"> What it is</span>
-                <a class="link-text" href="url">EDIT ALBUM</a>
-              </div>
-          </div>
+<!-- Album name, artists and tracks -->
+<div class="row">
+  <div class="small-6 columns">
+    <!-- Large album image -->
+    <div class="album-cover-object">
+      <div class="album-cover-main-image">
+        <%= albums_show_image_link(@album) %>
       </div>
-  </div>
 
- 
+      <div class="row">
+        <!-- Album Thumbnail Module Start -->
+        <div class="small-3 columns">
+          <div class="album-cover-small-image">
+            <img class="album-cover-small-image" src="/images/tilly-and-the-wall-cover.jpg" alt="Smiley face">
+          </div>
+        </div>
+        <!-- Album Thumbnail Module End -->
+        <div class="small-3 columns">
+          <div class="album-cover-small-image">
+            <img class="album-cover-small-image" src="/images/tilly-and-the-wall-cover.jpg" alt="Smiley face">
+          </div>
+        </div>
+        <div class="small-3 columns">
+          <div class="album-cover-small-image">
+            <img class="album-cover-small-image" src="/images/tilly-and-the-wall-cover.jpg" alt="Smiley face">
+          </div>
+        </div>
+        <div class="small-3 columns">
+          <div class="album-cover-small-image">
+            <img class="album-cover-small-image" src="/images/tilly-and-the-wall-cover.jpg" alt="Smiley face">
+          </div>
+        </div>
+      </div> <!-- row -->
 
-  <div class="row">
-      <div class="small-6 columns">
+      <!-- Release Location Genre Lable Format -->
+      <div class="row">
+        <div class="small-12 columns">
+          <div class="album-release-text-object">
+            <div class="album-release-info">
+              <!-- Shows album's release date -->
+              <% @album.show_release_date.each do |date| %>
+                <li class="release-info" href="url">Released: <span class="album-release-data"> <%= date %></span></li>
+              <% end %>
+              <!-- Shows album artist's hometown -->
+                <li class="release-info" href="url">Location: <span class="album-release-data"> <%= areas_show_link(@album.area) %></span></li>
+              <!-- Shows album's genre -->
+                <li class="release-info" href="url">Genre: <span class="album-release-data"> <%= genres_show_link(@album.genre) %></span></li>
+              <!-- Shows album's record label -->
+              <% @album.show_album_label.each do |label| %>
+                <li class="release-info" href="url">Label: <span class="album-release-data"> <%= label %></span></li>
+              <% end %>
+              <!-- Shows album's format -->
+              <% @album.show_album_format.each do |album_format| %>
+                <li class="release-info" href="url">Format: <span class="album-release-data"> <%= formats_show_link(album_format) %></span></li>
+              <% end %> 
+            </div> <!-- album-release-info -->   
+          </div> <!-- album-release-text-object -->
+        </div> <!-- small-12 columns -->
+      </div> <!-- row -->
+    </div> <!-- album-cover-object -->
+  </div> <!-- small-6 columns -->
 
-            <div class="album-cover-object">
-              <div class="album-cover-main-image">
-                <%= albums_show_image_link(@album) %>
-              </div>
-            <div class="row">
-              <div class="small-3 columns">
-                <div class="album-cover-small-image">
-                  <img class="album-cover-small-image" src="/images/tilly-and-the-wall-cover.jpg" alt="Smiley face">
-                </div>
-              </div>
-              <div class="small-3 columns">
-                <div class="album-cover-small-image">
-                  <img class="album-cover-small-image" src="/images/tilly-and-the-wall-cover.jpg" alt="Smiley face">
-                </div>
-              </div>
-              <div class="small-3 columns">
-                <div class="album-cover-small-image">
-                  <img class="album-cover-small-image" src="/images/tilly-and-the-wall-cover.jpg" alt="Smiley face">
-                </div>
-              </div>
-              <div class="small-3 columns">
-                <div class="album-cover-small-image">
-                  <img class="album-cover-small-image" src="/images/tilly-and-the-wall-cover.jpg" alt="Smiley face">
-                </div>
-              </div>
-            </div>
-            <!-- <div class="row">  --> 
-          <div class="row">
-            <div class="small-12 columns">
-            <div class="album-release-text-object">
-              <div class="album-release-info">
-<!-- Shows album's release date -->
-                  <% @album.show_release_date.each do |date| %>
-                    <li class="release-info" href="url">Released: <span class="album-release-data"> <%= date %></span></li>
-                  <% end %>
-<!-- Shows album artist's hometown -->
-                    <li class="release-info" href="url">Location: <span class="album-release-data"> <%= areas_show_link(@album.area) %></span></li>
-<!-- Shows album's genre -->
-                    <li class="release-info" href="url">Genre: <span class="album-release-data"> <%= genres_show_link(@album.genre) %></span></li>
-<!-- Shows album's record label -->
-                  <% @album.show_album_label.each do |label| %>
-                    <li class="release-info" href="url">Label: <span class="album-release-data"> <%= label %></span></li>
-                  <% end %>
-<!-- Shows album's format -->
-                  <% @album.show_album_format.each do |album_format| %>
-                    <li class="release-info" href="url">Format: <span class="album-release-data"> <%= formats_show_link(album_format) %></span></li>
-                  <% end %> 
-              </div>   
+  <div class="small-6 columns">
+
+    <div class="album-detail-object">
+      <div class="album-detail-title">
+<!-- Shows album title -->
+        <%= albums_show_link(@album) %>
+        <div class="album-detail-artist">
+<!-- Shows album artist's name -->
+          By: <%= artists_show_link(@album.artist) %>
+<!-- Shows the title of each of the album's tracks -->
+          <% @album.tracklist.each do |number, track| %>
+          <div class="album-track-list-object">
+          <div class="album-track-list">
+            <div class="album-track-number"><%= "#{number}" %>  <span class="album-track-song-title"><%= "#{track}" %> </span> 
+            <!-- <span class="album-track-info"></span> -->
             </div>
           </div>
+          <% end %>
+         <!--  ALBUM TRACK INFO IS ADDITIONAL INFO FOR COMPILATION ALBUMS OR OTHER SPECIAL SITUATIONS. -->
           </div>
         </div>
       </div>
-
-      <div class="small-6 columns">
-
-          <div class="album-detail-object">
-            <div class="album-detail-title">
-<!-- Shows album title -->
-              <%= albums_show_link(@album) %>
-              <div class="album-detail-artist">
-<!-- Shows album artist's name -->
-                By: <%= artists_show_link(@album.artist) %>
-<!-- Shows the title of each of the album's tracks -->
-                <% @album.tracklist.each do |number, track| %>
-                <div class="album-track-list-object">
-                <div class="album-track-list">
-                  <div class="album-track-number"><%= "#{number}" %>  <span class="album-track-song-title"><%= "#{track}" %> </span> 
-                  <!-- <span class="album-track-info"></span> -->
-                  </div>
-                </div>
-                <% end %>
-               <!--  ALBUM TRACK INFO IS ADDITIONAL INFO FOR COMPILATION ALBUMS OR OTHER SPECIAL SITUATIONS. -->
-               
-             
-                
-
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-
-      
-     <!-- Shows album artist's bio -->
-          <div class="other-info-header">
-              Other info:
-          </div>
-          <div class="other-info-text">
-              <%= @album.artist.bio %> 
-          </div>
-       
-      
+    </div>
   </div>
+
+  
+ <!-- Shows album artist's bio -->
+      <div class="other-info-header">
+          Other info:
+      </div>
+      <div class="other-info-text">
+          <%= @album.artist.bio %> 
+      </div>
+     
+    
+</div> <!-- row line 55 -->
 
 
 
