@@ -923,9 +923,8 @@ background-repeat: repeat-y;
 //--BEGIN VA SECOND HEADER CONTAINER AND ELEMENTS--------------------
 
 .second-level-header-container {
-  width: 970px;
-  height: 93px;
-  padding: 20px 2%;
+  float: left;
+  width: 50%;
 }
 
 
@@ -938,13 +937,7 @@ background-repeat: repeat-y;
   // }
 
   .search-bar {
-    display: block;
-    float: left;
-    border-radius: 5px;
-    background-color: #efefef;
-    width: 400px;
-    padding: 0px 0px;
-    margin: 0px 0px;
+    width: 100%;
   }
   .search-bar-text {
     font: italic lighter 1.5rem "Oswald";
@@ -967,51 +960,45 @@ background-repeat: repeat-y;
 
 //----sort bar (not formatted correctly what does it do?)-------
   .sort-bar-object {
-    width: 300px;
-    height: 50px;
-    vertical-align: middle;
+    float: left;
+    width: 35%;
   }
 
 
   .sort-bar {
-    display: block;
-    position: relative;
-    float: left;
     font: $oswald;
-    margin-left: 10px;
-    vertical-align: middle;
+    text-align: center;
   }
 
   .sort-input {
-    position: relative;
-    display: inline-block;
     height: 36px;
     margin-left: 10px;
     vertical-align: middle;
   }
 
   .sort {
-    position: relative;
-    display: inline-block;
     font: $oswald;
-    float: left;
   }
 
 //------icons for toggle between box format and list format homepage---
 
-    // .navigation-icon {
-    //   height: 48px;
-    //   width: 100%;
-    //   vertical-align: middle;  
-    // }
+    .navigation-icon {
+      float: right;
+      width: 15%; 
+      position: relative; 
+    }
+    .navigation-icons__both{
+      position: absolute;
+      right: 0px;
+    }
 
-    .material-icons {
-      display: inline-block;
-      position: relative;
+    button .material-icons {
+      // display: inline-block;
+      // position: relative;
       font-size: 48px;
-      width: 100%;
-      height: 100%;
-      vertical-align: middle;  
+      // width: 100%;
+      // height: 100%;
+      // vertical-align: middle;  
     }
 
 //--------social media icons (on albums, artist, musician, search) -----
