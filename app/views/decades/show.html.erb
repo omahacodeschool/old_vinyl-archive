@@ -1,10 +1,25 @@
-<h1><%= @decade %>s</h1>
+
+
 <!-- Cycles through each release associated with a given decade -->
-<% @decade_releases.each do |release| %>
-  <br />
-  <%= albums_show_image_link(release.album) %>
-  <br />
-  <%= albums_show_link(release.album) %>
-  <br />
-  <%= artists_show_link(release.album.artist) %>
-<% end %>
+
+<div class="page-content-header-object">
+  <div class="page-content-header">
+    <div class="page-content-header-text">
+    <%= @decade %>s |<span class="page-content-modifier-text">Decade</span>    
+    </div>
+ </div>
+</div>
+
+<div class="row small-up-1 medium-up-2 large-up-3">
+  <% @decade_releases.each do |release| %>  
+      <div class="column one-album-object">
+        <%= albums_show_image_link(release.album) %>
+        <div class="album-title">
+          <%= albums_show_link(release.album) %>
+        </div>
+        <div class="album-artist">
+          <%= artists_show_link(release.album.artist) %>) %>
+        </div> 
+      </div>
+  <% end %>
+</div>
