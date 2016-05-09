@@ -1,17 +1,4 @@
 <!-- Show all genres with the titles of the albums associated with each genre -->
-<% @genres.each do |genre| %>
-  <br />
-  <%= genres_show_link(genre) %>
-  <% genre.albums.each do |genre_album| %>
-    <br />
-    <%= albums_show_image_link(genre_album) %>
-    <br />
-    <%= albums_show_link(genre_album) %>
-    <br />
-    <%= artists_show_link(genre_album.artist) %>
-  <% end %>
-<% end %>
-
 
 <!-- Top navigation, appears on all pages, will eventually be moved to application.html.erb -->
 <div class="row">
