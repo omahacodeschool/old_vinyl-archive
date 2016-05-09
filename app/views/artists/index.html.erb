@@ -1,18 +1,4 @@
-<% @artists.each do |artist| %>
-  <br />
-  <h1><%= artists_show_link(artist) %></h1>
-  <br />
-  <!-- Cycles through each album associated with a given artist -->
-  <% artist.albums.each do |album| %>
-    <%= albums_show_image_link(album) %>
-    <br />
-    <%= albums_show_link(album) %>
-    <br />
-    <%= artists_show_link(artist) %>
-    <br />
-    <br />
-  <% end %>
-<% end %>
+
 
 
 <!-- Top navigation, appears on all pages, will eventually be moved to application.html.erb -->
