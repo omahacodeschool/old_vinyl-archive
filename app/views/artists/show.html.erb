@@ -1,26 +1,150 @@
-<!-- Shows artist name -->
-<h1><%= artists_show_link(@artist) %></h1>
-<!-- Shows primary image of the artist -->
-<%= artists_show_image_link(@artist) %>
-<!-- Shows name of the artist's hometown -->
-<p><b>Hometown:</b> <%= areas_show_link(@artist.area) %> </p>
-<!-- Shows the range of the artist's active years -->
-<p><b>Years Active:</b> <%= @artist.start_year %> - <%= @artist.end_year %> </p>
-<!-- Shows the first and last names of the artist's members -->
-<p><b>Members:</b> 
-  <% @artist.members.each do |member| %>
-    <p><%= member.first_name %> 
-       <%= member.last_name %> - 
-       <%= member.role.instrument.name %>
-    </p>
-  <% end %>
-</p>
+<!-- Search bar header, will eventually go in application.html.erb -->
+
+<div class="row">
+  <div class="small-12 columns">
+    <div class="second-level-header-container">
+
+      <div class="small-6 columns"> 
+        <div class="search-bar-object">
+          <div class="search-bar-text">
+            <input class="search-bar" type="search" placeholder="Enter Search"/>
+          </div>
+          <button>
+            <img class="spyglass" type="submit" src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon-black.png" alt="Search Icon">
+          </button>
+        </div>
+      </div>
+
+      <div class="small-6 columns">
+        <div class="social-media-links-object">
+          <div class="social-media-logo">
+            <a class="facebook-link" href="www.facebook.com">
+              <i class="social-media-icon"></i>
+            </a>
+          </div>
+          <div class="social-media-logo">
+            <a class="twitter-link" href="www.twitter.com">
+              <i class="social-media-icon"></i>
+            </a>
+          </div>
+          <div class="social-media-links-text">SHARE THIS MUSICIAN
+          </div>
+        </div>
+      </div>     
+    </div>
+  </div>  <!-- small-12 columns  -->     
+</div> <!-- row -->
+
+
+<div class="page-content-header-object">
+  <div class="page-content-header">
+    <!-- Shows artist name -->
+    <div class="page-content-header-text">
+      <%= artists_show_link(@artist) %> |
+      <span class="page-content-modifier-text"> Musician</span>    
+      <a class="link-text" href="url">EDIT MUSICIAN</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header for musicians hometown and years active -->          
+<div class="musician-photo-large">
+  <%= artists_show_image_link(@artist) %>
+</div>
+
+<div class="page-content-header-object-alt">
+  <div class="page-content-header-alt">
+    <div class="page-content-header-text-alt">
+      Hometown
+      <span class="members">
+        Years Active
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-6 columns">
+    <!-- Shows name of the artist's hometown -->
+    <div class="bio-text">
+      <div class="default-body-text">
+        <%= areas_show_link(@artist.area) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="small-6 columns">
+    <div class="members-text">
+      <div class="default-body-text">
+        <!-- Shows the range of the artist's active years -->
+        <div class="artist">
+          <%= @artist.start_year %> - <%= @artist.end_year %>
+        </div>
+      </div>
+    </div>
+  </div>       
+</div> <!-- row -->
+
+<!-- Header for artists bio and band members -->
+<div class="page-content-header-object-alt">
+  <div class="page-content-header-alt">
+    <div class="page-content-header-text-alt">
+      Bio
+      <span class="members">
+        Members
+      </span>
+      <!-- <div class="sort-bar" href="url">Sort</div> -->
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-6 columns">
 <!-- Shows the artist's bio -->
-<p><b>Bio:</b> <%= @artist.bio %> </p>
+    <div class="bio-text">
+      <div class="default-body-text">
+        <%= @artist.bio %> 
+      </div>
+    </div>
+  </div>
+
+  <div class="small-6 columns">
+    <div class="members-text">
+      <div class="default-body-text">
+<!-- Shows the first and last names of the artist's members -->
+        <% @artist.members.each do |member| %>
+        <li class="artist"><%= member.first_name %> <%= member.last_name %> - <%= member.role.instrument.name %></li>
+        <% end %>
+      </div>
+    </div>
+  </div>       
+</div> <!-- row -->
+
+<!-- Header for artists additional albums -->
+<div class="row">
+  <div class="small-12 columns">
+    <div class="page-content-header-object-alt">
+      <div class="page-content-header-alt">
+        <div class="page-content-header-text-alt">Albums
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Shows each of the artist's albums with cover image and title -->
-<p><b>Albums:</b></p>
+<div class="row small-up-1 medium-up-2 large-up-3">
   <% @artist.albums.each do |album| %>
-    <%= albums_show_image_link(album) %>
-    <p><b> <%= albums_show_link(album) %> </b></p>
-    <br>
-  <% end %>
+    <div class="column">
+      <div class="one-album-object">
+        <%= albums_show_image_link(album) %>
+          <div class="album-title"><%= albums_show_link(album) %></div>
+          <div class="album-artist"><%= artists_show_link(@artist)%></div> 
+      </div>
+    </div>
+   <% end %>
+ </div>
+
+
+
+ 
