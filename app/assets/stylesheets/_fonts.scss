@@ -10,11 +10,6 @@
   src: url('HN-icons.ttf') format('truetype');   
   font-weight: normal;
   font-style: normal;
-
-  // ('HN-icons.eot');
-  // src: url('HN-icons.eot?#iefix') format('embedded-opentype'),
-  //   url('HN-icons.woff') format('woff'),
-
 }
 
 @font-face {
@@ -26,41 +21,28 @@
 
 @font-face {
   font-family: 'Yanone Kaffeesatz';
-  src: url('YanoneKaffeesatz-Bold.woff') format('woff');
+  src: url('YanoneKaffeesatz-Bold.otf') format('otf');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Oswald';
-  src: url('Oswald.woff') format('woff');
+  src: url('Oswald-Regular.otf') format('otf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Oswald';
-  src: url('Oswald-Light.woff') format('woff');
+  src: url('Oswald-Light.otf') format('otf');
   font-weight: 300;
   font-style: normal;
 }
 
-// @font-face {
-//   font-family: 'Oswald';
-//   src: url('Oswald-Light.eot');
-//   src: url('Oswald-Light.eot?#iefix') format('embedded-opentype'),
-//     url('Oswald-Light.woff') format('woff'),
-//     url('Oswald-Light.ttf') format('truetype');
-//   font-weight: 300;
-//   font-style: normal;
-// }
-
-
-
-
 @font-face {
   font-family: 'Montserrat';
-  src: url('Montserrat-Bold.woff') format('woff');
+  src: url('Montserrat-Bold.otf') format('otf');
   font-weight: bold;
   font-style: normal;
 }
